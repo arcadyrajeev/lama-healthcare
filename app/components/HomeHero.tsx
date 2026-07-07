@@ -45,7 +45,7 @@ export default function HomeHero() {
         className="absolute bottom-0 right-0 h-[280px] w-[280px] rounded-full bg-[#C7A46A]/20 blur-[90px]"
       />
 
-      <div className="relative  bg-neutral-100 mx-16 mt-24 rounded-4xl z-10 mx-auto flex min-h-screenitems-center px-6 py-8 lg:px-8">
+      <div className="relative  bg-neutral-100 mx-16 mt-24 rounded-4xl z-10 mx-auto flex min-h-screenitems-center px-6 py-8 lg:px-12">
         <div className="grid w-full items-center gap-16 lg:grid-cols-2">
           {/* LEFT CONTENT */}
 
