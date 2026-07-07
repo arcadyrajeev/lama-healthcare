@@ -95,8 +95,8 @@ function GlassCard({ icon, title, value, description }: GlassCardProps) {
       row-span-3
       border
       border-white/90
-      bg-white/40
-      backdrop-blur-2xl
+      bg-neutral-300/30
+      backdrop-blur-lg
       p-6
       shadow-[0_20px_60px_rgba(0,0,0,0.12)]
       transition-all
