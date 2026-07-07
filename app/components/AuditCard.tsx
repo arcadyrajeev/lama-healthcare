@@ -43,7 +43,7 @@ const metrics: Metric[] = [
 
 export default function AuditCard() {
   return (
-    <div className="w-full max-w-[540px] rounded-[30px] bg-white p-8 shadow-[0_35px_80px_rgba(0,0,0,0.08)]">
+    <div className="w-full  rounded-[30px] bg-white p-8 shadow-[0_35px_80px_rgba(0,0,0,0.08)]">
       <h3 className="text-3xl font-semibold tracking-tight text-neutral-900">
         Practice Audit Report
       </h3>

@@ -27,7 +27,7 @@ export default function ProblemSection() {
 
         <motion.div
           style={{ y: circleLeft }}
-          className="absolute left-16 top-0 hidden h-44 w-44 rounded-full bg-[#2F6173] lg:block"
+          className="absolute left-16 z-1 top-0 hidden h-44 w-44 rounded-full bg-[#2F6173] lg:block"
         />
 
         <motion.div
@@ -43,6 +43,7 @@ export default function ProblemSection() {
           }}
           className="
           relative
+          z-20
           overflow-hidden
           rounded-[42px]
           border
@@ -62,7 +63,7 @@ export default function ProblemSection() {
             <div className="absolute bottom-10 left-1/2 h-44 w-44 rounded-full bg-[#DCECF1]/60 blur-[90px]" />
           </div>
 
-          <div className="relative z-10 grid gap-14 px-8 py-10 lg:grid-cols-2 lg:px-14 lg:py-16">
+          <div className="relative z-10 grid gap-14 px-8 py-10 lg:grid-cols-5 lg:px-16 lg:py-16">
             {/* LEFT */}
 
             <motion.div
@@ -78,6 +79,7 @@ export default function ProblemSection() {
               transition={{
                 duration: 0.7,
               }}
+              className="col-span-3"
             >
               <AuditCard />
             </motion.div>
@@ -98,13 +100,13 @@ export default function ProblemSection() {
                 duration: 0.7,
                 delay: 0.15,
               }}
-              className="flex flex-col justify-center"
+              className="flex flex-col justify-center col-span-2 "
             >
               <span className="text-sm font-medium uppercase tracking-[0.25em] text-[#B9925A]">
                 The Problem
               </span>
 
-              <h2 className="mt-6 text-4xl font-serif leading-tight text-[#1F1F1F] lg:text-5xl">
+              <h2 className="mt-6 text-4xl font-serif leading-tight text-[#1F1F1F] ">
                 Most practices don&apos;t
                 <br />
                 have a staffing
@@ -112,7 +114,7 @@ export default function ProblemSection() {
                 problem.
               </h2>
 
-              <p className="mt-10 text-4xl font-serif leading-tight text-[#1F1F1F] lg:text-5xl">
+              <p className="mt-10 text-4xl font-serif leading-tight text-[#1F1F1F] ">
                 They have an
                 <br />
                 <span className="italic text-[#3D7185]">
