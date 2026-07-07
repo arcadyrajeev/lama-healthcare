@@ -21,10 +21,7 @@ export default function ProblemSection() {
   const circleRight = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative overflow-hidden bg-[#F8F7F4] py-24 lg:py-36"
-    >
+    <section ref={sectionRef} className="relative   py-24 lg:py-36">
       <div className="mx-auto px-6 lg:px-24">
         {/* Decorative Circle */}
 
