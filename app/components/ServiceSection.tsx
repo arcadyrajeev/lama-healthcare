@@ -68,7 +68,7 @@ export default function ServicesSection() {
 
         {/* Bento Grid */}
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-6">
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-6 md:grid-rows-5">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -86,7 +86,9 @@ export default function ServicesSection() {
                 delay: index * 0.08,
               }}
               className={
-                service.span === "large" ? "md:col-span-3" : "md:col-span-2"
+                service.span === "large"
+                  ? "md:col-span-3 md:row-span-3"
+                  : "md:col-span-2 md:row-span-2"
               }
             >
               <Link
@@ -100,7 +102,7 @@ export default function ServicesSection() {
         flex-col
         justify-between
         overflow-hidden
-        rounded-[30px]
+        rounded-3xl
         bg-[#F1F0EE]
         p-8
         shadow-sm
@@ -144,13 +146,13 @@ export default function ServicesSection() {
                 <div>
                   <h3
                     className={`font-light leading-tight text-[#1F1F1F] transition-colors group-hover:text-[#2F6173] ${
-                      service.span === "large" ? "text-5xl" : "text-4xl"
+                      service.span === "large" ? "text-4xl" : "text-2xl"
                     }`}
                   >
                     {service.title}
                   </h3>
 
-                  <p className="mt-6 max-w-sm text-lg leading-8 text-neutral-600">
+                  <p className="mt-3 max-w-sm text-lg leading-8 text-neutral-600">
                     {service.description}
                   </p>
                 </div>
