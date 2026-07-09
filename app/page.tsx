@@ -4,6 +4,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import SolutionSection from "./components/SolutionSection";
 import ServicesSection from "./components/ServiceSection";
 import ProcessSection from "./components/ProcessSection";
+import FaqSection from "./components/FaqSection";
 
 export default function HomePage() {
   return (
@@ -14,14 +15,13 @@ export default function HomePage() {
       <SolutionSection />
       <ServicesSection />
       <ProcessSection />
+      <FaqSection />
 
       {/* Upcoming Sections */}
 
       {/* <StatsSection /> */}
 
       {/* <TestimonialsSection /> */}
-
-      {/* <FAQSection /> */}
 
       {/* <CTASection /> */}
 

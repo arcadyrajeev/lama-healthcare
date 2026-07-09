@@ -84,11 +84,11 @@ export default function ProcessSection() {
                   <Icon size={46} className="text-main" strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-8 text-4xl font-semibold text-zinc-800">
+                <h3 className="mt-8 text-2xl font-semibold text-zinc-800">
                   {step.title}
                 </h3>
 
-                <p className="mt-6 text-lg leading-8 text-zinc-600">
+                <p className="mt-6 text-base leading-6 text-zinc-600">
                   {step.description}
                 </p>
               </div>
@@ -100,11 +100,11 @@ export default function ProcessSection() {
 
         <div className="mt-20 rounded-3xl bg-white/10 p-6 backdrop-blur-sm">
           <div className="flex flex-col gap-5 md:flex-row md:items-center">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-sky-300 text-white">
-              <Check size={34} strokeWidth={3} />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-300 text-white">
+              <Check size={24} strokeWidth={3} />
             </div>
 
-            <h3 className="text-center text-2xl font-semibold text-white md:text-left">
+            <h3 className="text-center text-lg font-semibold text-white md:text-left">
               One partner, End to end accountability. Better Outcomes
             </h3>
           </div>
