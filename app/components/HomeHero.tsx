@@ -21,18 +21,12 @@ export default function HomeHero() {
 
   // Floating cards movement
   const cardsY = useTransform(scrollYProgress, [0, 1], [200, -280]);
-  const cardsRotate = useTransform(scrollYProgress, [0, 1], [-2, 2]);
-  const cardsScale = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [0.96, 1, 0.98],
-  );
 
   // Background movement
   const gradientY = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section ref={heroRef} className="relative  px-12">
+    <section ref={heroRef} className="relative  px-4 lg:px-12">
       {/* Decorative Blur */}
 
       <motion.div
@@ -45,7 +39,7 @@ export default function HomeHero() {
         className="absolute bottom-0 right-0 h-[280px] w-[280px] rounded-full bg-[#C7A46A]/20 blur-[90px]"
       />
 
-      <div className="relative  bg-neutral-100 mx-16 mt-24 rounded-4xl z-10 mx-auto flex min-h-screenitems-center px-6 py-8 lg:px-12">
+      <div className="relative  bg-neutral-100 mx-16 mt-18 lg:mt-24 rounded-4xl z-10 mx-auto flex min-h-screenitems-center px-6 py-8 lg:px-12">
         <div className="grid w-full items-center gap-16 lg:grid-cols-2">
           {/* LEFT CONTENT */}
 
@@ -56,11 +50,11 @@ export default function HomeHero() {
             viewport={{ once: true }}
             className="max-w-xl"
           >
-            <span className="inline-flex rounded-full border border-[#B9925A]/30 bg-[#B9925A]/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.25em] text-[#B9925A]">
+            <span className="inline-flex rounded-full border border-[#B9925A]/30 bg-[#B9925A]/10 px-4 py-2 text-[10px] lg:text-xs font-medium uppercase tracking-[0.25em] text-[#B9925A]">
               Revenue Cycle Management
             </span>
 
-            <h1 className="mt-8 text-5xl font-serif leading-[1.05] tracking-tight text-[#1F1F1F] md:text-6xl xl:text-7xl">
+            <h1 className="mt-8 text-4xl font-serif leading-[1.05] tracking-tight text-[#1F1F1F] md:text-5xl xl:text-7xl">
               Your practice is
               <br />
               losing <span className="italic text-[#2F6173]">revenue</span>
@@ -70,7 +64,7 @@ export default function HomeHero() {
               noticing it.
             </h1>
 
-            <p className="mt-8 max-w-lg text-lg leading-8 text-neutral-600">
+            <p className="mt-8 max-w-lg text-sm lg:text-lg leading-6 lg:leading-8 text-neutral-600">
               We help independent healthcare practices maximize revenue, reduce
               operational costs and simplify day-to-day billing workflows.
             </p>
@@ -79,7 +73,7 @@ export default function HomeHero() {
               <CTAButton size="lg">Get Your Free Audit</CTAButton>
             </div>
 
-            <div className="mt-10 flex items-center gap-4">
+            <div className="mt-10 flex flex-col lg:flex-row lg:items-center gap-4">
               <div className="flex -space-x-3">
                 <div className="h-11 w-11 rounded-full border-2 border-white bg-neutral-300" />
                 <div className="h-11 w-11 rounded-full border-2 border-white bg-neutral-400" />
@@ -115,10 +109,10 @@ export default function HomeHero() {
                 y: lamaY,
                 scale: lamaScale,
               }}
-              className="absolute z-10  w-[900px] h-[800px] -translate-x-30"
+              className="absolute z-10 portrait:w-[800px]  landscape:w-[900px] landscape:h-[800px] landscape:-translate-x-30"
             >
               <Image
-                src="/images/lama-background.png"
+                src="/images/lama-hero2.png"
                 alt="Lama Healthcare"
                 height={2000}
                 width={2000}
@@ -132,8 +126,6 @@ export default function HomeHero() {
             <motion.div
               style={{
                 y: cardsY,
-                rotate: cardsRotate,
-                scale: cardsScale,
               }}
               className="absolute right-0 top-3/4 z-20 "
             >

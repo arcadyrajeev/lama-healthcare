@@ -95,7 +95,7 @@ const Navbar = () => {
       className="
         fixed z-50 w-full
         flex justify-center md:justify-between
-        items-center dm-sans
+        items-center subheading
         px-2 sm:px-4 md:px-10 lg:px-[7.5rem]
         py-4 
       "
@@ -114,6 +114,7 @@ const Navbar = () => {
           backdrop-blur-lg
           border border-white
           bg-neutral-300/20
+           
           rounded-full
           p-[1vw] lg:p-1
         "
@@ -130,10 +131,10 @@ const Navbar = () => {
                   block rounded-full
                   px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
                   text-[3.5vw] sm:text-xs md:text-md lg:text-base
-                  font-medium transition-colors duration-200
+                  transition-colors duration-200  
                   ${
                     active
-                      ? "bg-accent-dark text-cyan-800"
+                      ? "bg-accent text-white"
                       : "text-secondary-text hover:bg-accent hover:text-white"
                   }
                 `}
@@ -156,10 +157,10 @@ const Navbar = () => {
             onClick={() => setServicesOpen((prev) => !prev)}
             className={`
               flex items-center gap-1
-              rounded-full
+              rounded-full  
               px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
               text-[3.5vw] sm:text-xs md:text-md lg:text-base
-              font-medium
+             
               transition-colors duration-200
               ${
                 pathname.startsWith("/services")
@@ -184,7 +185,7 @@ const Navbar = () => {
               w-[75vw] p-2 sm:w-[320px] md:w-[280px]
               rounded-2xl
               border border-neutral-200
-              bg-white
+              bg-white  
               shadow-2xl
               overflow-hidden
               transition-all duration-300
@@ -206,11 +207,11 @@ const Navbar = () => {
                     py-4 md:py-3
                     text-lg md:text-sm
                     leading-relaxed
-                    bodyfont font-medium
+                    
                     text-secondary-text
                     rounded-lg
-                    hover:bg-accent-dark
-                    hover:text-white
+                    hover:bg-neutral-200
+                   
                     transition-colors
                     border-b lg:border-0 border-neutral-200
                     last:border-b-0
@@ -235,7 +236,7 @@ const Navbar = () => {
                   block rounded-full
                   px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
                   text-[3.5vw] sm:text-xs md:text-md lg:text-base
-                  font-medium transition-colors duration-200
+                  transition-colors duration-200
                   ${
                     active
                       ? "bg-accent-dark text-white"
@@ -264,7 +265,7 @@ const Navbar = () => {
               rounded-full
               px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
               text-[3.5vw] sm:text-xs md:text-md lg:text-base
-              font-medium
+              
               transition-colors duration-200
               ${
                 pathname === "/about" ||
@@ -314,11 +315,11 @@ const Navbar = () => {
                     py-4 md:py-3
                     text-lg md:text-sm
                     leading-relaxed
-                    bodyfont font-medium
+                    
                     text-secondary-text
                     rounded-lg
-                    hover:bg-accent-dark
-                    hover:text-white
+                    hover:bg-neutral-200
+                  
                     transition-colors
                     border-b border-neutral-200
                     last:border-b-0

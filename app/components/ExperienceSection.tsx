@@ -71,7 +71,7 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-[#F8F7F4] py-24">
+    <section className=" py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Heading */}
 
@@ -199,7 +199,7 @@ export default function ExperienceSection() {
             mt-14
             overflow-hidden
             rounded-[36px]
-            bg-[#436B7B]
+            bg-[#2F6173]
             px-8
             py-10
             lg:px-12
@@ -211,10 +211,10 @@ export default function ExperienceSection() {
           <div
             className="
               absolute
-              -right-32
-              top-0
+              -right-20
+              top-50
               h-full
-              w-[70%]
+              w-[170%]
               rotate-[-12deg]
               bg-white/6
             "

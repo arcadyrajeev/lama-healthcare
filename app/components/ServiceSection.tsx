@@ -102,9 +102,9 @@ export default function ServicesSection() {
         flex-col
         justify-between
         overflow-hidden
-        rounded-3xl
+        rounded-2xl md:rounded-3xl
         bg-[#F1F0EE]
-        p-8
+         p-3 md:p-8
         shadow-sm
         transition-all
         duration-300
@@ -145,14 +145,16 @@ export default function ServicesSection() {
 
                 <div>
                   <h3
-                    className={`font-light leading-tight text-[#1F1F1F] transition-colors group-hover:text-[#2F6173] ${
-                      service.span === "large" ? "text-4xl" : "text-2xl"
+                    className={`font-light subheading leading-tight text-[#1F1F1F] transition-colors group-hover:text-[#2F6173] ${
+                      service.span === "large"
+                        ? "text-2xl md:text-4xl"
+                        : "text-2xl"
                     }`}
                   >
                     {service.title}
                   </h3>
 
-                  <p className="mt-3 max-w-sm text-lg leading-8 text-neutral-600">
+                  <p className="mt-3 max-w-sm text-sm md:text-lg md:leading-8 text-neutral-600">
                     {service.description}
                   </p>
                 </div>

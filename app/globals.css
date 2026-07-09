@@ -2,7 +2,9 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #131617;
+  --main-color: #2f6173;
+  --accent-color: #b9925a;
 }
 
 @theme inline {
@@ -10,17 +12,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-main: var(--main-color);
+  --color-accent: var(--accent-color);
 }
 
 @font-face {
   font-family: "Dm Sans";
-  src: url("/fonts/Dm-Sans.ttf") format("truetype");
+  src: url("/fonts/DMSans.ttf") format("truetype");
 }
 
 html.lenis,
@@ -42,4 +40,15 @@ html.lenis body {
 
 .dm-sans {
   font-family: "Dm Sans", sans-serif;
+}
+
+.subheading {
+  font-family: "Dm Sans", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Dm Sans", Helvetica, sans-serif;
 }

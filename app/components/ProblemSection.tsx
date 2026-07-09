@@ -21,18 +21,18 @@ export default function ProblemSection() {
   const circleRight = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section ref={sectionRef} className="relative   py-24 lg:py-36">
+    <section ref={sectionRef} className="relative  py-24 lg:py-[10rem]">
       <div className="mx-auto px-6 lg:px-24">
         {/* Decorative Circle */}
 
         <motion.div
           style={{ y: circleLeft }}
-          className="absolute left-16 z-1 top-0 hidden h-44 w-44 rounded-full bg-[#2F6173] lg:block"
+          className="absolute left-16 z-1 top-24 h-44 w-44 rounded-full bg-main "
         />
 
         <motion.div
           style={{ y: circleRight }}
-          className="absolute right-0 top-1/2 hidden h-40 w-40 -translate-y-1/2 rounded-full bg-[#C49B5D] lg:block"
+          className="absolute right-0 top-1/2  h-40 w-40 -translate-y-1/2 rounded-full bg-accent "
         />
 
         {/* Glass Container */}
@@ -48,7 +48,7 @@ export default function ProblemSection() {
           rounded-[42px]
           border
           border-white/90
-          bg-neutral-300/30
+          bg-neutral-400/30
           backdrop-blur-lg
           shadow-[0_35px_100px_rgba(0,0,0,0.08)]
         "
@@ -63,7 +63,7 @@ export default function ProblemSection() {
             <div className="absolute bottom-10 left-1/2 h-44 w-44 rounded-full bg-[#DCECF1]/60 blur-[90px]" />
           </div>
 
-          <div className="relative z-10 grid gap-14 px-8 py-10 lg:grid-cols-5 lg:px-16 lg:py-16">
+          <div className="relative z-10 grid grid-cols-1 gap-14 px-4 py-6 lg:grid-cols-5 lg:px-16 lg:py-16">
             {/* LEFT */}
 
             <motion.div
@@ -106,7 +106,7 @@ export default function ProblemSection() {
                 The Problem
               </span>
 
-              <h2 className="mt-6 text-4xl font-serif leading-tight text-[#1F1F1F] ">
+              <h2 className="mt-6 text-3xl md:text-4xl font-serif leading-tight text-[#1F1F1F] ">
                 Most practices don&apos;t
                 <br />
                 have a staffing
@@ -114,13 +114,11 @@ export default function ProblemSection() {
                 problem.
               </h2>
 
-              <p className="mt-10 text-4xl font-serif leading-tight text-[#1F1F1F] ">
+              <p className="mt-10 text-3xl md:text-4xl font-serif leading-tight text-[#1F1F1F] ">
                 They have an
-                <br />
                 <span className="italic text-[#3D7185]">
                   operational visibility
                 </span>
-                <br />
                 <span className="italic text-[#3D7185]">problem.</span>
               </p>
 

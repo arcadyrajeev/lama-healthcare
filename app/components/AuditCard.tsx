@@ -43,7 +43,7 @@ const metrics: Metric[] = [
 
 export default function AuditCard() {
   return (
-    <div className="w-full  rounded-[30px] bg-white p-8 shadow-[0_35px_80px_rgba(0,0,0,0.08)]">
+    <div className="w-full rounded-[30px] bg-white p-8 shadow-[0_35px_80px_rgba(0,0,0,0.08)]">
       <h3 className="text-3xl font-semibold tracking-tight text-neutral-900">
         Practice Audit Report
       </h3>
@@ -76,7 +76,7 @@ interface ProgressBarProps {
 
 function ProgressBar({ label, value, color, delay }: ProgressBarProps) {
   return (
-    <div className="grid grid-cols-[130px_1fr] items-center gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-[130px_1fr] items-center gap-3 md:gap-6">
       <span className="text-sm font-medium text-neutral-600">{label}</span>
 
       <div className="h-2 overflow-hidden rounded-full bg-neutral-200">
@@ -89,7 +89,7 @@ function ProgressBar({ label, value, color, delay }: ProgressBarProps) {
           }}
           viewport={{ once: true }}
           transition={{
-            duration: 1,
+            duration: 3,
             delay,
             ease: [0.16, 1, 0.3, 1],
           }}

@@ -38,16 +38,27 @@ export default function SolutionSection() {
             }}
             className="
               relative
-              aspect-square
+              
+              portrait:h-[30vh]
+              landscape:h-[400px]
               overflow-hidden
-              rounded-[36px]
+               rounded-2xl md:rounded-3xl
               bg-neutral-200
             "
           >
             {/* Replace with Image or Video */}
 
             <div className="absolute inset-0 flex items-center justify-center text-neutral-400">
-              Media Placeholder
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-screen object-contain"
+              >
+                <source src="/videos/platform-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </motion.div>
 

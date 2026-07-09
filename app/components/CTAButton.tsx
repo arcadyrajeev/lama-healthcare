@@ -27,7 +27,7 @@ export default function CTAButton({
   const sizes = {
     sm: "h-10 px-4 text-sm",
     md: "h-12 px-6 text-sm",
-    lg: "h-14 px-8 text-base",
+    lg: "h-14 px-8 text-sm lg:text-base",
   };
 
   const variants = {
