@@ -3,6 +3,7 @@ import ProblemSection from "./components/ProblemSection";
 import ExperienceSection from "./components/ExperienceSection";
 import SolutionSection from "./components/SolutionSection";
 import ServicesSection from "./components/ServiceSection";
+import ProcessSection from "./components/ProcessSection";
 
 export default function HomePage() {
   return (
@@ -12,12 +13,11 @@ export default function HomePage() {
       <ExperienceSection />
       <SolutionSection />
       <ServicesSection />
+      <ProcessSection />
 
       {/* Upcoming Sections */}
 
       {/* <StatsSection /> */}
-
-      {/* <ProcessSection /> */}
 
       {/* <TestimonialsSection /> */}
 

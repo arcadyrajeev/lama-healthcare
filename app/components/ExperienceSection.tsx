@@ -86,10 +86,12 @@ export default function ExperienceSection() {
             Our Experience
           </p>
 
-          <h2 className="mt-4 text-5xl font-light leading-tight text-[#1F1F1F]">
+          <h2 className="mt-4 text-5xl font-serif leading-tight text-[#1F1F1F]">
             What We Saw Running
             <br />
-            Our Own Practices
+            <span className="font-serif text-main italic">
+              Our Own Practices
+            </span>
           </h2>
         </motion.div>
 
