@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
+import services from "@/data/services";
+
 const Navbar = () => {
   const pathname = usePathname();
 
@@ -17,32 +19,16 @@ const Navbar = () => {
 
   const moreDropdownRef = useRef<HTMLLIElement | null>(null);
 
+  const formatServiceName = (slug: string) =>
+    slug
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
   const links = [
     { name: "Home", path: "/" },
 
     { name: "About", path: "/about" },
-  ];
-
-  const services = [
-    {
-      name: "Service 1",
-      path: "/services/onboarding",
-    },
-
-    {
-      name: "Service 2",
-      path: "/services/brand",
-    },
-
-    {
-      name: "Service 3",
-      path: "/services/product",
-    },
-
-    {
-      name: "Service 4",
-      path: "/services/website",
-    },
   ];
 
   const moreLinks = [
@@ -164,7 +150,7 @@ const Navbar = () => {
               transition-colors duration-200
               ${
                 pathname.startsWith("/services")
-                  ? "bg-accent-dark text-white"
+                  ? "bg-accent text-white"
                   : "text-secondary-text hover:bg-accent hover:text-white"
               }
             `}
@@ -199,32 +185,30 @@ const Navbar = () => {
             <div className="flex flex-col">
               {services.map((service) => (
                 <Link
-                  key={service.name}
-                  href={service.path}
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
                   onClick={() => setServicesOpen(false)}
                   className="
-                    px-5 md:px-4
-                    py-4 md:py-3
-                    text-lg md:text-sm
-                    leading-relaxed
-                    
-                    text-secondary-text
-                    rounded-lg
-                    hover:bg-neutral-200
-                   
-                    transition-colors
-                    border-b lg:border-0 border-neutral-200
-                    last:border-b-0
-                  "
+      px-5 md:px-4
+      py-4 md:py-3
+      text-lg md:text-sm
+      leading-relaxed
+      text-secondary-text
+      rounded-lg
+      hover:bg-neutral-200
+      transition-colors
+      border-b lg:border-0 border-neutral-200
+      last:border-b-0
+    "
                 >
-                  {service.name}
+                  {formatServiceName(service.slug)}
                 </Link>
               ))}
             </div>
           </div>
         </li>
 
-        {/* Case Studies */}
+        {/* About */}
         {links.slice(1).map((link) => {
           const active = isActive(link.path);
 
@@ -239,7 +223,7 @@ const Navbar = () => {
                   transition-colors duration-200
                   ${
                     active
-                      ? "bg-accent-dark text-white"
+                      ? "bg-accent text-white"
                       : "text-secondary-text hover:bg-accent hover:text-white"
                   }
                 `}
@@ -268,9 +252,7 @@ const Navbar = () => {
               
               transition-colors duration-200
               ${
-                pathname === "/about" ||
-                pathname.startsWith("/blog") ||
-                pathname === "/contact"
+                pathname.startsWith("/blog") || pathname === "/contact"
                   ? "bg-accent-dark text-white"
                   : "text-secondary-text hover:bg-accent hover:text-white"
               }
