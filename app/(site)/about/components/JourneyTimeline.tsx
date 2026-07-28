@@ -39,9 +39,9 @@ export default function JourneyTimeline() {
   return (
     <div className="relative w-full py-8">
       {/* Vertical Timeline */}
-      <div className="absolute left-1/2 top-20 hidden h-[78%] w-[2px] -translate-x-1/2 bg-[#C89A5A] lg:block" />
+      <div className="absolute left-1/2 top-28 hidden h-[75%] w-[2px] -translate-x-1/2 bg-[#C89A5A] lg:block" />
 
-      <div className="space-y-10 lg:space-y-16">
+      <div className="space-y-8 lg:space-y-0">
         {journey.map((item, index) => (
           <div
             key={index}
@@ -50,26 +50,28 @@ export default function JourneyTimeline() {
             } justify-center`}
           >
             {/* Connector */}
-            <div className="absolute left-1/2 hidden h-[2px] w-16 -translate-x-1/2 bg-[#C89A5A] lg:block" />
+            <div
+              className={`absolute z-2 left-1/2 hidden h-[2px] w-8  bg-[#C89A5A] lg:block ${item.side === "left" ? "-translate-x-8" : "translate-x-2"}`}
+            />
 
             {/* Dot */}
-            <div className="absolute left-1/2 hidden h-4 w-4 -translate-x-1/2 rounded-full border-2 border-[#C89A5A] bg-white lg:block" />
+            <div className="absolute z-2 left-1/2 hidden h-4 w-4 -translate-x-1/2 rounded-full border-2 border-[#C89A5A] bg-white lg:block" />
 
             {/* Card */}
-            <div className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:shadow-md">
-              <div className="flex gap-5">
-                <div className="h-16 w-16 flex-shrink-0 rounded-full bg-[#DCE8EE]" />
+            <div className="w-full z-10 lg:max-w-[45%] rounded-3xl border border-gray-200 bg-white p-4 shadow-sm transition duration-300 hover:shadow-md">
+              <div className="flex gap-3">
+                <div className="h-10 w-10 flex-shrink-0 rounded-full bg-[#DCE8EE]" />
 
                 <div>
                   <p className="text-sm font-semibold text-[#C89A5A]">
                     {item.number}
                   </p>
 
-                  <h3 className="mt-2 text-xl font-semibold leading-tight text-[#222]">
+                  <h3 className="mt-2 text-lg font-semibold leading-tight text-[#222]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-7 text-gray-600">
+                  <p className="mt-3 text-xs leading-5 text-gray-600">
                     {item.description}
                   </p>
                 </div>

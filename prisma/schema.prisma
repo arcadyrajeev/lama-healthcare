@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Blog {
+  id             String   @id @default(cuid())
+
+  // Content
+  title          String
+  slug           String   @unique
+  excerpt        String?
+  content        Json
+
+  // Cover
+  coverImage     String?
+
+  // Organization
+  category       String?
+
+  // Publishing
+  published      Boolean   @default(false)
+  publishedAt    DateTime?
+
+  // SEO
+  seoTitle       String?
+  seoDescription String?
+  canonicalUrl   String?
+
+  // Metadata
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([published])
+  @@index([category])
+  @@index([publishedAt])
+}

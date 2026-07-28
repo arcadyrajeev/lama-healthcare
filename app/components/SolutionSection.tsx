@@ -93,11 +93,15 @@ export default function SolutionSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="mt-8 max-w-xl text-base dm-sans leading-8 text-neutral-600"
+              className="mt-8 max-w-xl text-base leading-8 text-[#2C2C2C]"
             >
-              Instead of managing billing, credentialing, compliance, reporting
-              and vendors separately, practices work with one accountable
-              partner responsible for the complete operation.
+              <span className="font-bold text-main">Practice One </span> is the
+              credentialing platform built and tested by the team that uses it
+              every day. It tracks every provider, automates status updates, and
+              gives practice managers real time visibility without spreadsheets
+              or constant follow ups. Choose the model that fits your practice.
+              Use Practice One with Lama Healthcare&apos;s managed service, or
+              as a standalone platform for your internal team.
             </motion.p>
 
             {/* Features */}
@@ -163,6 +167,22 @@ export default function SolutionSection() {
                 );
               })}
             </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="mt-5 font-serif leading-tight text-[#1F1F1F]
+             text-4xl md:text-5xl lg:text-[3.4rem]"
+            >
+              Built by credentialers.
+              <br />
+              <span className="italic text-[#3D6B7A]">
+                Used by our own team.
+                <br />
+                Now available to yours.
+              </span>
+            </motion.h2>
           </div>
         </div>
       </div>

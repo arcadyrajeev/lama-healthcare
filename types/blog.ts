@@ -1,3 +1,5 @@
+import type { PartialBlock } from "@blocknote/core";
+
 export interface BlogCard {
   id: string;
 
@@ -16,4 +18,24 @@ export interface BlogCard {
   readTime: string;
 
   author: string;
+}
+
+// types/blog.ts
+
+export interface BlogFormData {
+  id: string;
+
+  title: string;
+  slug: string;
+  excerpt: string;
+  category: string;
+  coverImage: string;
+
+  seoTitle: string;
+  seoDescription: string;
+  canonicalUrl: string;
+
+  published: boolean;
+
+  content: PartialBlock[];
 }
