@@ -253,7 +253,7 @@ const Navbar = () => {
               transition-colors duration-200
               ${
                 pathname.startsWith("/blog") || pathname === "/contact"
-                  ? "bg-accent-dark text-white"
+                  ? "bg-accent text-white"
                   : "text-secondary-text hover:bg-accent hover:text-white"
               }
             `}
