@@ -11,5 +11,5 @@ export default async function AdminPage() {
     },
   });
 
-  return <AdminDashboard blogs={blogs} />;
+  return <AdminDashboard blogs={blogs} adminCode={process.env.A_PATH!} />;
 }

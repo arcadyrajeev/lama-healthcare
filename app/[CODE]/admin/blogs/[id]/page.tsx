@@ -1,12 +1,9 @@
-import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 
 import { prisma } from "@/lib/prisma";
 import type { PartialBlock } from "@blocknote/core";
 
-const BlockEditor = dynamic(() => import("@/app/components/BlockEditor"), {
-  ssr: false,
-});
+import BlockEditor from "@/app/components/BlockEditor";
 
 type PageProps = {
   params: Promise<{

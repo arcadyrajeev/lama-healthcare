@@ -19,9 +19,13 @@ interface Blog {
 
 interface AdminDashboardProps {
   blogs: Blog[];
+  adminCode: string;
 }
 
-export default function AdminDashboard({ blogs }: AdminDashboardProps) {
+export default function AdminDashboard({
+  blogs,
+  adminCode,
+}: AdminDashboardProps) {
   const router = useRouter();
 
   async function logout() {
@@ -118,7 +122,7 @@ export default function AdminDashboard({ blogs }: AdminDashboardProps) {
 
                   <td className="p-4">
                     <Link
-                      href={`./blogs/${blog.id}`}
+                      href={`/${adminCode}/admin/blogs/${blog.id}`}
                       className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 transition hover:bg-stone-100"
                     >
                       <Pencil size={16} />
