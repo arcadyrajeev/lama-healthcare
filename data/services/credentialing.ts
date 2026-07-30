@@ -1,0 +1,456 @@
+import type { Service } from "@/types/service";
+
+export const credentialing: Service = {
+  id: "credentialling",
+
+  slug: "credentialing",
+
+  seo: {
+    title:
+      "Medical Credentialing & Payer Contracting Services | Lama Healthcare",
+
+    description:
+      "Provider credentialing, payer enrollment, Medicare, Medicaid, CAQH management, recredentialing, and payer contract negotiation. We ensure providers can bill correctly from day one.",
+
+    keywords: [
+      "Medical Credentialing",
+      "Provider Enrollment",
+      "Payer Contracting",
+      "CAQH",
+      "PECOS",
+      "Medicare Enrollment",
+      "Medicaid Enrollment",
+      "Credentialing Services",
+      "Healthcare Revenue Cycle",
+      "Practice Credentialing",
+    ],
+  },
+
+  hero: {
+    eyebrow: "Credentialing & Payer Contracting",
+
+    title:
+      "Your new provider is seeing patients. That doesn't mean they're getting paid.",
+
+    highlight: "Getting Paid",
+
+    description:
+      "Credentialing mistakes rarely announce themselves. They quietly become denied claims, delayed reimbursements, and revenue loss weeks after services have already been delivered. We make sure your providers are credentialed correctly before the first claim is submitted.",
+
+    image: "/images/services/credentialing/hero.webp",
+
+    ctaText: "Book a Discovery Call",
+
+    ctaLink: "/contact",
+  },
+
+  problem: {
+    eyebrow: "The Reality",
+
+    title:
+      "Adding a provider is one of the highest risk moments in your revenue cycle.",
+
+    highlight: "Highest Risk",
+
+    description:
+      "Every payer has different enrollment requirements, timelines, and approval processes. A single mistake, such as an incorrect taxonomy code or incomplete enrollment, can leave a provider treating patients without being eligible for reimbursement. Most practices don't discover the problem until weeks later when denials begin piling up. By then, thousands of dollars in revenue may already be at risk.",
+
+    image: "/images/services/credentialing/problem.webp",
+
+    ctaText: "Talk With Our Team",
+
+    ctaLink: "/contact",
+  },
+
+  caseStudy: {
+    id: "credentialing-taxonomy-case-study",
+
+    slug: "the-credentialing-approval-that-wasnt",
+
+    eyebrow: "Real Incident",
+
+    title: "The provider was credentialed. The taxonomy code was wrong.",
+
+    description:
+      "A newly hired provider was successfully credentialed and immediately began seeing patients. Weeks later, claim denials started piling up because the provider had been enrolled under the wrong specialty taxonomy code. We identified the issue, corrected the enrollments, coordinated with payers, and helped recover as much revenue as possible.",
+
+    image: "/case-studies/credentialing-taxonomy.jpg",
+
+    location: "Las Vegas Medical Practice",
+
+    result: "Weeks of future claim denials prevented",
+
+    buttonText: "Read Full Story",
+  },
+
+  features: {
+    eyebrow: "Our Services",
+
+    title:
+      "Every application tracked. Every enrollment verified. Every step visible.",
+
+    description:
+      "Credentialing isn't just paperwork. It's the foundation of your revenue cycle. We manage every stage of provider enrollment, monitor every deadline, and keep your billing team informed so providers can start billing with confidence.",
+
+    items: [
+      {
+        title: "New Provider Credentialing & Enrollment",
+
+        description:
+          "We manage the complete credentialing process across Medicare, Medicaid, and commercial payers. Every application is prepared correctly, submitted with accurate provider information and taxonomy codes, tracked through approval, and communicated to your billing team before the first claim is submitted.",
+
+        icon: "UserPlus",
+      },
+
+      {
+        title: "CAQH Setup & Maintenance",
+
+        description:
+          "We create, update, and maintain CAQH provider profiles, keeping attestations current and provider information accurate so payer enrollments are never delayed because of outdated records.",
+
+        icon: "Database",
+      },
+
+      {
+        title: "Medicare & Medicaid Enrollment",
+
+        description:
+          "From PECOS enrollment to state Medicaid registration and NPI management, we handle government payer enrollment requirements so providers can begin billing without unnecessary administrative delays.",
+
+        icon: "ShieldCheck",
+      },
+
+      {
+        title: "Recredentialing & Deadline Management",
+
+        description:
+          "Credentialing expires. We continuously monitor every provider's renewal schedule, submit recredentialing applications before deadlines, and prevent lapses that could suspend reimbursement.",
+
+        icon: "CalendarClock",
+      },
+
+      {
+        title: "Payer Contract Review & Negotiation",
+
+        description:
+          "We review reimbursement contracts, compare rates against market benchmarks, identify underperforming agreements, and help negotiate stronger reimbursement terms with commercial payers.",
+
+        icon: "Handshake",
+      },
+
+      {
+        title: "Credentialing Denial Resolution",
+
+        description:
+          "When an enrollment application is denied, we identify the cause, prepare supporting documentation, submit reconsiderations, and manage communication until the provider is successfully enrolled.",
+
+        icon: "FileWarning",
+      },
+
+      {
+        title: "Credentialing Status Tracking",
+
+        description:
+          "Through Practice One, every application, approval, renewal, and enrollment milestone is visible in real time. You'll always know where every provider stands with every payer.",
+
+        icon: "Activity",
+      },
+
+      {
+        title: "Credentialing Vendor Oversight",
+
+        description:
+          "Already working with a credentialing vendor? We oversee timelines, monitor performance, coordinate communication with billing, escalate delays, and ensure nothing falls through the cracks.",
+
+        icon: "Users",
+      },
+    ],
+  },
+
+  difference: {
+    eyebrow: "Why Choose Lama Healthcare",
+
+    title:
+      "We connect credentialing with billing so revenue isn't lost between the two.",
+
+    highlight: "Connected",
+
+    description:
+      "Most practices use separate vendors for credentialing and billing. We bridge that gap by ensuring every enrollment milestone is communicated to billing before claims are submitted, eliminating the disconnect that causes preventable denials.",
+
+    items: [
+      {
+        title: "Credentialing & Billing Stay Connected",
+
+        description:
+          "Every enrollment approval, taxonomy code, effective date, and payer confirmation is shared with your billing team before claims are submitted.",
+      },
+
+      {
+        title: "Complete Visibility",
+
+        description:
+          "Track every provider, payer, application status, approval, and renewal deadline through Practice One without chasing vendors for updates.",
+      },
+
+      {
+        title: "One Dedicated Partner",
+
+        description:
+          "Instead of coordinating multiple vendors, you work with one team that manages credentialing, follows up with payers, resolves delays, and keeps your practice informed.",
+      },
+    ],
+  },
+
+  audience: {
+    eyebrow: "Who We Serve",
+
+    title:
+      "Built for practices where enrollment delays directly impact revenue.",
+
+    description:
+      "Whether you're onboarding new providers, expanding locations, or managing multiple specialties, we ensure your providers are credentialed correctly and ready to bill.",
+
+    image: "/images/services/credentialing/audience.webp",
+
+    audiences: [
+      {
+        title: "Independent Physician Practices",
+
+        description:
+          "Credentialing support for single and multi-provider physician groups.",
+      },
+
+      {
+        title: "Nurse Practitioner Practices",
+
+        description:
+          "Provider enrollment and payer contracting for growing NP practices.",
+      },
+
+      {
+        title: "Behavioral Health Clinics",
+
+        description:
+          "Credentialing management for therapists, psychiatrists, psychologists, and counselors.",
+      },
+
+      {
+        title: "Specialty Medical Clinics",
+
+        description:
+          "End-to-end enrollment for specialty providers with complex payer requirements.",
+      },
+
+      {
+        title: "Ambulatory Surgery Centers",
+
+        description:
+          "Provider credentialing and payer enrollment for outpatient surgical facilities.",
+      },
+
+      {
+        title: "Home Health & Therapy Providers",
+
+        description:
+          "Enrollment management for home health agencies, physical therapy, and rehabilitation practices.",
+      },
+    ],
+  },
+
+  process: {
+    eyebrow: "Our Process",
+
+    title:
+      "A structured credentialing workflow that keeps providers billing on time.",
+
+    description:
+      "Every provider follows the same standardized process, ensuring nothing is missed before the first claim is submitted.",
+
+    steps: [
+      {
+        title: "Practice & Provider Assessment",
+
+        description:
+          "We review your providers, specialties, payer mix, existing enrollments, and documentation requirements.",
+      },
+
+      {
+        title: "Application Preparation",
+
+        description:
+          "Our team prepares CAQH, Medicare, Medicaid, commercial payer applications, taxonomy information, and supporting documents.",
+      },
+
+      {
+        title: "Submission & Follow-Up",
+
+        description:
+          "Applications are submitted, tracked continuously, and followed up with payers until approval is received.",
+      },
+
+      {
+        title: "Billing Coordination",
+
+        description:
+          "Enrollment details, payer approvals, taxonomy codes, and effective dates are verified with your billing team before claims begin.",
+      },
+
+      {
+        title: "Ongoing Monitoring",
+
+        description:
+          "We continue tracking recredentialing deadlines, enrollment updates, payer changes, and contract renewals throughout the provider lifecycle.",
+      },
+    ],
+  },
+
+  stats: {
+    eyebrow: "What You Gain",
+
+    title: "Credentialing that supports a healthier revenue cycle.",
+
+    description:
+      "Our focus is reducing administrative delays and ensuring providers can begin billing with confidence.",
+
+    stats: [
+      {
+        value: "100%",
+
+        label: "Application Visibility",
+
+        description:
+          "Track every provider, payer, and credentialing milestone from one dashboard.",
+      },
+
+      {
+        value: "1",
+
+        label: "Single Point of Contact",
+
+        description:
+          "One team manages applications, follow-ups, escalations, and communication.",
+      },
+
+      {
+        value: "24/7",
+
+        label: "Enrollment Tracking",
+
+        description:
+          "Know exactly where every application stands without contacting multiple vendors.",
+      },
+
+      {
+        value: "0",
+
+        label: "Missed Renewal Targets",
+
+        description:
+          "Proactive monitoring helps prevent avoidable credentialing lapses.",
+      },
+    ],
+  },
+
+  faq: {
+    eyebrow: "Frequently Asked Questions",
+
+    title: "Answers to common credentialing questions.",
+
+    description:
+      "Everything you need to know about provider credentialing, payer enrollment, and contract management.",
+
+    items: [
+      {
+        question: "How long does provider credentialing usually take?",
+
+        answer:
+          "The timeline depends on each payer. Medicare, Medicaid, and commercial insurers all have different processing times. We track every application proactively and follow up regularly to minimize delays.",
+      },
+
+      {
+        question:
+          "Can providers start seeing patients before credentialing is complete?",
+
+        answer:
+          "Providers may begin seeing patients, but claims often cannot be reimbursed until enrollment is approved with the appropriate payer. We help coordinate approvals so billing begins at the right time.",
+      },
+
+      {
+        question: "What is CAQH and why is it important?",
+
+        answer:
+          "CAQH is a centralized provider database used by many insurance companies during credentialing. Keeping provider profiles accurate and regularly attested prevents unnecessary enrollment delays.",
+      },
+
+      {
+        question: "Do you handle Medicare and Medicaid enrollment?",
+
+        answer:
+          "Yes. We manage Medicare enrollment through PECOS, Medicaid enrollment, NPI registration, and ongoing provider maintenance for government payers.",
+      },
+
+      {
+        question: "Can you review our existing payer contracts?",
+
+        answer:
+          "Absolutely. We evaluate reimbursement rates, identify underperforming contracts, compare them against current benchmarks, and support negotiations for stronger payer agreements.",
+      },
+
+      {
+        question: "What happens if a credentialing application is denied?",
+
+        answer:
+          "We identify the reason for the denial, prepare supporting documentation, submit reconsiderations, and work directly with the payer until the issue is resolved whenever possible.",
+      },
+
+      {
+        question: "How do you prevent credentialing lapses?",
+
+        answer:
+          "We continuously monitor renewal deadlines, manage recredentialing submissions in advance, and notify your team before credentials expire so providers maintain uninterrupted billing privileges.",
+      },
+
+      {
+        question: "How do you keep billing informed?",
+
+        answer:
+          "Every enrollment milestone, including payer approval, effective dates, taxonomy verification, and payer participation, is communicated to the billing team before claims are submitted.",
+      },
+    ],
+  },
+
+  cta: {
+    eyebrow: "Get Started",
+
+    title: "Let's find out where your credentialing really stands.",
+
+    description:
+      "Most practices have at least one enrollment gap they aren't aware of. We'll review your provider enrollments, credentialing timelines, and payer participation to identify potential risks before they become lost revenue.",
+
+    primaryButton: {
+      label: "Schedule a Free Discovery Call",
+
+      href: "/contact",
+    },
+
+    secondaryButton: {
+      label: "Explore Practice One",
+
+      href: "/practice-one",
+    },
+  },
+
+  relatedBlogs: {
+    eyebrow: "Related Insights",
+
+    title: "Learn more about provider enrollment and revenue protection.",
+
+    description:
+      "Explore expert resources on credentialing, payer contracting, and revenue cycle management.",
+
+    blogs: [],
+  },
+};
+
+export default credentialing;

@@ -6,23 +6,23 @@ import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
-    title: "Revenue Cycle Management",
+    title: "Medical Billing / RCM",
     description:
       "Maximize collections and reduce revenue leakage across the entire revenue cycle.",
-    href: "/services/revenue-cycle-management",
+    href: "/services/medical-billing",
     span: "large",
   },
   {
     title: "Credentialing & Enrollment",
     description:
       "Accelerate provider enrollment while minimizing delays and costly errors.",
-    href: "/services/credentialing-enrollment",
+    href: "/services/credentialing",
     span: "large",
   },
   {
     title: "Compliance Management",
     description: "Stay compliant with payer and regulatory requirements.",
-    href: "/services/compliance-management",
+    href: "/services/hipaa-compliance",
     span: "small",
   },
   {
@@ -33,9 +33,10 @@ const services = [
     span: "small",
   },
   {
-    title: "Reporting & Analytics",
-    description: "Gain complete visibility into your practice performance.",
-    href: "/services/reporting-analytics",
+    title: "Launcing New Practice",
+    description:
+      "Assist with Launching New Medical Practice | Start Your Practice Right ",
+    href: "/services/new-practice-consulting",
     span: "small",
   },
 ];

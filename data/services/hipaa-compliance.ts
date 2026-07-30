@@ -1,9 +1,9 @@
 import { Service } from "@/types/service";
 
 const hipaaCompliance: Service = {
-  id: "hipaa-privacy-security-compliance",
+  id: "hipaa-compliance",
 
-  slug: "hipaa-privacy-security-compliance",
+  slug: "hipaa-compliance",
 
   seo: {
     title: "HIPAA Privacy & Security Compliance | Lama Healthcare",

@@ -45,7 +45,7 @@ export default function ProblemsSection() {
   return (
     <section className="relative overflow-hidden bg-white py-20 lg:py-28">
       {/* Decorative Circles */}
-      <div className="absolute left-10 top-[55%] h-28 w-28 rounded-full bg-[#43697B]" />
+      <div className="absolute z-0 left-20 top-[48%] h-28 w-28 rounded-full bg-[#43697B]" />
 
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
@@ -73,14 +73,14 @@ export default function ProblemsSection() {
         </div>
 
         {/* Cards */}
-        <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className=" relative z-10 mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-5 ">
           {problems.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={index}
-                className="rounded-[28px] border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="rounded-[28px] border border-gray-200 bg-neutral/80 shadow-md backdrop-blur p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 {/* Icon */}
                 <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#E6DCC8]">
@@ -88,7 +88,7 @@ export default function ProblemsSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-8 text-center text-2xl font-semibold leading-tight text-[#222]">
+                <h3 className="mt-8 text-center text-xl font-semibold leading-tight text-[#222]">
                   {item.title}
                 </h3>
 
@@ -96,7 +96,7 @@ export default function ProblemsSection() {
                 <div className="mx-auto my-6 h-[2px] w-10 bg-[#C69247]" />
 
                 {/* Description */}
-                <p className="text-center text-base leading-8 text-gray-600">
+                <p className="text-center text-sm leading-6 text-gray-600">
                   {item.description}
                 </p>
               </div>

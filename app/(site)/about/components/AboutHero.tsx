@@ -6,10 +6,10 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function AboutHero() {
   return (
-    <section className="w-full bg-white py-10 lg:py-16 px-4 lg:px-12">
+    <section className="w-full bg-white p-4 lg:px-12">
       <div className="mx-auto  px-5">
         {/* Hero */}
-        <div className="overflow-hidden rounded-[32px] bg-[#eef2f4] shadow-sm">
+        <div className="overflow-hidden rounded-[32px] mt-16 lg:mt-20 bg-[#eef2f4] shadow-sm">
           <div className="grid lg:grid-cols-2">
             {/* Left Content */}
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">

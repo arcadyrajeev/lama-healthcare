@@ -12,9 +12,9 @@ interface ServiceHeroProps {
 
 export default function ServiceHero({ data }: ServiceHeroProps) {
   return (
-    <section className="py-10 lg:py-16">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="overflow-hidden rounded-[32px] bg-[#F5F5F3]">
+    <section className="w-full bg-white p-4 lg:px-12">
+      <div className="mx-auto px-6">
+        <div className="overflow-hidden rounded-[32px] bg-[#F5F5F3] mt-16 lg:mt-20">
           <div className="grid items-center lg:grid-cols-2">
             {/* Left */}
             <div className="px-8 py-12 lg:px-14 lg:py-16">
@@ -22,7 +22,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                 {data.eyebrow}
               </p>
 
-              <h1 className="text-4xl font-serif leading-tight text-[#2F2F2F] md:text-5xl lg:text-6xl">
+              <h1 className="text-4xl font-serif leading-tight text-[#2F2F2F] md:text-4xl lg:text-5xl">
                 {data.title}
 
                 {data.highlight && (
