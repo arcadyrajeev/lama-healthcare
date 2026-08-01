@@ -12,11 +12,6 @@ interface ServiceAudienceProps {
 export default function ServiceAudience({ data }: ServiceAudienceProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* Decorative Elements */}
-      <div className="absolute -left-24 top-20 h-48 w-48 rounded-full bg-[#456B7C]" />
-
-      <div className="absolute -right-10 bottom-20 h-24 w-24 rounded-full bg-[#C6944A]" />
-
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Image */}

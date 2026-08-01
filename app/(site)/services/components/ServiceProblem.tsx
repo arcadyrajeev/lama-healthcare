@@ -13,11 +13,6 @@ interface ServiceProblemProps {
 export default function ServiceProblem({ data }: ServiceProblemProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* Decorative Shapes */}
-      <div className="absolute -left-20 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-[#3F6677]" />
-
-      <div className="absolute -right-10 top-1/2 h-28 w-28 rounded-full bg-[#C89A5A]" />
-
       <div className="mx-auto max-w-7xl px-6">
         <div className="overflow-hidden rounded-[32px] border border-gray-200 bg-[#F7F7F5]">
           <div className="grid items-center lg:grid-cols-2">

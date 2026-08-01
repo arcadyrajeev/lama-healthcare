@@ -90,14 +90,14 @@ export const credentialing: Service = {
       "Every application tracked. Every enrollment verified. Every step visible.",
 
     description:
-      "Credentialing isn't just paperwork. It's the foundation of your revenue cycle. We manage every stage of provider enrollment, monitor every deadline, and keep your billing team informed so providers can start billing with confidence.",
+      "From first enrollment to ongoing maintenance, we manage every stage of provider credentialing with complete visibility and accountability.",
 
     items: [
       {
         title: "New Provider Credentialing & Enrollment",
 
         description:
-          "We manage the complete credentialing process across Medicare, Medicaid, and commercial payers. Every application is prepared correctly, submitted with accurate provider information and taxonomy codes, tracked through approval, and communicated to your billing team before the first claim is submitted.",
+          "Complete provider enrollment across Medicare, Medicaid, and commercial payers, tracked from submission to approval.",
 
         icon: "UserPlus",
       },
@@ -106,7 +106,7 @@ export const credentialing: Service = {
         title: "CAQH Setup & Maintenance",
 
         description:
-          "We create, update, and maintain CAQH provider profiles, keeping attestations current and provider information accurate so payer enrollments are never delayed because of outdated records.",
+          "Keep CAQH profiles accurate, up to date, and fully compliant to prevent enrollment delays.",
 
         icon: "Database",
       },
@@ -115,7 +115,7 @@ export const credentialing: Service = {
         title: "Medicare & Medicaid Enrollment",
 
         description:
-          "From PECOS enrollment to state Medicaid registration and NPI management, we handle government payer enrollment requirements so providers can begin billing without unnecessary administrative delays.",
+          "Manage PECOS, Medicaid, and NPI enrollment to ensure providers are ready to bill.",
 
         icon: "ShieldCheck",
       },
@@ -124,7 +124,7 @@ export const credentialing: Service = {
         title: "Recredentialing & Deadline Management",
 
         description:
-          "Credentialing expires. We continuously monitor every provider's renewal schedule, submit recredentialing applications before deadlines, and prevent lapses that could suspend reimbursement.",
+          "Monitor renewals, submit applications early, and prevent credentialing lapses.",
 
         icon: "CalendarClock",
       },
@@ -133,7 +133,7 @@ export const credentialing: Service = {
         title: "Payer Contract Review & Negotiation",
 
         description:
-          "We review reimbursement contracts, compare rates against market benchmarks, identify underperforming agreements, and help negotiate stronger reimbursement terms with commercial payers.",
+          "Review payer agreements, identify opportunities, and support stronger reimbursement rates.",
 
         icon: "Handshake",
       },
@@ -142,7 +142,7 @@ export const credentialing: Service = {
         title: "Credentialing Denial Resolution",
 
         description:
-          "When an enrollment application is denied, we identify the cause, prepare supporting documentation, submit reconsiderations, and manage communication until the provider is successfully enrolled.",
+          "Resolve enrollment denials with documentation, appeals, and direct payer follow-up.",
 
         icon: "FileWarning",
       },
@@ -151,7 +151,7 @@ export const credentialing: Service = {
         title: "Credentialing Status Tracking",
 
         description:
-          "Through Practice One, every application, approval, renewal, and enrollment milestone is visible in real time. You'll always know where every provider stands with every payer.",
+          "Track every application, milestone, and approval with real-time visibility through Practice One.",
 
         icon: "Activity",
       },
@@ -160,7 +160,7 @@ export const credentialing: Service = {
         title: "Credentialing Vendor Oversight",
 
         description:
-          "Already working with a credentialing vendor? We oversee timelines, monitor performance, coordinate communication with billing, escalate delays, and ensure nothing falls through the cracks.",
+          "Oversee external vendors, monitor timelines, and ensure every enrollment stays on track.",
 
         icon: "Users",
       },

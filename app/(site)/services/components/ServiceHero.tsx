@@ -13,7 +13,7 @@ interface ServiceHeroProps {
 export default function ServiceHero({ data }: ServiceHeroProps) {
   return (
     <section className="w-full bg-white p-4 lg:px-12">
-      <div className="mx-auto px-6">
+      <div className="mx-auto lg:px-6">
         <div className="overflow-hidden rounded-[32px] bg-[#F5F5F3] mt-16 lg:mt-20">
           <div className="grid items-center lg:grid-cols-2">
             {/* Left */}

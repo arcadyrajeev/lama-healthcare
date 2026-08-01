@@ -18,11 +18,6 @@ export default function ServiceFAQ({ data }: ServiceFAQProps) {
 
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* Decorative Elements */}
-      <div className="absolute -left-24 top-20 h-52 w-52 rounded-full bg-[#456B7C]" />
-
-      <div className="absolute -right-10 bottom-16 h-24 w-24 rounded-full bg-[#C6944A]" />
-
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid items-start gap-16 lg:grid-cols-[420px_1fr]">
           {/* Left Content */}

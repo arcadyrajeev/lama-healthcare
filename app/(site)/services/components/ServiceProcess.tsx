@@ -11,11 +11,6 @@ interface ServiceProcessProps {
 export default function ServiceProcess({ data }: ServiceProcessProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* Decorative Elements */}
-      <div className="absolute -left-24 top-24 h-48 w-48 rounded-full bg-[#456B7C]" />
-
-      <div className="absolute -right-10 bottom-20 h-24 w-24 rounded-full bg-[#C6944A]" />
-
       <div className="mx-auto max-w-6xl px-6">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">

@@ -11,11 +11,6 @@ interface ServiceDifferenceProps {
 export default function ServiceDifference({ data }: ServiceDifferenceProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* Decorative Circles */}
-      <div className="absolute -left-24 top-0 h-56 w-56 rounded-full bg-[#456B7C]" />
-
-      <div className="absolute -right-10 bottom-10 h-24 w-24 rounded-full bg-[#C6944A]" />
-
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">

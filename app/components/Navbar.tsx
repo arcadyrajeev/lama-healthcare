@@ -88,7 +88,7 @@ const Navbar = () => {
   return (
     <nav
       className="
-        fixed z-50 w-full
+        fixed z-99 w-full
         flex justify-center md:justify-between
         items-center subheading
         px-2 sm:px-4 md:px-10 lg:px-[7.5rem]
@@ -190,7 +190,7 @@ const Navbar = () => {
 
           <div
             className={`
-        absolute top-[120%] -left-16
+        absolute top-[120%] -left-32 md:-left-16
         w-[75vw] sm:w-[320px] md:w-[280px]
         p-2
         rounded-2xl
