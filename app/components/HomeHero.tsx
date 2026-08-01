@@ -63,10 +63,6 @@ export default function HomeHero() {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <span className="inline-flex rounded-full border border-[#B9925A]/30 bg-[#B9925A]/10 px-4 py-2 text-[10px] lg:text-xs font-medium uppercase tracking-[0.25em] text-[#B9925A]">
-              Revenue Cycle Management
-            </span>
-
             <h1 className="mt-8 text-4xl font-serif leading-[1.05] tracking-tight text-[#1F1F1F] md:text-5xl xl:text-7xl">
               Your practice is losing{" "}
               <span className="italic text-[#2F6173]"> revenue </span>
