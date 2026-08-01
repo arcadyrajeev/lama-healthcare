@@ -138,16 +138,19 @@ const Navbar = () => {
         <li>
           <Link
             href="/practice-one"
-            className="
+            className={`
       block rounded-full h-full flex items-center justify-center
       px-[2.5vw] md:px-4 py-auto md:py-2 lg:px-6
       text-[2.5vw] sm:text-xs md:text-base 
-      font-light
-      text-white
-      bg-gradient-to-r from-[#2F6F73] via-[#4D7D82] to-[#BF7E27]
+
+       ${
+         pathname.startsWith("/practice-one")
+           ? "bg-gradient-to-r from-[#2F6F73] via-[#4D7D82] to-[#BF7E27] text-white font-light"
+           : "border-2 border-cyan-700 bg-gradient-to-r from-[#456B7C] via-[#5E8A98] to-[#C69247] bg-clip-text text-transparent text-secondary-text hover:bg-accent hover:text-white font-semibold"
+       }
       transition-all duration-300
       hover:brightness-110
-    "
+    `}
           >
             PRACTICE ONE
           </Link>
