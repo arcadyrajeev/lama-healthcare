@@ -28,13 +28,13 @@ const practiceOperations: Service = {
   hero: {
     eyebrow: "Practice Operations & Compliance",
 
-    title: "Someone can file a complaint against your practice tomorrow.",
+    title: "A complaint shouldn't expose operational weaknesses.",
 
     highlight:
-      "The only thing standing between you and a full investigation is your documentation.",
+      "Build the systems, documentation, and compliance programs before you're tested.",
 
     description:
-      "Operational inefficiencies slow your practice down. Compliance gaps put your business at risk. We build operational systems, documentation, and compliance programs that keep your practice running efficiently while ensuring you're prepared when regulators, auditors, or investigators come knocking.",
+      "We help independent medical practices streamline daily operations, strengthen compliance, and create audit-ready documentation so you're prepared for regulators, investigators, and sustainable growth.",
 
     image: "/services/practice-operations-compliance/hero.jpg",
 

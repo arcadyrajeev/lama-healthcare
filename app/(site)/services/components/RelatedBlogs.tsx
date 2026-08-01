@@ -11,11 +11,6 @@ interface RelatedBlogsProps {
 export default function RelatedBlogs({ data }: RelatedBlogsProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* Decorative Elements */}
-      <div className="absolute -left-24 top-16 h-52 w-52 rounded-full bg-[#456B7C]" />
-
-      <div className="absolute -right-12 bottom-10 h-24 w-24 rounded-full bg-[#C6944A]" />
-
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">

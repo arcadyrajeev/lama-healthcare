@@ -12,7 +12,7 @@ export default function ServiceCaseStudy({ data }: ServiceCaseStudyProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
       {/* Decorative Elements */}
-      <div className="absolute left-0 top-20 h-40 w-40 -translate-x-1/2 rounded-full bg-[#456B7C]" />
+      <div className="absolute -left-10 top-20 h-40 w-40 -translate-x-1/2 rounded-full bg-[#456B7C]" />
 
       <div className="absolute right-0 bottom-16 h-24 w-24 translate-x-1/2 rounded-full bg-[#C6944A]" />
 
@@ -41,7 +41,9 @@ export default function ServiceCaseStudy({ data }: ServiceCaseStudyProps) {
         </div>
 
         {/* Card */}
-        <CaseCard data={data} />
+        <div className="mx-auto  z-50 relative">
+          <CaseCard data={data} />
+        </div>
       </div>
     </section>
   );

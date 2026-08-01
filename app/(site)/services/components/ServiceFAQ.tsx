@@ -47,7 +47,7 @@ export default function ServiceFAQ({ data }: ServiceFAQProps) {
                     onClick={() => toggle(index)}
                     className="flex w-full items-center justify-between gap-6 p-7 text-left"
                   >
-                    <h3 className="font-serif text-xl text-[#2F2F2F] md:text-2xl">
+                    <h3 className="font-serif text-lg text-[#2F2F2F] md:text-2xl">
                       {faq.question}
                     </h3>
 

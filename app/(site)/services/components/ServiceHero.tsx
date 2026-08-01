@@ -17,12 +17,12 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
         <div className="overflow-hidden rounded-[32px] bg-[#F5F5F3] mt-16 lg:mt-20">
           <div className="grid items-center lg:grid-cols-2">
             {/* Left */}
-            <div className="px-8 py-12 lg:px-14 lg:py-16">
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-[#C6944A]">
+            <div className="px-6 py-12 lg:px-14 lg:py-16">
+              <p className="mb-5 text-sm  font-semibold uppercase tracking-[0.3em] text-[#C6944A]">
                 {data.eyebrow}
               </p>
 
-              <h1 className="text-4xl font-serif leading-tight text-[#2F2F2F] md:text-4xl lg:text-5xl">
+              <h1 className="text-xl font-serif leading-tight text-[#2F2F2F] md:text-4xl lg:text-5xl">
                 {data.title}
 
                 {data.highlight && (
@@ -38,7 +38,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
 
               <div className="mt-8 h-[2px] w-24 bg-[#C6944A]" />
 
-              <p className="mt-8 max-w-xl text-lg leading-8 text-[#666666]">
+              <p className="mt-8 max-w-xltext-sm lg:text-lg leading-6 lg:leading-8  text-[#666666]">
                 {data.description}
               </p>
 

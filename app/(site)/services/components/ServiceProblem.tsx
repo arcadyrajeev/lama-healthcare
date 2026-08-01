@@ -27,12 +27,12 @@ export default function ServiceProblem({ data }: ServiceProblemProps) {
             </div>
 
             {/* Content */}
-            <div className="relative order-1 px-8 py-12 lg:order-2 lg:px-14">
+            <div className="relative order-1 px-6 py-12 lg:order-2 lg:px-14">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C89A5A]">
                 {data.eyebrow}
               </p>
 
-              <h2 className="mt-5 text-4xl leading-tight text-[#2E2E2E] lg:text-5xl">
+              <h2 className="mt-5 text-3xl leading-tight text-[#2E2E2E] lg:text-5xl">
                 <span className="font-serif">{data.title}</span>
 
                 {data.highlight && (
@@ -48,7 +48,7 @@ export default function ServiceProblem({ data }: ServiceProblemProps) {
 
               <div className="mt-8 h-[2px] w-20 bg-[#C89A5A]" />
 
-              <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
+              <p className="mt-8 max-w-xl text-sm lg:text-lg leading-6 lg:leading-8 text-gray-600">
                 {data.description}
               </p>
 

@@ -10,7 +10,7 @@ export default function ServiceStats({ data }: ServiceStatsProps) {
   return (
     <section className="relative overflow-hidden bg-[#F8FAFB] py-20 lg:py-28">
       {/* Decorative Elements */}
-      <div className="absolute -left-24 top-12 h-56 w-56 rounded-full bg-[#456B7C]" />
+      <div className="absolute hidden lg:block -left-24 top-12 h-56 w-56 rounded-full border-2  border-[#456B7C]" />
 
       <div className="absolute -right-10 bottom-12 h-24 w-24 rounded-full bg-[#C6944A]" />
 
@@ -37,7 +37,7 @@ export default function ServiceStats({ data }: ServiceStatsProps) {
         {/* Stats */}
         <div className="mt-20 grid gap-8 lg:grid-cols-12">
           {/* Featured Stat */}
-          <div className="overflow-hidden rounded-[36px] bg-[#456B7C] p-10 text-white lg:col-span-5">
+          <div className="overflow-hidden rounded-[36px] bg-main p-10 text-white lg:col-span-5">
             <p className="text-sm uppercase tracking-[0.25em] text-white/70">
               Featured Metric
             </p>

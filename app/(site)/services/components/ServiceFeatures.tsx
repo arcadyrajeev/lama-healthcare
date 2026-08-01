@@ -71,7 +71,7 @@ export default function ServiceFeatures({ data }: ServiceFeaturesProps) {
           <div className="mx-auto mt-8 h-[2px] w-24 bg-[#C6944A]" />
 
           {data.description && (
-            <p className="mt-8 text-lg leading-8 text-gray-600">
+            <p className="mt-8 text-sm lg:text-lg leading-6 lg:leading-8  text-gray-600">
               {data.description}
             </p>
           )}

@@ -9,26 +9,69 @@ import {
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 const services = [
-  "Medical Billing",
-  "Credentialing",
-  "Revenue Cycle Management",
-  "Virtual Staffing",
-  "Practice Consulting",
+  {
+    name: "Credentialing",
+    href: "/services/credentialing",
+  },
+  {
+    name: "Medical Billing",
+    href: "/services/medical-billing",
+  },
+  {
+    name: "Practice Operations",
+    href: "/services/practice-operations",
+  },
+  {
+    name: "New Practice Consulting",
+    href: "/services/new-practice-consulting",
+  },
+  {
+    name: "HIPAA Compliance",
+    href: "/services/hipaa-compliance",
+  },
 ];
 
-const quickLinks = ["Home", "About", "Services", "Process", "FAQs", "Contact"];
+const companyLinks = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
+
+const resources = [
+  {
+    name: "Practice One",
+    href: "/practice-one",
+  },
+  {
+    name: "Case Studies",
+    href: "/case-study",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+];
 
 const keywords = [
   "Medical Billing",
-  "RCM",
   "Credentialing",
-  "Healthcare Consulting",
-  "Medical Coding",
-  "Practice Growth",
-  "Revenue Optimization",
-  "Compliance",
+  "Practice Operations",
+  "HIPAA Compliance",
+  "New Practice Consulting",
+  "Practice One",
+  "Revenue Cycle",
+  "Healthcare Operations",
   "Provider Enrollment",
-  "Operations",
+  "Independent Medical Practices",
 ];
 
 export default function Footer() {
@@ -36,7 +79,48 @@ export default function Footer() {
     <footer className="bg-main text-white">
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8">
         {/* Top */}
+        {/* Practice One */}
+        <div className="mb-16 overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-r from-[#2F6173] via-[#4E90A8] to-[#C6944A] p-[1px]">
+          <div className="flex flex-col items-start justify-between gap-8 rounded-[31px] bg-[#2F6173] px-8 py-8 lg:flex-row lg:items-center">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#DDB373]">
+                Flagship Product
+              </p>
 
+              <h3 className="mt-3 font-serif text-4xl text-white">
+                Practice One
+              </h3>
+
+              <p className="mt-4 max-w-xl leading-8 text-white/75">
+                One accountable team. One operational system. Manage
+                credentialing, billing, compliance, and practice operations from
+                a single platform.
+              </p>
+            </div>
+
+            <Link
+              href="/practice-one"
+              className="
+              shrink-0
+              rounded-full
+              border-white
+              border-1
+              bg-gradient-to-r
+              from-cyan-700 
+              to-[#C6944A]
+              px-8
+              py-4
+              font-semibold
+              text-white
+              transition
+              duration-300
+              hover:scale-105
+            "
+            >
+              Explore Practice One
+            </Link>
+          </div>
+        </div>
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           {/* Company */}
 
@@ -52,9 +136,9 @@ export default function Footer() {
             </Link>
 
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/70">
-              Helping healthcare organizations streamline operations, improve
-              revenue cycles, strengthen compliance, and scale with confidence
-              through end-to-end operational support.
+              We help independent medical practices build stronger operations
+              through credentialing, medical billing, compliance, and Practice
+              One, our operational management platform.
             </p>
 
             <div className="mt-6 flex gap-3">
@@ -91,27 +175,29 @@ export default function Footer() {
           {/* Services */}
 
           <div>
-            <h4 className="mb-5 text-sm font-semibold uppercase tracking-widest text-accent">
-              Services
-            </h4>
+            <div>
+              <h4 className="mb-5 text-sm font-semibold uppercase tracking-widest text-accent">
+                Services
+              </h4>
 
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <Link
-                    href="#"
-                    className="group flex items-center justify-between text-sm text-white/70 transition hover:text-white"
-                  >
-                    {service}
+              <ul className="space-y-3">
+                {services.map((service) => (
+                  <li key={service.name}>
+                    <Link
+                      href={service.href}
+                      className="group flex items-center justify-between text-sm text-white/70 transition hover:text-white"
+                    >
+                      {service.name}
 
-                    <ArrowUpRight
-                      size={14}
-                      className="opacity-0 transition group-hover:opacity-100"
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                      <ArrowUpRight
+                        size={14}
+                        className="opacity-0 transition group-hover:opacity-100"
+                      />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Navigation */}
@@ -122,17 +208,46 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link}>
+              {companyLinks.map((link) => (
+                <li key={link.name}>
                   <Link
-                    href="#"
-                    className="text-sm text-white/70 transition hover:text-white"
+                    href={link.href}
+                    className="group flex items-center justify-between text-sm text-white/70 transition hover:text-white"
                   >
-                    {link}
+                    {link.name}
+
+                    <ArrowUpRight
+                      size={14}
+                      className="opacity-0 transition group-hover:opacity-100"
+                    />
                   </Link>
                 </li>
               ))}
             </ul>
+
+            <div>
+              <h4 className="mb-5 mt-10 text-sm font-semibold uppercase tracking-widest text-accent">
+                Resources
+              </h4>
+
+              <ul className="space-y-3">
+                {resources.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="group flex items-center justify-between text-sm text-white/70 transition hover:text-white"
+                    >
+                      {item.name}
+
+                      <ArrowUpRight
+                        size={14}
+                        className="opacity-0 transition group-hover:opacity-100"
+                      />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Contact */}

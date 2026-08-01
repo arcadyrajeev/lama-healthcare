@@ -12,14 +12,13 @@ interface ServiceCTAProps {
 export default function ServiceCTA({ data }: ServiceCTAProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="relative overflow-hidden rounded-[40px] bg-[#456B7C] px-8 py-16 text-white shadow-2xl md:px-14 lg:px-20 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="relative overflow-hidden rounded-[40px] bg-main px-6 py-16 text-white shadow-2xl md:px-14 lg:px-20 lg:py-20">
           {/* Decorative Circles */}
           <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-white/5" />
 
-          <div className="absolute -right-16 bottom-0 h-48 w-48 rounded-full bg-[#C6944A]/20" />
-
           <div className="absolute right-10 top-10 h-20 w-20 rounded-full border border-white/10" />
+          <div className="absolute -right-16 -bottom-10 h-52 w-52 rounded-full border-2 border-accent/80" />
 
           <div className="relative z-10 grid items-center gap-14 lg:grid-cols-[1fr_340px]">
             {/* Content */}
