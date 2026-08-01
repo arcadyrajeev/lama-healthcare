@@ -26,21 +26,21 @@ export default function HomeHero() {
   const gradientY = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section ref={heroRef} className="relative  px-4 lg:px-12">
+    <section ref={heroRef} className="  px-4 lg:px-12">
       {/* Decorative Blur */}
 
       <motion.div
         style={{ y: gradientY }}
-        className="absolute left-1/2 top-44 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-[#9FD9E8]/30 blur-[130px]"
+        className="hidden md:block absolute left-1/2 top-44 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-[#9FD9E8]/30 blur-[130px]"
       />
 
       <motion.div
         style={{ y: gradientY }}
-        className="absolute bottom-0 right-0 h-[280px] w-[280px] rounded-full bg-[#C7A46A]/20 blur-[90px]"
+        className=" hidden md:block absolute bottom-0 right-0 h-[280px] w-[280px] rounded-full bg-[#C7A46A]/20 blur-[90px]"
       />
 
-      <div className="relative  bg-neutral-100 mx-16 mt-18 lg:mt-24 rounded-4xl z-10 mx-auto flex min-h-screenitems-center px-6 py-8 lg:px-12">
-        <div className="grid w-full items-center gap-16 lg:grid-cols-2">
+      <div className="relative  flex flex-col  bg-neutral-100 mx-16 mt-18 lg:mt-24 rounded-4xl z-10 mx-auto flex min-h-screenitems-center px-2 py-8 lg:px-12">
+        <div className="grid w-full items-center gap-16 lg:grid-cols-2 px-5">
           {/* LEFT CONTENT */}
 
           <motion.div
@@ -94,12 +94,12 @@ export default function HomeHero() {
 
           {/* RIGHT CONTENT */}
 
-          <div className="relative flex min-h-[760px] items-center justify-center">
+          <div className="relative flex min-h-[400px] items-center justify-center">
             {/* Soft Glow */}
 
             <motion.div
               style={{ y: gradientY, x: 150 }}
-              className="absolute h-[540px] w-[540px] rounded-full bg-gradient-to-br from-[#B5E8F2] via-[#D9F2F8]/40 to-transparent blur-[120px]"
+              className="absolute h-[540px] w-[540px] rounded-full bg-gradient-to-br from-[#B5E8F2] via-[#D9F2F8]/40 to-transparent blur-[120px] "
             />
 
             {/* Lama */}
@@ -109,7 +109,7 @@ export default function HomeHero() {
                 y: lamaY,
                 scale: lamaScale,
               }}
-              className="absolute z-10 portrait:w-[800px]  landscape:w-[900px] landscape:h-[800px] landscape:-translate-x-30"
+              className="absolute z-10 portrait:w-[900px]  landscape:w-[1000px] landscape:h-[600px] -translate-x-10 -translate-y-40 lg:landscape:-translate-x-40 "
             >
               <Image
                 src="/images/lama-hero2.png"
@@ -122,16 +122,24 @@ export default function HomeHero() {
             </motion.div>
 
             {/* Floating Cards */}
-
-            <motion.div
-              style={{
-                y: cardsY,
-              }}
-              className="absolute right-0 top-3/4 z-20 "
-            >
-              <FloatingCards />
-            </motion.div>
           </div>
+        </div>
+        <div className="relative w-full  h-[100vh] landscape:h-[10vh] md:portrait:h-[20vh] ">
+          <motion.div
+            style={{ y: cardsY }}
+            className="
+              absolute
+              z-20
+
+
+              landscape:left-auto
+              landscape:right-0
+              landscape:-top-50
+              landscape:bottom-auto
+              landscape:translate-x-0"
+          >
+            <FloatingCards />
+          </motion.div>
         </div>
       </div>
 

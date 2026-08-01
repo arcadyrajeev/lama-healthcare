@@ -5,11 +5,11 @@ import CTAButton from "./CTAButton";
 
 export default function FloatingCards() {
   return (
-    <div className="hidden lg:block">
-      <div className="grid w-[50vw] grid-cols-3 gap-4">
+    <div className="w-full">
+      <div className="grid portrait:w-full landscape:w-[50vw] grid-cols-1 md:grid-cols-3 gap-4">
         {/* LEFT CARD */}
 
-        <div className="row-span-4 flex h-full flex-col justify-between rounded-3xl bg-[#2F6173] p-8 text-white shadow-2xl">
+        <div className="md:row-span-4 flex h-full flex-col justify-between rounded-3xl bg-[#2F6173] p-8 text-white shadow-2xl">
           <div>
             <p className="text-[34px] font-light leading-[1.1]">
               We lived
@@ -57,7 +57,7 @@ export default function FloatingCards() {
 
         {/* Bottom */}
 
-        <div className="col-span-2 rounded-3xl bg-white p-6 shadow-xl">
+        <div className="md:col-span-2 rounded-3xl bg-white p-6 shadow-xl">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-neutral-500">Independent Practices</p>

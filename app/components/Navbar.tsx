@@ -33,6 +33,15 @@ const Navbar = () => {
 
   const moreLinks = [
     {
+      name: "Case Studies",
+      path: "/case-study",
+    },
+
+    {
+      name: "About",
+      path: "/about",
+    },
+    {
       name: "Blog",
       path: "/blog",
     },
@@ -96,42 +105,55 @@ const Navbar = () => {
       {/* Navigation */}
       <ul
         className="
-          flex gap-2 md:gap-4 lg:gap-4
-          backdrop-blur-lg
-          border border-white
-          bg-neutral-300/20
-           
-          rounded-full
-          p-[1vw] lg:p-1
-        "
+    flex gap-2 md:gap-4 lg:gap-4
+    backdrop-blur-lg
+    border border-white
+    bg-neutral-300/20
+    rounded-full
+    p-[1vw] lg:p-1
+  "
       >
         {/* Home */}
-        {links.slice(0, 1).map((link) => {
-          const active = isActive(link.path);
+        <li>
+          <Link
+            href="/"
+            className={`
+        block rounded-full
+        px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
+        text-[3.5vw] sm:text-xs md:text-md lg:text-base
+        transition-colors duration-200
+        ${
+          pathname === "/"
+            ? "bg-accent text-white"
+            : "text-secondary-text hover:bg-accent hover:text-white"
+        }
+      `}
+          >
+            Home
+          </Link>
+        </li>
 
-          return (
-            <li key={link.name}>
-              <Link
-                href={link.path}
-                className={`
-                  block rounded-full
-                  px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
-                  text-[3.5vw] sm:text-xs md:text-md lg:text-base
-                  transition-colors duration-200  
-                  ${
-                    active
-                      ? "bg-accent text-white"
-                      : "text-secondary-text hover:bg-accent hover:text-white"
-                  }
-                `}
-              >
-                {link.name}
-              </Link>
-            </li>
-          );
-        })}
+        {/* Practice One */}
 
-        {/* Services Dropdown */}
+        <li>
+          <Link
+            href="/practice-one"
+            className="
+      block rounded-full h-full flex items-center justify-center
+      px-[2.5vw] md:px-4 py-auto md:py-2 lg:px-6
+      text-[2.5vw] sm:text-xs md:text-base 
+      font-light
+      text-white
+      bg-gradient-to-r from-[#2F6F73] via-[#4D7D82] to-[#BF7E27]
+      transition-all duration-300
+      hover:brightness-110
+    "
+          >
+            PRACTICE ONE
+          </Link>
+        </li>
+
+        {/* Services */}
         <li
           ref={dropdownRef}
           className="relative"
@@ -142,18 +164,17 @@ const Navbar = () => {
             type="button"
             onClick={() => setServicesOpen((prev) => !prev)}
             className={`
-              flex items-center gap-1
-              rounded-full  
-              px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
-              text-[3.5vw] sm:text-xs md:text-md lg:text-base
-             
-              transition-colors duration-200
-              ${
-                pathname.startsWith("/services")
-                  ? "bg-accent text-white"
-                  : "text-secondary-text hover:bg-accent hover:text-white"
-              }
-            `}
+        flex items-center gap-1
+        rounded-full
+        px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
+        text-[3.5vw] sm:text-xs md:text-md lg:text-base
+        transition-colors duration-200
+        ${
+          pathname.startsWith("/services")
+            ? "bg-accent text-white"
+            : "text-secondary-text hover:bg-accent hover:text-white"
+        }
+      `}
           >
             Services
             <ChevronDown
@@ -164,23 +185,23 @@ const Navbar = () => {
             />
           </button>
 
-          {/* Services Dropdown */}
           <div
             className={`
-              absolute top-[120%] -left-16
-              w-[75vw] p-2 sm:w-[320px] md:w-[280px]
-              rounded-2xl
-              border border-neutral-200
-              bg-white  
-              shadow-2xl
-              overflow-hidden
-              transition-all duration-300
-              ${
-                servicesOpen
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
-              }
-            `}
+        absolute top-[120%] -left-16
+        w-[75vw] sm:w-[320px] md:w-[280px]
+        p-2
+        rounded-2xl
+        border border-neutral-200
+        bg-white
+        shadow-2xl
+        overflow-hidden
+        transition-all duration-300
+        ${
+          servicesOpen
+            ? "opacity-100 visible translate-y-0"
+            : "opacity-0 invisible -translate-y-2"
+        }
+      `}
           >
             <div className="flex flex-col">
               {services.map((service) => (
@@ -189,17 +210,16 @@ const Navbar = () => {
                   href={`/services/${service.slug}`}
                   onClick={() => setServicesOpen(false)}
                   className="
-      px-5 md:px-4
-      py-4 md:py-3
-      text-lg md:text-sm
-      leading-relaxed
-      text-secondary-text
-      rounded-lg
-      hover:bg-neutral-200
-      transition-colors
-      border-b lg:border-0 border-neutral-200
-      last:border-b-0
-    "
+              px-5 md:px-4
+              py-4 md:py-3
+              text-lg md:text-sm
+              text-secondary-text
+              rounded-lg
+              hover:bg-neutral-200
+              transition-colors
+              border-b border-neutral-200
+              last:border-b-0 lg:border-b-0
+            "
                 >
                   {formatServiceName(service.slug)}
                 </Link>
@@ -208,33 +228,7 @@ const Navbar = () => {
           </div>
         </li>
 
-        {/* About */}
-        {links.slice(1).map((link) => {
-          const active = isActive(link.path);
-
-          return (
-            <li key={link.name}>
-              <Link
-                href={link.path}
-                className={`
-                  block rounded-full
-                  px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
-                  text-[3.5vw] sm:text-xs md:text-md lg:text-base
-                  transition-colors duration-200
-                  ${
-                    active
-                      ? "bg-accent text-white"
-                      : "text-secondary-text hover:bg-accent hover:text-white"
-                  }
-                `}
-              >
-                {link.name}
-              </Link>
-            </li>
-          );
-        })}
-
-        {/* More Dropdown */}
+        {/* More */}
         <li
           ref={moreDropdownRef}
           className="relative"
@@ -245,18 +239,20 @@ const Navbar = () => {
             type="button"
             onClick={() => setMoreOpen((prev) => !prev)}
             className={`
-              flex items-center gap-1
-              rounded-full
-              px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
-              text-[3.5vw] sm:text-xs md:text-md lg:text-base
-              
-              transition-colors duration-200
-              ${
-                pathname.startsWith("/blog") || pathname === "/contact"
-                  ? "bg-accent text-white"
-                  : "text-secondary-text hover:bg-accent hover:text-white"
-              }
-            `}
+        flex items-center gap-1
+        rounded-full
+        px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
+        text-[3.5vw] sm:text-xs md:text-md lg:text-base
+        transition-colors duration-200
+        ${
+          pathname.startsWith("/case-study") ||
+          pathname.startsWith("/blog") ||
+          pathname.startsWith("/about") ||
+          pathname.startsWith("/contact")
+            ? "bg-accent text-white"
+            : "text-secondary-text hover:bg-accent hover:text-white"
+        }
+      `}
           >
             More
             <ChevronDown
@@ -267,49 +263,56 @@ const Navbar = () => {
             />
           </button>
 
-          {/* More Dropdown */}
           <div
             className={`
-              absolute top-[120%] right-0
-              w-[220px]
-              p-2
-              rounded-2xl
-              border border-neutral-200
-              bg-white
-              shadow-2xl
-              overflow-hidden
-              transition-all duration-300
-              ${
-                moreOpen
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
-              }
-            `}
+        absolute top-[120%] right-0
+        w-[220px]
+        p-2
+        rounded-2xl
+        border border-neutral-200
+        bg-white
+        shadow-2xl
+        overflow-hidden
+        transition-all duration-300
+        ${
+          moreOpen
+            ? "opacity-100 visible translate-y-0"
+            : "opacity-0 invisible -translate-y-2"
+        }
+      `}
           >
             <div className="flex flex-col">
-              {moreLinks.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.path}
-                  onClick={() => setMoreOpen(false)}
-                  className="
-                    px-5 md:px-4
-                    py-4 md:py-3
-                    text-lg md:text-sm
-                    leading-relaxed
-                    
-                    text-secondary-text
-                    rounded-lg
-                    hover:bg-neutral-200
-                  
-                    transition-colors
-                    border-b border-neutral-200
-                    last:border-b-0
-                  "
-                >
-                  {item.name}
-                </Link>
-              ))}
+              <Link
+                href="/case-study"
+                onClick={() => setMoreOpen(false)}
+                className="px-4 py-3 rounded-lg hover:bg-neutral-200 transition"
+              >
+                Case Studies
+              </Link>
+
+              <Link
+                href="/about"
+                onClick={() => setMoreOpen(false)}
+                className="px-4 py-3 rounded-lg hover:bg-neutral-200 transition"
+              >
+                About
+              </Link>
+
+              <Link
+                href="/blog"
+                onClick={() => setMoreOpen(false)}
+                className="px-4 py-3 rounded-lg hover:bg-neutral-200 transition"
+              >
+                Blog
+              </Link>
+
+              <Link
+                href="/contact"
+                onClick={() => setMoreOpen(false)}
+                className="px-4 py-3 rounded-lg hover:bg-neutral-200 transition"
+              >
+                Contact
+              </Link>
             </div>
           </div>
         </li>

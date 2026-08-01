@@ -63,7 +63,7 @@ const practiceOperations: Service = {
   caseStudy: {
     id: "anonymous-complaint-investigation",
 
-    slug: "anonymous-complaint-investigation-case-study",
+    slug: "anonymous-complaint-investigation",
 
     eyebrow: "Real Incident",
 

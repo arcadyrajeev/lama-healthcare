@@ -1,83 +1,191 @@
+// types/case-study.ts
+
 export interface CaseStudyCard {
   id: string;
+
   slug: string;
 
-  // Card Content
-  eyebrow?: string;
+  eyebrow: string;
+
   title: string;
+
   description: string;
+
   image: string;
 
-  // Optional Metadata
-  location?: string;
-  category?: string;
-  industry?: string;
-  result?: string;
+  location: string;
 
-  // CTA
-  buttonText?: string;
+  result: string;
+
+  buttonText: string;
 }
 
 export interface CaseStudy {
-  id: string;
   slug: string;
 
-  // SEO
-  seoTitle: string;
-  seoDescription: string;
+  hero: HeroSection;
 
-  // Hero
+  overview: OverviewSection;
+
+  challenge: ContentSection;
+
+  timeline: TimelineItem[];
+
+  findings: FindingsSection;
+
+  solution: SolutionSection;
+
+  results: ResultsSection;
+
+  lessons: LessonsSection;
+
+  quote: QuoteSection;
+
+  cta: CTASection;
+
+  featuredService: RelatedService;
+
+  relatedBlogs: RelatedBlog[];
+}
+
+export interface HeroSection {
   eyebrow: string;
   title: string;
   subtitle: string;
+
+  category: string;
+
+  tags: string[];
+
+  location: string;
+
+  readTime: string;
+
+  publishedBy: string;
+
   heroImage: string;
+}
 
-  // Metadata
-  location?: string;
-  industry?: string;
-  category?: string;
-  publishedAt?: string;
-  readTime?: string;
+export interface OverviewSection {
+  situation: string;
 
-  // Overview
-  overview: string;
+  problem: string;
 
-  // Challenge
-  challenge: string;
-
-  // Solution
   solution: string;
 
-  // Results
-  results: {
-    title: string;
-    value: string;
-  }[];
+  outcome: string;
+}
 
-  // Timeline (Optional)
-  timeline?: {
-    title: string;
-    description: string;
-  }[];
+export interface ContentSection {
+  eyebrow: string;
 
-  // Gallery
-  gallery?: string[];
+  title: string;
 
-  // Testimonial
-  testimonial?: {
-    quote: string;
-    author: string;
-    role: string;
-  };
+  subtitle?: string;
 
-  // Related Services
-  services?: string[];
+  description: string[];
+}
 
-  // CTA
-  cta: {
-    title: string;
-    description: string;
-    buttonText: string;
-    buttonLink: string;
-  };
+export interface TimelineItem {
+  step: string;
+
+  title: string;
+
+  description: string;
+}
+
+export interface FindingsSection {
+  eyebrow: string;
+
+  title: string;
+
+  subtitle?: string;
+
+  cards: FindingCard[];
+}
+
+export interface FindingCard {
+  title: string;
+
+  description: string;
+
+  icon?: string;
+}
+
+export interface SolutionSection {
+  eyebrow: string;
+
+  title: string;
+
+  subtitle?: string;
+
+  steps: SolutionStep[];
+}
+
+export interface SolutionStep {
+  title: string;
+
+  description: string;
+
+  icon?: string;
+}
+
+export interface ResultsSection {
+  eyebrow: string;
+
+  title: string;
+
+  subtitle?: string;
+
+  cards: ResultCard[];
+}
+
+export interface ResultCard {
+  value: string;
+
+  label: string;
+
+  description?: string;
+}
+
+export interface LessonsSection {
+  eyebrow: string;
+
+  title: string;
+
+  items: string[];
+}
+
+export interface QuoteSection {
+  text: string;
+
+  author?: string;
+}
+
+export interface CTASection {
+  eyebrow: string;
+
+  title: string;
+
+  description: string;
+
+  button: string;
+
+  href?: string;
+}
+
+export interface RelatedService {
+  slug: string;
+  title: string;
+  description: string;
+  href?: string;
+  image?: string;
+  cta?: string;
+}
+export interface RelatedBlog {
+  slug: string;
+
+  title: string;
+
+  image?: string;
 }

@@ -1,6 +1,7 @@
 "use client";
 
-import CaseStudyCard from "@/app/components/CaseStudyCard";
+import CaseCard from "@/app/components/CaseCard";
+
 import type { CaseStudyCard as CaseStudyCardData } from "@/types/case-study";
 
 interface ServiceCaseStudyProps {
@@ -40,7 +41,7 @@ export default function ServiceCaseStudy({ data }: ServiceCaseStudyProps) {
         </div>
 
         {/* Card */}
-        <CaseStudyCard data={data} />
+        <CaseCard data={data} />
       </div>
     </section>
   );

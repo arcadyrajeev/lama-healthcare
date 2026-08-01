@@ -10,7 +10,7 @@ interface CaseStudyCardProps {
   data: CaseStudyCardData;
 }
 
-export default function CaseStudyCard({ data }: CaseStudyCardProps) {
+export default function CaseCard({ data }: CaseStudyCardProps) {
   return (
     <div className="overflow-hidden rounded-[32px] border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <div className="grid lg:grid-cols-[320px_1fr]">
@@ -55,7 +55,7 @@ export default function CaseStudyCard({ data }: CaseStudyCardProps) {
           </div>
 
           <Link
-            href={`/${data.slug}`}
+            href={`/case-study/${data.slug}`}
             className="mt-10 inline-flex w-fit items-center gap-3 rounded-full bg-[#456B7C] px-6 py-3 font-medium text-white transition hover:bg-[#355564]"
           >
             {data.buttonText ?? "Read Case Study"}
