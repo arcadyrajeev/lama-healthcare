@@ -40,7 +40,7 @@ export default function IntroVideo() {
         <div className="overflow-hidden rounded-2xl lg:rounded-[36px] border border-neutral-200 bg-neutral-100 shadow-xl">
           <video
             ref={videoRef}
-            className="aspect-video w-full object-cover"
+            className="aspect-[16/8] w-full object-cover"
             autoPlay
             muted
             loop
