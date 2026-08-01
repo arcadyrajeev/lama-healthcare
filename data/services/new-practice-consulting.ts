@@ -88,67 +88,77 @@ const newPracticeConsulting: Service = {
     title: "Everything a new practice needs.",
 
     description:
-      "Launching a successful medical practice requires dozens of interconnected decisions. We guide you through every critical step in the right order, ensuring your business is fully prepared before opening day.",
+      "From business formation to compliance and billing, we help you launch your practice with the right systems from day one.",
 
     items: [
       {
-        title: "Business Formation & Practice Setup",
+        title: "Business Formation & Setup",
         description:
-          "Build your practice on a solid foundation with business registration, EIN and NPI setup, taxonomy selection, vendor recommendations, EMR implementation guidance, and workflow planning that supports long-term growth.",
+          "Register your business, obtain EIN and NPI, select taxonomy codes, and build the operational foundation for long-term growth.",
+        icon: "Building2",
       },
 
       {
-        title: "Credentialing & Provider Enrollment",
+        title: "Credentialing & Enrollment",
         description:
-          "We manage provider credentialing, Medicare and Medicaid enrollment, commercial insurance contracting, CAQH setup, PECOS assistance, taxonomy verification, and payer follow-up so you're ready to bill from day one.",
+          "Complete Medicare, Medicaid, commercial payer enrollment, CAQH setup, and provider credentialing before opening day.",
+        icon: "ShieldCheck",
       },
 
       {
-        title: "Medical Policies & Procedures",
+        title: "Policies & Procedures",
         description:
-          "Receive customized clinical and administrative policies built specifically for your practice, including HIPAA documentation, infection prevention protocols, employee handbooks, documentation standards, and emergency preparedness plans.",
+          "Receive customized clinical, administrative, and compliance policies tailored to your specialty.",
+        icon: "BookOpenCheck",
       },
 
       {
         title: "HIPAA Compliance",
         description:
-          "Establish a complete privacy and security program with HIPAA policies, Security Risk Assessment guidance, Notice of Privacy Practices, Business Associate Agreements, and staff training before your first patient visit.",
+          "Implement privacy policies, security documentation, risk assessments, and staff training before treating patients.",
+        icon: "LockKeyhole",
       },
 
       {
         title: "OSHA Compliance",
         description:
-          "Protect your team with a complete OSHA compliance program including Exposure Control Plans, Bloodborne Pathogens Program, Hazard Communication Program, workplace safety documentation, and annual training resources.",
+          "Protect your workplace with OSHA programs, safety documentation, and required employee training.",
+        icon: "HardHat",
       },
 
       {
-        title: "Revenue Cycle & Billing Setup",
+        title: "Revenue Cycle Setup",
         description:
-          "Create an efficient billing infrastructure with fee schedules, coding guidance, claims workflows, clearinghouse integration, payment posting procedures, and denial management processes designed for healthy cash flow.",
+          "Build efficient billing workflows, coding processes, fee schedules, and claims management from the start.",
+        icon: "CircleDollarSign",
       },
 
       {
         title: "Practice Operations",
         description:
-          "Design efficient front-office systems including scheduling workflows, patient intake, referral management, telephone procedures, staff responsibilities, and operational checklists tailored to your specialty.",
+          "Design scheduling, patient intake, referrals, and daily workflows for a smooth-running practice.",
+        icon: "Workflow",
       },
 
       {
         title: "Regulatory Compliance",
         description:
-          "Stay ahead of healthcare regulations with support for CMS requirements, Medicare compliance, documentation standards, internal audit frameworks, risk management, and record retention policies.",
+          "Stay aligned with CMS, Medicare, documentation standards, and ongoing regulatory requirements.",
+        icon: "Scale",
       },
 
       {
         title: "Forms & Documentation",
         description:
-          "Launch with professionally developed patient registration forms, consent forms, HIPAA acknowledgements, financial policies, medical history forms, onboarding documents, incident reports, and quality assurance forms.",
+          "Launch with professionally designed patient forms, consent documents, financial policies, and compliance paperwork.",
+        icon: "FileText",
       },
 
       {
-        title: "Staff Training & Support",
+        title: "Staff Training",
         description:
-          "Prepare your team before opening day with training covering HIPAA, OSHA, office workflows, documentation standards, compliance education, patient experience, and workplace safety procedures.",
+          "Prepare your team with training on HIPAA, OSHA, documentation, compliance, and patient experience.",
+        icon: "GraduationCap",
       },
     ],
   },

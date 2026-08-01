@@ -1,32 +1,58 @@
 "use client";
 
-import { CheckCircle2 } from "lucide-react";
-
 import type { ServiceFeatures as ServiceFeaturesData } from "@/types/service";
+
 import {
-  Users,
-  UserPlus,
-  Database,
-  ShieldCheck,
-  CalendarClock,
-  Handshake,
-  FileWarning,
   Activity,
+  BookOpenCheck,
+  Building2,
+  CalendarClock,
+  CheckCircle2,
+  SearchCheck,
+  CircleDollarSign,
+  Database,
+  FileText,
+  FileWarning,
+  GraduationCap,
+  ClipboardList,
+  Handshake,
+  HardHat,
+  LockKeyhole,
+  Scale,
+  ShieldCheck,
+  UserPlus,
+  LayoutDashboard,
+  Users,
+  Workflow,
 } from "lucide-react";
 
 interface ServiceFeaturesProps {
   data: ServiceFeaturesData;
 }
+
 export const serviceIcons = {
+  // Credentialing
   Users: Users,
   UserPlus: UserPlus,
   Database: Database,
   ShieldCheck: ShieldCheck,
   CalendarClock: CalendarClock,
+  SearchCheck: SearchCheck,
   Handshake: Handshake,
   FileWarning: FileWarning,
   Activity: Activity,
-};
+  ClipboardList: ClipboardList,
+  Building2: Building2,
+  BookOpenCheck: BookOpenCheck,
+  LockKeyhole: LockKeyhole,
+  HardHat: HardHat,
+  CircleDollarSign: CircleDollarSign,
+  Workflow: Workflow,
+  LayoutDashboard: LayoutDashboard,
+  Scale: Scale,
+  FileText: FileText,
+  GraduationCap: GraduationCap,
+} as const;
 
 export default function ServiceFeatures({ data }: ServiceFeaturesProps) {
   return (

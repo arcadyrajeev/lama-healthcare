@@ -94,101 +94,78 @@ const practiceOperations: Service = {
     items: [
       {
         title: "Staffing Analysis & Role Design",
-
         description:
-          "Evaluate staffing levels, clarify responsibilities, eliminate workflow gaps, and create documented job roles that improve accountability across your practice.",
-
+          "Define clear responsibilities, eliminate workflow gaps, and build accountability across your team.",
         icon: "Users",
       },
 
       {
-        title: "Front Office Workflow Optimization",
-
+        title: "Front Office Optimization",
         description:
-          "Redesign scheduling, patient intake, check-in, referrals, co-pay collection, and communication workflows to improve efficiency and enhance the patient experience.",
-
+          "Improve scheduling, patient intake, referrals, check-in, and front desk workflows for a better patient experience.",
         icon: "LayoutDashboard",
       },
 
       {
-        title: "Clinical Documentation Workflows",
-
+        title: "Clinical Documentation",
         description:
-          "Create standardized workflows for charting, documentation, referrals, and clinical processes that improve accuracy while supporting billing and regulatory compliance.",
-
+          "Standardize charting, referrals, and documentation workflows to improve accuracy and support compliant billing.",
         icon: "ClipboardList",
       },
 
       {
-        title: "Staff Onboarding & Training Systems",
-
+        title: "Staff Onboarding & Training",
         description:
-          "Develop structured onboarding programs and documented training processes that help every new employee follow consistent standards from day one.",
-
+          "Create structured onboarding and training programs that help every employee succeed from day one.",
         icon: "GraduationCap",
       },
 
       {
-        title: "Policies & Procedures Manual",
-
+        title: "Policies & Procedures",
         description:
-          "Build a customized operational manual that documents how your practice actually works, giving staff, auditors, and investigators a clear operational reference.",
-
-        icon: "BookOpen",
+          "Develop a customized operations manual with documented workflows, responsibilities, and best practices.",
+        icon: "BookOpenCheck",
       },
 
       {
-        title: "OSHA Compliance Program",
-
+        title: "OSHA Compliance",
         description:
-          "Implement Exposure Control Plans, Bloodborne Pathogen Programs, Hazard Communication, workplace safety documentation, annual OSHA training, and required compliance records.",
-
+          "Implement OSHA programs, workplace safety documentation, and required employee training.",
         icon: "ShieldCheck",
       },
 
       {
-        title: "Healthcare Regulatory Compliance",
-
+        title: "Healthcare Compliance",
         description:
-          "Develop compliance programs covering CMS requirements, Medicare standards, documentation policies, internal audits, record retention, and risk management.",
-
-        icon: "FileCheck",
+          "Stay aligned with CMS, Medicare, documentation standards, internal audits, and regulatory requirements.",
+        icon: "Scale",
       },
 
       {
-        title: "Compliance Training & Certification",
-
+        title: "Compliance Training",
         description:
-          "Deliver documented staff training across OSHA, HIPAA, documentation standards, safety procedures, and compliance requirements while tracking completion and certifications.",
-
-        icon: "BadgeCheck",
+          "Train staff on OSHA, HIPAA, documentation standards, workplace safety, and compliance requirements.",
+        icon: "GraduationCap",
       },
 
       {
         title: "Audit Preparation",
-
         description:
-          "Perform mock inspections, documentation reviews, policy gap assessments, and corrective action planning before regulators or auditors arrive.",
-
+          "Perform mock audits, documentation reviews, and corrective action planning before inspections.",
         icon: "SearchCheck",
       },
 
       {
-        title: "Incident Response Planning",
-
+        title: "Incident Response",
         description:
-          "Create documented workflows for workplace injuries, patient complaints, documentation errors, internal reporting, corrective actions, and compliance incidents.",
-
-        icon: "AlertTriangle",
+          "Establish response plans for workplace incidents, complaints, documentation errors, and compliance events.",
+        icon: "FileWarning",
       },
 
       {
-        title: "Continuous Compliance Management",
-
+        title: "Continuous Compliance",
         description:
-          "Keep documentation, policies, procedures, and compliance programs current as your practice grows, ensuring you're always prepared for audits and investigations.",
-
-        icon: "RefreshCw",
+          "Keep policies, documentation, and compliance programs current as your practice grows.",
       },
     ],
   },

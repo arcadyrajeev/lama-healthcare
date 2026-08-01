@@ -79,7 +79,7 @@ export default function Problem() {
 
             <div className="mt-12 rounded-[32px] border border-[#456B7C]/10 bg-[#EDF5F7] p-8">
               <div className="flex items-start gap-5">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#456B7C] text-white">
+                <div className="flex p-4 items-center justify-center rounded-2xl bg-[#456B7C] text-white">
                   <AlertTriangle size={26} />
                 </div>
 

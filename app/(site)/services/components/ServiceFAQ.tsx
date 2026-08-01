@@ -17,30 +17,24 @@ export default function ServiceFAQ({ data }: ServiceFAQProps) {
   };
 
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
+    <section className="relative overflow-hidden py-8 lg:py-28">
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="grid items-start gap-16 lg:grid-cols-[420px_1fr]">
+        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-[420px_1fr]">
           {/* Left Content */}
           <div className="sticky top-28">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C6944A]">
               {data.eyebrow}
             </p>
 
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#2F2F2F] md:text-5xl">
+            <h2 className="mt-5 font-serif text-3xl leading-tight text-[#2F2F2F] md:text-5xl">
               {data.title}
             </h2>
 
             <div className="mt-8 h-[2px] w-24 bg-[#C6944A]" />
-
-            {data.description && (
-              <p className="mt-8 text-lg leading-8 text-gray-600">
-                {data.description}
-              </p>
-            )}
           </div>
 
           {/* Accordion */}
-          <div className="space-y-5">
+          <div className="space-y-5 mt-24 lg:mt-0">
             {data.items.map((faq, index) => {
               const isOpen = openIndex === index;
 

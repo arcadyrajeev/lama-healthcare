@@ -92,43 +92,50 @@ const hipaaCompliance: Service = {
       {
         title: "HIPAA Privacy & Security Compliance",
         description:
-          "Build a complete HIPAA compliance program with customized Privacy and Security Policies, Notice of Privacy Practices, Business Associate Agreement guidance, administrative safeguards, technical safeguards, documentation, and staff training tailored specifically to your practice.",
+          "Implement customized HIPAA privacy policies, security safeguards, documentation, Business Associate Agreements, and staff training.",
+        icon: "LockKeyhole",
       },
 
       {
-        title: "Device & Network Security Management",
+        title: "Device & Network Security",
         description:
-          "Know exactly what's connected to your network. We document your practice environment, map every connected device, monitor firewall and VPN status, and maintain the network documentation auditors request first.",
+          "Document your network, monitor connected devices, and maintain firewall, VPN, and infrastructure records for audit readiness.",
+        icon: "Workflow",
       },
 
       {
         title: "Security Risk Assessments",
         description:
-          "Identify vulnerabilities before they become violations through comprehensive HIPAA Security Risk Assessments, gap analysis, corrective action planning, annual reviews, and risk mitigation strategies built around your practice.",
+          "Identify vulnerabilities, perform HIPAA risk assessments, and build corrective action plans before issues become violations.",
+        icon: "ShieldCheck",
       },
 
       {
-        title: "Policies & Procedures Development",
+        title: "Policies & Procedures",
         description:
-          "Receive professionally written policies customized for your organization, including password management, remote access, mobile device usage, email security, data backup, incident response, and records retention procedures.",
+          "Develop customized security policies covering passwords, remote access, email security, backups, incident response, and record retention.",
+        icon: "BookOpenCheck",
       },
 
       {
         title: "Incident Response & Breach Preparedness",
         description:
-          "Prepare before something goes wrong. We develop your incident response playbook, breach notification procedures, reporting workflows, investigation documentation, and audit-ready incident tracking processes.",
+          "Create breach response plans, notification workflows, investigation documentation, and audit-ready incident tracking.",
+        icon: "FileWarning",
       },
 
       {
         title: "Healthcare Cybersecurity Training",
         description:
-          "Train every employee to recognize modern cyber threats including phishing attacks, ransomware, social engineering, safe PHI handling, password security, device protection, and secure communication practices.",
+          "Train staff to recognize phishing, ransomware, social engineering, and follow secure PHI handling best practices.",
+        icon: "GraduationCap",
       },
 
       {
         title: "Vendor & Third-Party Risk Management",
         description:
-          "Protect patient information beyond your own walls by evaluating vendors, reviewing Business Associate Agreements, documenting third-party access, and reducing supply-chain security risks throughout your organization.",
+          "Review vendors, manage Business Associate Agreements, and reduce third-party security risks across your organization.",
+        icon: "Users",
       },
     ],
   },
