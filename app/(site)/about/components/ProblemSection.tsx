@@ -50,7 +50,7 @@ export default function ProblemsSection() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#C69247]">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">
             What We Saw
           </p>
 
@@ -64,7 +64,7 @@ export default function ProblemsSection() {
             </span>
           </h2>
 
-          <div className="mt-8 h-[2px] w-48 bg-[#C69247]" />
+          <div className="mt-8 h-[2px] w-48 bg-accent" />
 
           <p className="mt-10 max-w-2xl text-lg leading-9 text-gray-600">
             We lived these challenges firsthand. Nothing changed until we built
@@ -93,7 +93,7 @@ export default function ProblemsSection() {
                 </h3>
 
                 {/* Divider */}
-                <div className="mx-auto my-6 h-[2px] w-10 bg-[#C69247]" />
+                <div className="mx-auto my-6 h-[2px] w-10 bg-accent" />
 
                 {/* Description */}
                 <p className="text-center text-sm leading-6 text-gray-600">

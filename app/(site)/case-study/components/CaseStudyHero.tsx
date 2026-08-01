@@ -12,8 +12,8 @@ export default function CaseStudyHero() {
           {/* Decorative Circles */}
 
           <div className="pointer-events-none absolute -right-20 -bottom-20">
-            <div className="absolute h-72 w-72 rounded-full border border-[#C69247]/30" />
-            <div className="absolute left-12 top-12 h-48 w-48 rounded-full border border-[#C69247]/20" />
+            <div className="absolute h-72 w-72 rounded-full border border-accent/30" />
+            <div className="absolute left-12 top-12 h-48 w-48 rounded-full border border-accent/20" />
             <div className="absolute left-24 top-24 h-24 w-24 rounded-full bg-[#456B7C]" />
           </div>
 
@@ -21,7 +21,7 @@ export default function CaseStudyHero() {
             {/* Left */}
 
             <div>
-              <span className="rounded-full bg-[#F3E7D5] px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#C69247]">
+              <span className="rounded-full bg-[#F3E7D5] px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                 Real Practice Stories
               </span>
 
@@ -44,7 +44,7 @@ export default function CaseStudyHero() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="#case-studies"
-                  className="inline-flex items-center gap-3 rounded-full bg-[#C69247] px-7 py-4 font-medium text-white transition hover:bg-[#b78238]"
+                  className="inline-flex items-center gap-3 rounded-full bg-accent px-7 py-4 font-medium text-white transition hover:bg-[#b78238]"
                 >
                   Explore Case Studies
                   <ArrowRight size={18} />
@@ -107,7 +107,7 @@ export default function CaseStudyHero() {
               {/* Floating Card */}
 
               <div className="absolute -bottom-6 -left-6 rounded-3xl bg-white p-6 shadow-xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C69247]">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                   Featured Topics
                 </p>
 

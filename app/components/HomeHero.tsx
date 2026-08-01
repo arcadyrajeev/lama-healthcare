@@ -14,7 +14,7 @@ export default function HomeHero() {
 
   useEffect(() => {
     const update = () => {
-      setIsDesktop(window.innerWidth >= 1024);
+      setIsDesktop(window.innerWidth >= 1366);
     };
 
     update();
@@ -52,7 +52,7 @@ export default function HomeHero() {
         className=" hidden md:block absolute bottom-0 right-0 h-[280px] w-[280px] rounded-full bg-[#C7A46A]/20 blur-[90px]"
       />
 
-      <div className="relative  flex flex-col  bg-neutral-100 mx-16 mt-18 lg:mt-24 rounded-4xl z-10 mx-auto flex min-h-screenitems-center px-2 py-8 lg:px-12">
+      <div className="relative  flex flex-col  bg-neutral-100 mx-16 mt-18 lg:mt-24 rounded-4xl z-10 mx-auto flex min-h-screenitems-center px-2 py-8 xl:px-12">
         <div className="grid w-full items-center gap-16 lg:grid-cols-2 px-5">
           {/* LEFT CONTENT */}
 
@@ -61,20 +61,16 @@ export default function HomeHero() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="max-w-xl"
+            className="max-w-2xl"
           >
             <span className="inline-flex rounded-full border border-[#B9925A]/30 bg-[#B9925A]/10 px-4 py-2 text-[10px] lg:text-xs font-medium uppercase tracking-[0.25em] text-[#B9925A]">
               Revenue Cycle Management
             </span>
 
             <h1 className="mt-8 text-4xl font-serif leading-[1.05] tracking-tight text-[#1F1F1F] md:text-5xl xl:text-7xl">
-              Your practice is
-              <br />
-              losing <span className="italic text-[#2F6173]">revenue</span>
-              <br />
-              without even
-              <br />
-              noticing it.
+              Your practice is losing{" "}
+              <span className="italic text-[#2F6173]"> revenue </span>
+              without even noticing it.
             </h1>
 
             <p className="mt-8 max-w-lg text-sm lg:text-lg leading-6 lg:leading-8 text-neutral-600">
@@ -86,7 +82,7 @@ export default function HomeHero() {
               <CTAButton size="lg">Get Your Free Audit</CTAButton>
             </div>
 
-            <div className="mt-10 flex flex-col lg:flex-row lg:items-center gap-4">
+            <div className="mt-10 flex flex-col lg:flex-row lg:items-center gap-4 ">
               <div className="flex -space-x-3">
                 <div className="h-11 w-11 rounded-full border-2 border-white bg-neutral-300" />
                 <div className="h-11 w-11 rounded-full border-2 border-white bg-neutral-400" />
@@ -119,7 +115,7 @@ export default function HomeHero() {
 
             <motion.div
               style={isDesktop ? { y: lamaY } : {}}
-              className="absolute z-10 portrait:w-[900px]  landscape:w-[1000px] landscape:h-[600px] -translate-x-10 md:-translate-y-40 lg:landscape:-translate-x-40 "
+              className="absolute z-10 portrait:w-[800px]  portrait:md:h-[300px] landscape:w-[1000px] landscape:h-[600px] -translate-x-10 md:-translate-y-40 lg:landscape:-translate-x-40 "
             >
               <Image
                 src="/images/lama-hero.webp"
@@ -134,13 +130,13 @@ export default function HomeHero() {
             {/* Floating Cards */}
           </div>
         </div>
-        <div className="relative w-full  h-[100vh] landscape:h-[10vh] md:portrait:h-[20vh] ">
+        <div className="relative w-full  h-[240vw]  landscape:h-[10vh] md:portrait:h-[20vh] ">
           <motion.div
             style={{ y: cardsY }}
             className="
               absolute
               z-20
-
+              top-26
 
               landscape:left-auto
               landscape:right-0

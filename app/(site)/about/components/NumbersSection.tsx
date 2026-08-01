@@ -26,7 +26,7 @@ export default function NumbersSection() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="max-w-5xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C69247]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
             The Numbers
           </p>
 

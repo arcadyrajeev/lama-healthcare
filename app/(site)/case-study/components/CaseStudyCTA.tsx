@@ -9,9 +9,9 @@ export default function CaseStudyCTA() {
       {/* Decorative Background */}
 
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full border border-[#C69247]/20" />
+        <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full border border-accent/20" />
 
-        <div className="absolute -right-16 -top-16 h-[320px] w-[320px] rounded-full border border-[#C69247]/15" />
+        <div className="absolute -right-16 -top-16 h-[320px] w-[320px] rounded-full border border-accent/15" />
 
         <div className="absolute -left-40 bottom-0 h-[320px] w-[320px] rounded-full bg-[#456B7C]/5 blur-3xl" />
       </div>
@@ -22,7 +22,7 @@ export default function CaseStudyCTA() {
             {/* Left */}
 
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C69247]">
+              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
                 Ready To Find Your Story?
               </span>
 
@@ -40,7 +40,7 @@ export default function CaseStudyCTA() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 rounded-full bg-[#C69247] px-8 py-4 font-medium text-white transition hover:bg-[#b78238]"
+                  className="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-medium text-white transition hover:bg-[#b78238]"
                 >
                   <CalendarDays size={20} />
                   Schedule Discovery Call
@@ -59,8 +59,8 @@ export default function CaseStudyCTA() {
             {/* Right */}
 
             <div className="rounded-[30px] bg-white/10 p-8 backdrop-blur-sm">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#C69247]/20">
-                <ShieldCheck className="text-[#C69247]" size={28} />
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/20">
+                <ShieldCheck className="text-accent" size={28} />
               </div>
 
               <h3 className="mt-8 font-serif text-3xl text-white">
@@ -76,7 +76,7 @@ export default function CaseStudyCTA() {
                   "Workflow Efficiency",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-4">
-                    <span className="h-2.5 w-2.5 rounded-full bg-[#C69247]" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-accent" />
 
                     <span className="text-white/80">{item}</span>
                   </div>

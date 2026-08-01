@@ -23,7 +23,7 @@ export default function ProblemSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative mt-16 md:mt-2 py-24 lg:py-[10rem]"
+      className="relative mt-16 md:mt-2 pt-24 lg:pt-[10rem]"
     >
       <div className="mx-auto px-3 lg:px-24">
         {/* Decorative Circle */}
@@ -66,7 +66,7 @@ export default function ProblemSection() {
             <div className="absolute bottom-10 left-1/2 h-44 w-44 rounded-full bg-[#DCECF1]/60 blur-[90px]" />
           </div>
 
-          <div className="relative z-10 grid grid-cols-1 gap-14 px-3 py-3 lg:grid-cols-5 lg:px-16 lg:py-16">
+          <div className="relative z-10 grid grid-cols-1 gap-14 px-3 py-3 lg:grid-cols-5 lg:portrait:px-6 lg:portrait:py-6 lg:landscape:px-12 lg:landscape:py-12">
             {/* LEFT */}
 
             <motion.div

@@ -14,7 +14,7 @@ export default function CaseStudyPage() {
           {/* Heading */}
 
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C69247]">
+            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
               Real Practice Stories
             </span>
 

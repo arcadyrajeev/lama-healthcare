@@ -27,7 +27,7 @@ export default function CaseCard({ data }: CaseStudyCardProps) {
         {/* Content */}
         <div className="flex flex-col justify-between p-8 lg:p-10">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C69247]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               {data.eyebrow ?? "Case Study"}
             </p>
 
@@ -41,7 +41,7 @@ export default function CaseCard({ data }: CaseStudyCardProps) {
               {data.title}
             </h3>
 
-            <div className="mt-6 h-[2px] w-16 bg-[#C69247]" />
+            <div className="mt-6 h-[2px] w-16 bg-accent" />
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
               {data.description}
