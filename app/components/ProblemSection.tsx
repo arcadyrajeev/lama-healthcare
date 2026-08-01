@@ -21,8 +21,11 @@ export default function ProblemSection() {
   const circleRight = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section ref={sectionRef} className="relative  py-24 lg:py-[10rem]">
-      <div className="mx-auto px-6 lg:px-24">
+    <section
+      ref={sectionRef}
+      className="relative mt-16 md:mt-2 py-24 lg:py-[10rem]"
+    >
+      <div className="mx-auto px-3 lg:px-24">
         {/* Decorative Circle */}
 
         <motion.div
@@ -63,7 +66,7 @@ export default function ProblemSection() {
             <div className="absolute bottom-10 left-1/2 h-44 w-44 rounded-full bg-[#DCECF1]/60 blur-[90px]" />
           </div>
 
-          <div className="relative z-10 grid grid-cols-1 gap-14 px-4 py-6 lg:grid-cols-5 lg:px-16 lg:py-16">
+          <div className="relative z-10 grid grid-cols-1 gap-14 px-3 py-3 lg:grid-cols-5 lg:px-16 lg:py-16">
             {/* LEFT */}
 
             <motion.div
@@ -100,7 +103,7 @@ export default function ProblemSection() {
                 duration: 0.7,
                 delay: 0.15,
               }}
-              className="flex flex-col justify-center col-span-2 "
+              className="flex flex-col justify-center col-span-2 px-4 lg:px-0"
             >
               <span className="text-sm font-medium uppercase tracking-[0.25em] text-[#B9925A]">
                 The Problem

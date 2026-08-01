@@ -2,13 +2,27 @@
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import CTAButton from "./CTAButton";
 import FloatingCards from "./FloatingCards";
 
 export default function HomeHero() {
   const heroRef = useRef<HTMLElement>(null);
+
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const update = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    update();
+
+    window.addEventListener("resize", update);
+
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -17,7 +31,6 @@ export default function HomeHero() {
 
   // Lama movement
   const lamaY = useTransform(scrollYProgress, [0, 1], [140, -140]);
-  const lamaScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 1.05]);
 
   // Floating cards movement
   const cardsY = useTransform(scrollYProgress, [0, 1], [200, -280]);
@@ -30,12 +43,12 @@ export default function HomeHero() {
       {/* Decorative Blur */}
 
       <motion.div
-        style={{ y: gradientY }}
+        style={isDesktop ? { y: gradientY } : {}}
         className="hidden md:block absolute left-1/2 top-44 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-[#9FD9E8]/30 blur-[130px]"
       />
 
       <motion.div
-        style={{ y: gradientY }}
+        style={isDesktop ? { y: gradientY } : {}}
         className=" hidden md:block absolute bottom-0 right-0 h-[280px] w-[280px] rounded-full bg-[#C7A46A]/20 blur-[90px]"
       />
 
@@ -98,21 +111,18 @@ export default function HomeHero() {
             {/* Soft Glow */}
 
             <motion.div
-              style={{ y: gradientY, x: 150 }}
-              className="absolute h-[540px] w-[540px] rounded-full bg-gradient-to-br from-[#B5E8F2] via-[#D9F2F8]/40 to-transparent blur-[120px] "
+              style={isDesktop ? { y: gradientY, x: 150 } : {}}
+              className="absolute md:block hidden h-[540px] w-[540px] rounded-full bg-gradient-to-br from-[#B5E8F2] via-[#D9F2F8]/40 to-transparent blur-[120px] "
             />
 
             {/* Lama */}
 
             <motion.div
-              style={{
-                y: lamaY,
-                scale: lamaScale,
-              }}
-              className="absolute z-10 portrait:w-[900px]  landscape:w-[1000px] landscape:h-[600px] -translate-x-10 -translate-y-40 lg:landscape:-translate-x-40 "
+              style={isDesktop ? { y: lamaY } : {}}
+              className="absolute z-10 portrait:w-[900px]  landscape:w-[1000px] landscape:h-[600px] -translate-x-10 md:-translate-y-40 lg:landscape:-translate-x-40 "
             >
               <Image
-                src="/images/lama-hero2.png"
+                src="/images/lama-hero.webp"
                 alt="Lama Healthcare"
                 height={2000}
                 width={2000}
