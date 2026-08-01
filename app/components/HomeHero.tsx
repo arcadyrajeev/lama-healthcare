@@ -99,7 +99,7 @@ export default function HomeHero() {
 
           {/* RIGHT CONTENT */}
 
-          <div className="relative flex min-h-[400px] items-center justify-center">
+          <div className="relative flex min-h-[400px] items-center justify-center  ">
             {/* Soft Glow */}
 
             <motion.div
@@ -126,13 +126,13 @@ export default function HomeHero() {
             {/* Floating Cards */}
           </div>
         </div>
-        <div className="relative w-full  h-[240vw]  landscape:h-[10vh] md:portrait:h-[20vh] ">
+        <div className="relative w-full  h-[200vw]  landscape:h-[10vh] md:portrait:h-[20vh]">
           <motion.div
             style={{ y: cardsY }}
             className="
               absolute
               z-20
-              top-26
+              top-10 sm:top-26
 
               landscape:left-auto
               landscape:right-0

@@ -23,14 +23,14 @@ export default function ProblemSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative mt-16 md:mt-2 pt-24 lg:pt-[10rem]"
+      className="relative mt-16 md:mt-2 pt-[40vw] lg:pt-[10rem]"
     >
       <div className="mx-auto px-3 lg:px-24">
         {/* Decorative Circle */}
 
         <motion.div
           style={{ y: circleLeft }}
-          className="absolute left-16 z-1 top-24 h-44 w-44 rounded-full bg-main "
+          className="absolute hidden md:block left-16 z-1 top-24 h-44 w-44 rounded-full bg-main "
         />
 
         <motion.div
