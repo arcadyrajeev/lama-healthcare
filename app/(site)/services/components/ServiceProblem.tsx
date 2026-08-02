@@ -17,7 +17,7 @@ export default function ServiceProblem({ data }: ServiceProblemProps) {
         <div className="overflow-hidden rounded-[32px] border border-gray-200 bg-[#F7F7F5]">
           <div className="grid items-center lg:grid-cols-2">
             {/* Image */}
-            <div className="relative order-2 h-[320px] lg:order-1 lg:h-[500px]">
+            <div className="relative order-1 md:order-2 h-[40vh] md:h-full  ">
               <Image
                 src={data.image}
                 alt={data.title}

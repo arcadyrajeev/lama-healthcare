@@ -1,7 +1,8 @@
 "use client";
 
-import CaseCard from "@/app/components/CaseCard";
+import { useEffect } from "react";
 
+import CaseCard from "@/app/components/CaseCard";
 import type { CaseStudyCard as CaseStudyCardData } from "@/types/case-study";
 
 interface ServiceCaseStudyProps {
@@ -10,13 +11,13 @@ interface ServiceCaseStudyProps {
 
 export default function ServiceCaseStudy({ data }: ServiceCaseStudyProps) {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-white py-20 lg:py-28">
       {/* Decorative Elements */}
-      <div className="absolute -left-10 top-20 h-40 w-40 -translate-x-1/2 rounded-full bg-[#456B7C]" />
+      <div className="absolute -left-10 top-20 -z-10 h-40 w-40 -translate-x-1/2 rounded-full bg-[#456B7C]/15 blur-3xl" />
 
-      <div className="absolute right-0 bottom-16 h-24 w-24 translate-x-1/2 rounded-full bg-[#C6944A]" />
+      <div className="absolute bottom-16 right-0 -z-10 h-28 w-28 translate-x-1/2 rounded-full bg-[#C6944A]/20 blur-2xl" />
 
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
         {/* Section Heading */}
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C6944A]">
@@ -33,17 +34,15 @@ export default function ServiceCaseStudy({ data }: ServiceCaseStudyProps) {
 
           <div className="mx-auto mt-8 h-[2px] w-24 bg-[#C6944A]" />
 
-          <p className="mt-8 text-lg leading-8 text-gray-600">
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-600">
             See how Lama Healthcare partners with practices to improve
             operational efficiency, strengthen revenue cycles, and create
             measurable business outcomes.
           </p>
         </div>
 
-        {/* Card */}
-        <div className="mx-auto  z-50 relative">
-          <CaseCard data={data} />
-        </div>
+        {/* Case Study Card */}
+        <CaseCard data={data} />
       </div>
     </section>
   );

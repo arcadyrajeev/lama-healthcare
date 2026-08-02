@@ -26,7 +26,7 @@ export const hipaaAndCybersecurityCaseStudy: CaseStudy = {
 
     publishedBy: "Lama Healthcare",
 
-    heroImage: "/images/placeholder.png",
+    heroImage: "/images/case-study/phishing-hero.webp",
   },
 
   overview: {

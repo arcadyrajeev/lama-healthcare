@@ -13,7 +13,7 @@ interface CaseStudyCardProps {
 export default function CaseCard({ data }: CaseStudyCardProps) {
   return (
     <div className="overflow-hidden rounded-[32px] border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <div className="grid lg:grid-cols-[320px_1fr]">
+      <div className="grid lg:grid-cols-[500px_1fr]">
         {/* Image */}
         <div className="relative min-h-[320px] h-64 lg:h-full">
           <Image

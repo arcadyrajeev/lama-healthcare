@@ -16,7 +16,7 @@ export default function ServiceAudience({ data }: ServiceAudienceProps) {
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Image */}
           <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[32px]">
+            <div className="relative aspect-[3/5] overflow-hidden rounded-[32px]">
               <Image
                 src={data.image}
                 alt={data.title}

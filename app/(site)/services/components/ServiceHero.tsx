@@ -15,9 +15,9 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
     <section className="w-full bg-white p-4 lg:px-12">
       <div className="mx-auto lg:px-6">
         <div className="overflow-hidden rounded-[32px] bg-[#F5F5F3] mt-16 lg:mt-20">
-          <div className="grid items-center lg:grid-cols-2">
+          <div className=" relative grid items-center grid-cols-1 lg:grid-cols-5">
             {/* Left */}
-            <div className="px-6 py-12 lg:px-14 lg:py-16">
+            <div className="px-6 py-12 lg:px-14 lg:py-16 col-span-2">
               <p className="mb-5 text-sm  font-semibold uppercase tracking-[0.3em] text-[#C6944A]">
                 {data.eyebrow}
               </p>
@@ -57,16 +57,16 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
             </div>
 
             {/* Right */}
-            <div className="relative h-[350px] md:h-[500px] lg:h-[620px]">
+            <div className="relative md:col-span-3 w-full h-[40vh] md:h-full bg-blue-200 overflow-hidden ">
               <Image
                 src={data.image}
                 alt={data.title}
                 fill
                 priority
-                className="object-cover"
+                className="object-cover absolute inset-0 "
               />
 
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white/10" />
+              <div className="absolute inset-0 hidden md:block bg-gradient-to-l from-transparent via-transparent to-[#F5F5F3]" />
             </div>
           </div>
         </div>

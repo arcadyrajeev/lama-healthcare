@@ -35,7 +35,7 @@ const hipaaCompliance: Service = {
     description:
       "Cybersecurity threats don't target hospitals alone. Independent medical practices are increasingly becoming the easiest targets. We help you build the policies, infrastructure, documentation, and security program needed to protect your patients—and your practice—before an incident ever happens.",
 
-    image: "/services/hipaa-compliance/hero.jpg",
+    image: "/images/services/hipaa-hero.webp",
 
     ctaText: "Schedule a Free Discovery Call",
 
@@ -52,7 +52,7 @@ const hipaaCompliance: Service = {
     description:
       "Healthcare remains one of the most targeted industries for cyberattacks. Most independent practices have the same sensitive patient information as large hospital systems but only a fraction of the security infrastructure. Missing documentation, outdated policies, weak staff training, and incomplete security programs leave practices vulnerable to HIPAA violations, costly fines, and operational disruption.",
 
-    image: "/services/hipaa-compliance/problem.jpg",
+    image: "/images/services/hipaa-problem.webp",
 
     ctaText: "Request a HIPAA Assessment",
 
@@ -71,7 +71,7 @@ const hipaaCompliance: Service = {
     description:
       "A phishing email installed spyware within seconds of being opened. Because the practice already had endpoint protection, documented response procedures, and immediate expert support, the incident was contained before a single patient record was compromised.",
 
-    image: "/case-studies/phishing-attack.jpg",
+    image: "/images/case-study/phishing-hero.webp",
 
     location: "Las Vegas Medical Practice",
 
@@ -186,7 +186,7 @@ const hipaaCompliance: Service = {
     description:
       "Whether you're establishing your compliance program for the first time or strengthening an existing one, we help practices build lasting security and regulatory confidence.",
 
-    image: "/services/hipaa-compliance/audience.jpg",
+    image: "/images/services/hipaa-image2.webp",
 
     audiences: [
       {

@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Pencil, Plus, LogOut } from "lucide-react";
+import Image from "next/image";
+import { Pencil, Plus, LogOut, Trash2 } from "lucide-react";
 
 interface Blog {
   id: string;
@@ -41,6 +42,31 @@ export default function AdminDashboard({
     }
   }
 
+  async function deleteBlog(id: string) {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this blog? This action cannot be undone.",
+    );
+
+    if (!confirmed) return;
+
+    try {
+      const res = await fetch(`/api/admin/blogs/${id}`, {
+        method: "DELETE",
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Failed to delete blog");
+      }
+
+      router.refresh();
+    } catch (error) {
+      console.error(error);
+      alert("Failed to delete blog.");
+    }
+  }
+
   return (
     <main className="mx-auto max-w-7xl px-10 py-[10rem]">
       <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
@@ -70,14 +96,14 @@ export default function AdminDashboard({
       </div>
 
       <div className="overflow-hidden rounded-xl border bg-white">
-        <table className="w-full">
+        <table className="w-full table-fixed">
           <thead className="bg-stone-100">
-            <tr className="text-left text-sm font-semibold">
-              <th className="p-4">Title</th>
-              <th className="p-4">Category</th>
-              <th className="p-4">Status</th>
-              <th className="p-4">Updated</th>
-              <th className="w-36 p-4"></th>
+            <tr>
+              <th className="w-[45%] p-4 text-left">Title</th>
+              <th className="w-[10%] p-4 text-left">Category</th>
+              <th className="w-[10%] p-4 text-left">Status</th>
+              <th className="w-[10%] p-4 text-left">Updated</th>
+              <th className="w-[20%] p-4"></th>
             </tr>
           </thead>
 
@@ -95,10 +121,32 @@ export default function AdminDashboard({
                   className="border-t transition hover:bg-stone-50"
                 >
                   <td className="p-4">
-                    <div className="font-semibold">{blog.title}</div>
+                    <div className="flex items-center gap-4">
+                      <div className="relative h-16 w-24 overflow-hidden rounded-lg border bg-stone-100 shrink-0">
+                        {blog.coverImage ? (
+                          <Image
+                            src={blog.coverImage}
+                            alt={blog.title}
+                            fill
+                            className="object-cover"
+                            sizes="96px"
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-xs text-stone-400">
+                            No Image
+                          </div>
+                        )}
+                      </div>
 
-                    <div className="mt-1 text-sm text-stone-500">
-                      {blog.slug}
+                      <div className="min-w-0">
+                        <div className="truncate font-semibold">
+                          {blog.title}
+                        </div>
+
+                        <div className="mt-1 truncate text-sm text-stone-500">
+                          {blog.slug}
+                        </div>
+                      </div>
                     </div>
                   </td>
 
@@ -121,13 +169,23 @@ export default function AdminDashboard({
                   </td>
 
                   <td className="p-4">
-                    <Link
-                      href={`/${adminCode}/admin/blogs/${blog.id}`}
-                      className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 transition hover:bg-stone-100"
-                    >
-                      <Pencil size={16} />
-                      Edit
-                    </Link>
+                    <div className="flex items-center gap-2">
+                      <Link
+                        href={`/${adminCode}/admin/blogs/${blog.id}`}
+                        className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 transition hover:bg-stone-100"
+                      >
+                        <Pencil size={16} />
+                        Edit
+                      </Link>
+
+                      <button
+                        onClick={() => deleteBlog(blog.id)}
+                        className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-red-300 px-4 py-2 text-red-600 transition hover:bg-red-50"
+                      >
+                        <Trash2 size={16} />
+                        <span className="hidden xl:inline">Delete</span>
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))
