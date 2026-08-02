@@ -3,10 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 const services = [
   {
     title: "Medical Billing / RCM",
+    image: "/images/services/medical-billing.webp",
     description:
       "Maximize collections and reduce revenue leakage across the entire revenue cycle.",
     href: "/services/medical-billing",
@@ -14,6 +16,7 @@ const services = [
   },
   {
     title: "Credentialing & Enrollment",
+    image: "/images/services/credentialing.webp",
     description:
       "Accelerate provider enrollment while minimizing delays and costly errors.",
     href: "/services/credentialing",
@@ -21,19 +24,22 @@ const services = [
   },
   {
     title: "Compliance Management",
+    image: "/images/services/compliance.webp",
     description: "Stay compliant with payer and regulatory requirements.",
     href: "/services/hipaa-compliance",
     span: "small",
   },
   {
     title: "Practice Operations",
+    image: "/images/services/practice-operations.webp",
     description:
       "Streamline workflows to improve efficiency and accountability.",
     href: "/services/practice-operations",
     span: "small",
   },
   {
-    title: "Launcing New Practice",
+    title: "Launching New Practice",
+    image: "/images/services/practice-launch.webp",
     description:
       "Assist with Launching New Medical Practice | Start Your Practice Right ",
     href: "/services/new-practice-consulting",
@@ -69,7 +75,7 @@ export default function ServicesSection() {
 
         {/* Bento Grid */}
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-6 md:grid-rows-5">
+        <div className="mt-16  grid grid-cols-1 gap-6 md:grid-cols-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -86,82 +92,50 @@ export default function ServicesSection() {
                 duration: 0.6,
                 delay: index * 0.08,
               }}
-              className={
+              className={`${
                 service.span === "large"
-                  ? "md:col-span-3 md:row-span-3"
-                  : "md:col-span-2 md:row-span-2"
-              }
+                  ? "h-[320px] md:h-[350px]  md:col-span-3  "
+                  : " h-[320px] md:h-[300px] md:col-span-2 "
+              }`}
             >
               <Link
                 href={service.href}
-                className="
-        group
-        relative
-        flex
-        h-full
-        min-h-[240px]
-        flex-col
-        justify-between
-        overflow-hidden
-        rounded-2xl md:rounded-3xl
-        bg-[#F1F0EE]
-         p-3 md:p-8
-        shadow-sm
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:bg-white
-        hover:shadow-2xl
-      "
+                className="group relative min-h-[250px] flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
-                {/* Top Right Arrow */}
-
-                <div className="flex justify-end">
-                  <div
-                    className="
-            flex
-            h-12
-            w-12
-            items-center
-            justify-center
-            rounded-full
-            bg-white
-            text-[#2F6173]
-            opacity-0
-            shadow-md
-            transition-all
-            duration-300
-            group-hover:translate-x-0
-            group-hover:opacity-100
-          "
-                  >
-                    <ArrowUpRight
-                      size={20}
-                      className="transition-transform duration-300 group-hover:rotate-45"
+                {/* Image */}
+                <div className="absolute inset-0 z-0 aspect-[16/6] overflow-hidden">
+                  <div className="absolute inset-0 bottom-10 bg-gradient-to-t from-white via-transparent to-transparent" />
+                  <div className="absolute inset-0 transition-transform duration-700 h-[95%] group-hover:scale-105">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover "
                     />
                   </div>
+
+                  <div className="absolute  inset-0 bg-gradient-to-t from-white via-white via-[5%] to-transparent to-[50%]" />
                 </div>
 
                 {/* Content */}
+                <div className="flex mt-auto flex-col dm-sans  p-8 z-10 relative  group-hover:scale-102 transition-transform duration-700">
+                  <div className="flex items-start justify-between">
+                    <h3 className="text-3xl font-medium leading-8 ">
+                      {service.title}
+                    </h3>
 
-                <div>
-                  <h3
-                    className={`font-light subheading leading-tight text-[#1F1F1F] transition-colors group-hover:text-[#2F6173] ${
-                      service.span === "large"
-                        ? "text-2xl md:text-4xl"
-                        : "text-2xl"
-                    }`}
-                  >
-                    {service.title}
-                  </h3>
+                    <div className="ml-4 flex  p-2 items-center justify-center rounded-full  transition group-hover:bg-white group-hover:border group-hover:border-[#476B6B] group-hover:text-[#476B6B]">
+                      <ArrowUpRight
+                        size={30}
+                        className="transition-all duration-500 group-hover:rotate-45"
+                      />
+                    </div>
+                  </div>
 
-                  <p className="mt-3 max-w-sm text-sm md:text-lg md:leading-8 text-neutral-600">
+                  <p className="mt-2 text-lg leading-7 text-neutral-600">
                     {service.description}
                   </p>
                 </div>
-
-                {/* Bottom Accent */}
-
                 <div
                   className="
           absolute
