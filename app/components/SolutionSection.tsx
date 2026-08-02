@@ -31,13 +31,13 @@ export default function SolutionSection() {
           {/* LEFT */}
           <div className="absolute hidden lg:block -left-42 bottom-24 h-72 w-72 rounded-full bg-main/20" />
 
-          <div className="absolute  hidden lg:block  -left-15 bottom-10 h-52 w-52 rounded-full border-2 border-accent/80" />
+          <div className="absolute  hidden lg:block -left-15 bottom-10 h-52 w-52 rounded-full border-2 border-accent/80" />
           <Image
             src="/lama.svg"
             alt="Lama"
             width={280}
             height={380}
-            className="mb-4 opacity-20 absolute top-5 left-10 z-0 "
+            className="mb-4 opacity-20 absolute top-70 left-50 lg:top-5 lg:left-10 z-0 "
           />
 
           <motion.div
