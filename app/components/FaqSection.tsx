@@ -80,7 +80,7 @@ export default function FaqSection() {
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="flex w-full items-center gap-6 px-8 py-7 text-left"
+                    className="flex w-full items-center gap-6 px-8 cursor-pointer py-7 text-left"
                   >
                     {/* Left Icon */}
 
