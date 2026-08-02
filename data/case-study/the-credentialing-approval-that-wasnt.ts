@@ -26,7 +26,7 @@ export const credentialingCaseStudy: CaseStudy = {
 
     publishedBy: "Lama Healthcare",
 
-    heroImage: "/images/placeholder.png",
+    heroImage: "/images/case-study/credentialing-taxonomy.webp",
   },
 
   overview: {

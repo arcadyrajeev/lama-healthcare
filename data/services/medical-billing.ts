@@ -33,7 +33,7 @@ const medicalBilling: Service = {
     description:
       "Most practices outsource billing and hope everything is handled correctly. We become your operational partner, providing oversight, accountability, and strategic direction to maximize collections.",
 
-    image: "/services/medical-billing/hero.jpg",
+    image: "/images/services/billing-hero.webp",
 
     ctaText: "Book Discovery Call",
 
@@ -50,7 +50,7 @@ const medicalBilling: Service = {
     description:
       "Most practices don't know where revenue is leaking because vendors work independently and no one owns the complete process. Without transparency, denied claims, delayed reimbursements, and operational inefficiencies become normal.",
 
-    image: "/services/medical-billing/problem.jpg",
+    image: "/images/services/billing-problem2.webp",
 
     ctaText: "Get Your Free Audit",
 
@@ -69,7 +69,7 @@ const medicalBilling: Service = {
     description:
       "By improving communication between billing, credentialing, and practice staff, the client significantly reduced denials and accelerated reimbursements.",
 
-    image: "/case-studies/billing.jpg",
+    image: "/images/case-study/revenue-report.webp",
 
     location: "Las Vegas, Nevada",
 
@@ -150,7 +150,7 @@ const medicalBilling: Service = {
     description:
       "Whether you're a solo provider or a growing healthcare organization, our process adapts to your workflow.",
 
-    image: "/services/medical-billing/audience.jpg",
+    image: "/images/services/new-practice-1.webp",
 
     audiences: [
       {

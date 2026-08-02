@@ -43,10 +43,10 @@ export default function CaseStudyHero() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
-                  href="#case-studies"
+                  href="/services/medical-billing"
                   className="inline-flex items-center gap-3 rounded-full bg-accent px-7 py-4 font-medium text-white transition hover:bg-[#b78238]"
                 >
-                  Explore Case Studies
+                  Explore Services
                   <ArrowRight size={18} />
                 </Link>
 
@@ -95,7 +95,7 @@ export default function CaseStudyHero() {
               <div className="relative overflow-hidden rounded-[32px] bg-white shadow-xl">
                 <div className="relative aspect-[4/5]">
                   <Image
-                    src="/images/case-study-hero.jpg"
+                    src="/images/services/credentialing-hero.webp"
                     alt="Healthcare Case Studies"
                     fill
                     priority

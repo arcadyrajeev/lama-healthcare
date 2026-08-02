@@ -30,13 +30,12 @@ const practiceOperations: Service = {
 
     title: "A complaint shouldn't expose operational weaknesses.",
 
-    highlight:
-      "Build the systems, documentation, and compliance programs before you're tested.",
+    highlight: "Build compliant systems before they're put to the test.",
 
     description:
-      "We help independent medical practices streamline daily operations, strengthen compliance, and create audit-ready documentation so you're prepared for regulators, investigators, and sustainable growth.",
+      "We help independent practices strengthen operations, maintain compliance, and stay audit ready with documented systems that support long-term growth.",
 
-    image: "/services/practice-operations-compliance/hero.jpg",
+    image: "/images/services/practice-operations-hero.webp",
 
     ctaText: "Book Discovery Call",
 
@@ -53,7 +52,7 @@ const practiceOperations: Service = {
     description:
       "As practices grow, operational complexity grows with them. Workflows become inconsistent, responsibilities overlap, documentation suffers, and staff rely on institutional knowledge instead of standardized processes. The result is unnecessary inefficiency, compliance risk, and an inconsistent patient experience.",
 
-    image: "/services/practice-operations-compliance/problem.jpg",
+    image: "/images/services/practice-operations-problem.webp",
 
     ctaText: "Schedule Assessment",
 
@@ -73,7 +72,7 @@ const practiceOperations: Service = {
     description:
       "A false complaint triggered a full licensing investigation into a medical practice. Because their policies, procedures, and compliance documentation accurately reflected day-to-day operations, the investigators found no deficiencies and closed the investigation without findings.",
 
-    image: "/case-studies/anonymous-complaint-investigation.jpg",
+    image: "/images/case-study/investigation.webp",
 
     location: "Las Vegas Medical Practice",
 
@@ -220,7 +219,7 @@ const practiceOperations: Service = {
     description:
       "Whether you're launching a new practice or managing a growing healthcare organization, we help create systems that scale while protecting your business from unnecessary risk.",
 
-    image: "/services/practice-operations-compliance/audience.jpg",
+    image: "/images/services/practice-operations-image2.webp",
 
     audiences: [
       {

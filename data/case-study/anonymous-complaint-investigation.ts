@@ -26,7 +26,7 @@ export const practiceComplianceCaseStudy: CaseStudy = {
 
     publishedBy: "Lama Healthcare",
 
-    heroImage: "/images/placeholder.png",
+    heroImage: "/images/case-study/investigation.webp",
   },
 
   overview: {

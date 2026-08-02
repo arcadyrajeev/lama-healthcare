@@ -3,6 +3,7 @@ import CaseCard from "@/app/components/CaseCard";
 import CaseStudyHero from "./components/CaseStudyHero";
 import CaseStudyCTA from "./components/CaseStudyCTA";
 import { caseStudyCards } from "@/data/case-study";
+import FaqSection from "@/app/components/FaqSection";
 
 export default function CaseStudyPage() {
   return (
@@ -42,6 +43,7 @@ export default function CaseStudyPage() {
       </section>
 
       <CaseStudyCTA />
+      <FaqSection />
     </>
   );
 }

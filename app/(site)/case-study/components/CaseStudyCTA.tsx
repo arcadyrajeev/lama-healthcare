@@ -17,7 +17,7 @@ export default function CaseStudyCTA() {
       </div>
 
       <div className="container relative mx-auto max-w-7xl px-6">
-        <div className="overflow-hidden rounded-[40px] bg-[#456B7C]">
+        <div className="overflow-hidden rounded-[40px] bg-main">
           <div className="grid items-center gap-14 p-10 lg:grid-cols-[2fr_1fr] lg:p-16">
             {/* Left */}
 

@@ -36,7 +36,7 @@ const newPracticeConsulting: Service = {
     description:
       "Opening a medical practice requires far more than clinical expertise. We help providers build the operational, financial, and compliance foundation needed to launch successfully—before the first patient ever walks through the door.",
 
-    image: "/services/new-practice-consulting/hero.jpg",
+    image: "/images/services/new-practice-hero.webp",
 
     ctaText: "Schedule a Free Discovery Call",
 
@@ -51,9 +51,9 @@ const newPracticeConsulting: Service = {
     highlight: "operational challenges in healthcare.",
 
     description:
-      "Most providers begin their practice with incredible clinical expertise but little guidance on building the business behind it. Business registration, credentialing, HIPAA compliance, OSHA requirements, billing infrastructure, staff training, operational workflows, and regulatory documentation all need to be completed before opening day. Missing even one critical step can delay revenue, create compliance risks, and make long-term success significantly more difficult.",
+      "Opening a practice requires far more than clinical expertise. Credentialing, compliance, billing, staffing, workflows, and regulatory requirements must all be in place before seeing patients. Missing even one step can delay revenue, increase risk, and disrupt growth from day one.",
 
-    image: "/services/new-practice-consulting/problem.jpg",
+    image: "/images/services/new-practice-problem.webp",
 
     ctaText: "Book a Discovery Call",
 
@@ -73,7 +73,7 @@ const newPracticeConsulting: Service = {
     description:
       "A nurse practitioner launched her own practice after years of clinical success. Within three months she faced incomplete credentialing, missing OSHA documentation, billing workflow failures, and delayed reimbursements. The issue wasn't medicine—it was infrastructure.",
 
-    image: "/case-studies/practice-launch.jpg",
+    image: "/images/case-study/practice-launch-story.webp",
 
     location: "Independent Medical Practice",
 
@@ -205,7 +205,7 @@ const newPracticeConsulting: Service = {
     description:
       "Whether you're launching your very first clinic or expanding into a new location, we provide the operational expertise needed to build a strong foundation from day one.",
 
-    image: "/services/new-practice-consulting/audience.jpg",
+    image: "/images/services/new-practice-1.webp",
 
     audiences: [
       {

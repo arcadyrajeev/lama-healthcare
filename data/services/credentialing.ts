@@ -29,15 +29,14 @@ export const credentialing: Service = {
   hero: {
     eyebrow: "Credentialing & Payer Contracting",
 
-    title:
-      "Your new provider is seeing patients. That doesn't mean they're getting paid.",
+    title: "Your new provider is seeing patients. That doesn't mean they're",
 
-    highlight: "Getting Paid",
+    highlight: "Getting Paid.",
 
     description:
       "Credentialing mistakes rarely announce themselves. They quietly become denied claims, delayed reimbursements, and revenue loss weeks after services have already been delivered. We make sure your providers are credentialed correctly before the first claim is submitted.",
 
-    image: "/images/services/credentialing/hero.webp",
+    image: "/images/services/credentialing-hero.webp",
 
     ctaText: "Book a Discovery Call",
 
@@ -55,7 +54,7 @@ export const credentialing: Service = {
     description:
       "Every payer has different enrollment requirements, timelines, and approval processes. A single mistake, such as an incorrect taxonomy code or incomplete enrollment, can leave a provider treating patients without being eligible for reimbursement. Most practices don't discover the problem until weeks later when denials begin piling up. By then, thousands of dollars in revenue may already be at risk.",
 
-    image: "/images/services/credentialing/problem.webp",
+    image: "/images/services/credentialing-image2.webp",
 
     ctaText: "Talk With Our Team",
 
@@ -74,7 +73,7 @@ export const credentialing: Service = {
     description:
       "A newly hired provider was successfully credentialed and immediately began seeing patients. Weeks later, claim denials started piling up because the provider had been enrolled under the wrong specialty taxonomy code. We identified the issue, corrected the enrollments, coordinated with payers, and helped recover as much revenue as possible.",
 
-    image: "/case-studies/credentialing-taxonomy.jpg",
+    image: "/images/case-study/credentialing-taxonomy.webp",
 
     location: "Las Vegas Medical Practice",
 
@@ -211,7 +210,7 @@ export const credentialing: Service = {
     description:
       "Whether you're onboarding new providers, expanding locations, or managing multiple specialties, we ensure your providers are credentialed correctly and ready to bill.",
 
-    image: "/images/services/credentialing/audience.webp",
+    image: "/images/services/credentialing-image3.webp",
 
     audiences: [
       {
