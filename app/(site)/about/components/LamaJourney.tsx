@@ -63,9 +63,9 @@ export default function LamaJourney() {
     <section className="relative overflow-hidden bg-white py-16 lg:py-20">
       {/* Background Decorations */}
 
-      <div className="absolute bottom-40 right-20 h-28 w-28 rounded-full bg-[#476B7C]" />
+      <div className="absolute hidden lg:block bottom-40 right-20 h-28 w-28 rounded-full bg-[#476B7C]" />
 
-      <div className="absolute bottom-35 right-40 h-20 w-20 rounded-full bg-[#C79A59]" />
+      <div className="absolute hidden lg:block bottom-35 right-40 h-20 w-20 rounded-full bg-[#C79A59]" />
 
       <div className="mx-auto lg:max-w-7xl px-6">
         <div className="grid items-start gap-20 lg:grid-cols-2">

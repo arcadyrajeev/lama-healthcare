@@ -45,7 +45,7 @@ export default function ProblemsSection() {
   return (
     <section className="relative overflow-hidden bg-white py-20 lg:py-28">
       {/* Decorative Circles */}
-      <div className="absolute z-0 left-20 top-[48%] h-28 w-28 rounded-full bg-[#43697B]" />
+      <div className="absolute hidden lg:block z-0 left-20 top-[48%] h-28 w-28 rounded-full bg-[#43697B]" />
 
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}

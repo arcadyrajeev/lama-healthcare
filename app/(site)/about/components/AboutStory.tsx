@@ -10,7 +10,7 @@ export default function AboutStory() {
           {/* LEFT */}
           <div className="relative z-10">
             <Image
-              src="/lama-icon.svg"
+              src="/lama.svg"
               alt="Lama"
               width={42}
               height={42}
@@ -37,10 +37,10 @@ export default function AboutStory() {
           </div>
 
           {/* RIGHT */}
-          <div className="relative flex justify-center">
-            <div className="relative h-[320px] w-full max-w-[560px] overflow-hidden rounded-[32px] bg-[#EEF1F3] shadow-sm md:h-[420px]">
+          <div className="relative flex justify-center ">
+            <div className="relative h-[320px] w-full  z-10 max-w-[560px] overflow-hidden rounded-[32px] bg-[#EEF1F3] shadow-sm md:h-[420px]">
               <Image
-                src="/about-image.jpg"
+                src="/images/about-image2.webp"
                 alt="About Lama"
                 fill
                 className="object-cover"
@@ -48,10 +48,10 @@ export default function AboutStory() {
             </div>
 
             {/* Gold Ring */}
-            <div className="absolute -bottom-10 right-6 h-32 w-32 rounded-full border-4 border-[#C08D49]" />
+            <div className="absolute z-3 -bottom-10 right-6 h-42 w-42 rounded-full border-4 border-[#C08D49]" />
 
             {/* Blue Circle */}
-            <div className="absolute -bottom-28 -right-24 h-56 w-56 rounded-full bg-[#446B80]" />
+            <div className="absolute z-0 -bottom-28 -right-24 h-56 w-56 rounded-full bg-[#446B80]" />
           </div>
         </div>
       </div>
