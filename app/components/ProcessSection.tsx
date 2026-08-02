@@ -63,7 +63,7 @@ export default function ProcessSection() {
 
         {/* Cards */}
 
-        <div className="mt-20 grid gap-10 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-20 grid gap-18 md:gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
           {steps.map((step) => {
             const Icon = step.icon;
 
@@ -99,7 +99,7 @@ export default function ProcessSection() {
         {/* Bottom CTA */}
 
         <div className="mt-20 rounded-3xl bg-white/10 p-6 backdrop-blur-sm">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center">
+          <div className="flex flex-col gap-5 md:flex-row items-center">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-300 text-white">
               <Check size={24} strokeWidth={3} />
             </div>

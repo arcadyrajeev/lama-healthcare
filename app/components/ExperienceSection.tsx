@@ -201,7 +201,7 @@ export default function ExperienceSection() {
             mt-14
             overflow-hidden
             rounded-[36px]
-            bg-[#2F6173]
+            bg-main
             px-8
             py-10
             lg:px-12
@@ -223,74 +223,46 @@ export default function ExperienceSection() {
           />
 
           <div className="relative z-10 flex flex-col items-center gap-8 lg:flex-row">
-            {/* Icon */}
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <p className="font-light dm-sans flex gap-6 text-7xl items-center text-white">
+                  <Clock3 size={50} strokeWidth={1.5} /> 15+
+                </p>
 
-            <motion.div
-              animate={{
-                rotate: [0, 6, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-              }}
-              className="
-                flex
-                h-36
-                w-36
-                items-center
-                justify-center
-                rounded-full
-                bg-white
-                text-[#436B7B]
-              "
-            >
-              <Clock3 size={70} strokeWidth={1.5} />
-            </motion.div>
+                <p className="mt-3 text-sm uppercase tracking-[0.2em] text-yellow-400">
+                  Hours Lost Weekly
+                </p>
 
-            {/* Content */}
+                <p className="mt-3 text-sm leading-6 text-white/70">
+                  Administrative work that distracted from patient care.
+                </p>
+              </div>
 
-            <div>
-              <motion.h3
-                initial={{
-                  opacity: 0,
-                  x: 20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: 0.2,
-                }}
-                className="
-                  text-5xl
-                  font-light
-                  leading-tight
-                  text-white
-                  lg:text-7xl
-                "
-              >
-                15+ hours lost every week
-              </motion.h3>
+              <div>
+                <p className="font-light dm-sans flex gap-6 items-center text-7xl text-white">
+                  <Users size={50} strokeWidth={1.5} />1
+                </p>
 
-              <motion.p
-                initial={{
-                  opacity: 0,
-                  x: 20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: 0.35,
-                }}
-                className="mt-4 text-xl text-white/90"
-              >
-                Time and resources lost to administrative follow-up.
-              </motion.p>
+                <p className="mt-3 text-sm uppercase tracking-[0.2em] text-yellow-400">
+                  Unified Partner
+                </p>
+
+                <p className="mt-3 text-sm leading-6 text-white/70">
+                  One team managing operations, compliance, billing, and growth.
+                </p>
+              </div>
+            </div>
+
+            <div className="my-8 h-px bg-white/10" />
+            <div className="flex flex-col gap-3 lg:ml-8">
+              {" "}
+              <blockquote className="font-serif text-2xl leading-relaxed text-white">
+                &quot;Healthcare practices shouldn&apos;t need five vendors to
+                solve one operational problem.&quot;
+              </blockquote>
+              <p className="mt-6 text-sm uppercase tracking-[0.2em] text-yellow-400">
+                Lama Healthcare Philosophy
+              </p>
             </div>
           </div>
         </motion.div>

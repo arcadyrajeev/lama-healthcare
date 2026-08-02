@@ -6,6 +6,7 @@ import ServicesSection from "./components/ServiceSection";
 import ProcessSection from "./components/ProcessSection";
 import FaqSection from "./components/FaqSection";
 import VideoSection from "./components/VideoSection";
+import FinalCTA from "./components/FinalCTA";
 
 export default function HomePage() {
   return (
@@ -18,16 +19,7 @@ export default function HomePage() {
       <ServicesSection />
       <ProcessSection />
       <FaqSection />
-
-      {/* Upcoming Sections */}
-
-      {/* <StatsSection /> */}
-
-      {/* <TestimonialsSection /> */}
-
-      {/* <CTASection /> */}
-
-      {/* <Footer /> */}
+      <FinalCTA />
     </main>
   );
 }

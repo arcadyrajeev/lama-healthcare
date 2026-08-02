@@ -23,7 +23,7 @@ export default function ProblemSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative mt-16 md:mt-2 pt-[80px] lg:pt-[10rem]"
+      className="relative mt-16 md:mt-2 pt-[80px] md:pt-[10rem]"
     >
       <div className="mx-auto px-3 lg:px-24">
         {/* Decorative Circle */}
