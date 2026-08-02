@@ -29,12 +29,12 @@ export const credentialing: Service = {
   hero: {
     eyebrow: "Credentialing & Payer Contracting",
 
-    title: "Your new provider is seeing patients. That doesn't mean they're",
+    title: "Your provider is seeing patients.",
 
-    highlight: "Getting Paid.",
+    highlight: "Are they getting paid?",
 
     description:
-      "Credentialing mistakes rarely announce themselves. They quietly become denied claims, delayed reimbursements, and revenue loss weeks after services have already been delivered. We make sure your providers are credentialed correctly before the first claim is submitted.",
+      "Credentialing errors lead to denied claims, delayed reimbursements, and lost revenue. We ensure every provider is properly enrolled before the first claim is submitted.",
 
     image: "/images/services/credentialing-hero.webp",
 
@@ -52,7 +52,7 @@ export const credentialing: Service = {
     highlight: "Highest Risk",
 
     description:
-      "Every payer has different enrollment requirements, timelines, and approval processes. A single mistake, such as an incorrect taxonomy code or incomplete enrollment, can leave a provider treating patients without being eligible for reimbursement. Most practices don't discover the problem until weeks later when denials begin piling up. By then, thousands of dollars in revenue may already be at risk.",
+      "Every payer has different enrollment requirements and approval timelines. A single enrollment mistake can delay reimbursement for weeks, leaving providers seeing patients without getting paid. Most practices discover the issue only after claim denials begin to accumulate.",
 
     image: "/images/services/credentialing-image2.webp",
 

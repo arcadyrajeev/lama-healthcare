@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function CaseStudyHero() {
   return (
-    <section className="bg-white pt-32 pb-16">
-      <div className="container mx-auto max-w-7xl px-6">
+    <section className="bg-white pt-24 pb-16">
+      <div className="container mx-auto ">
         <div className="relative overflow-hidden rounded-[40px] bg-[#F7F8F8]">
           {/* Decorative Circles */}
 
@@ -17,7 +17,7 @@ export default function CaseStudyHero() {
             <div className="absolute left-24 top-24 h-24 w-24 rounded-full bg-[#456B7C]" />
           </div>
 
-          <div className="grid items-center gap-12 px-8 py-12 lg:grid-cols-2 lg:px-16 lg:py-20">
+          <div className="grid items-center gap-12 px-8 py-12 lg:grid-cols-2 lg:px-10 lg:py-20">
             {/* Left */}
 
             <div>
