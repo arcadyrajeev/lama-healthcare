@@ -15,11 +15,11 @@ export default function PracticeOnePage() {
 
       <Story />
 
+      <CaseStudy />
+
       <Automation />
 
       <Features />
-
-      <CaseStudy />
 
       <CTA />
     </>
