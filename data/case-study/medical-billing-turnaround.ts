@@ -17,7 +17,7 @@ export const medicalBillingCaseStudy: CaseStudy = {
     location: "Las Vegas, Nevada",
     readTime: "6 min",
     publishedBy: "Lama Healthcare",
-    heroImage: "/images/case-study/revenue-report.webp",
+    heroImage: "/images/case-study/billing-case.webp",
   },
 
   overview: {

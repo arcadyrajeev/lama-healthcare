@@ -69,7 +69,7 @@ const medicalBilling: Service = {
     description:
       "By improving communication between billing, credentialing, and practice staff, the client significantly reduced denials and accelerated reimbursements.",
 
-    image: "/images/case-study/revenue-report.webp",
+    image: "/images/case-study/billing-case.webp",
 
     location: "Las Vegas, Nevada",
 
