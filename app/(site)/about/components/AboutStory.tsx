@@ -55,15 +55,6 @@ export default function AboutStory() {
           </div>
         </div>
       </div>
-
-      {/* Bottom Left Outline Lama */}
-      <Image
-        src="/lama-outline.svg"
-        alt="Lama Outline"
-        width={220}
-        height={320}
-        className="pointer-events-none absolute bottom-0 left-0 opacity-10"
-      />
     </section>
   );
 }
