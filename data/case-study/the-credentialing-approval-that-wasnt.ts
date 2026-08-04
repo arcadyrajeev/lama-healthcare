@@ -51,6 +51,8 @@ export const credentialingCaseStudy: CaseStudy = {
     subtitle:
       "Credentialing succeeds only when enrollment, billing and payer data all match.",
 
+    image: "/images/case-study/credentialing-approval.webp",
+
     description: [
       "The provider appeared fully credentialed, allowing patient appointments and claim submission to begin immediately.",
 

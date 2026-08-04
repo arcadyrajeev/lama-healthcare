@@ -39,6 +39,8 @@ export const medicalBillingCaseStudy: CaseStudy = {
 
     title: "The reports looked healthy. The revenue wasn't.",
 
+    image: "/images/case-study/billing-challenge.webp",
+
     description: [
       "Every month the practice received billing reports showing submitted claims, payments received and denials being worked.",
 

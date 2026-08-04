@@ -84,7 +84,7 @@ export default function ContactHero() {
           {/* Right */}
           <div className="absolute right-0 top-0 inset-0 min-h-[350px] lg:min-h-full">
             <Image
-              src="/images/contact-hero.webp"
+              src="/images/contact-heroimage.webp"
               alt="Lama Healthcare Team"
               fill
               className="object-cover"

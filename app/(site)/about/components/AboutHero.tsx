@@ -39,7 +39,7 @@ export default function AboutHero() {
             {/* Right Image */}
             <div className="absolute inset-0 z-0 lg:h-auto min-h-[600px]">
               <Image
-                src="/images/about-hero1.webp" // Replace with your image
+                src="/images/about-hero.webp" // Replace with your image
                 alt="Healthcare Team"
                 fill
                 className="object-cover"

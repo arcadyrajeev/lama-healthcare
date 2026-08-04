@@ -139,7 +139,7 @@ const Navbar = () => {
           <div className="rotating-border">
             <Link
               href="/practice-one"
-              className={`
+              className={` 
         relative z-10 flex items-center justify-center
         rounded-full
         px-[2.5vw] md:px-4 lg:px-6

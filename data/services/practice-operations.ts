@@ -35,7 +35,7 @@ const practiceOperations: Service = {
     description:
       "We help independent practices strengthen operations, maintain compliance, and stay audit ready with documented systems that support long-term growth.",
 
-    image: "/images/services/practice-operations-hero.webp",
+    image: "/images/services/practice-operations-hero1.webp",
 
     ctaText: "Book Discovery Call",
 
@@ -52,7 +52,7 @@ const practiceOperations: Service = {
     description:
       "As practices grow, operational complexity grows with them. Workflows become inconsistent, responsibilities overlap, documentation suffers, and staff rely on institutional knowledge instead of standardized processes. The result is unnecessary inefficiency, compliance risk, and an inconsistent patient experience.",
 
-    image: "/images/services/practice-operations-problem.webp",
+    image: "/images/services/practice-operations-problem1.webp",
 
     ctaText: "Schedule Assessment",
 

@@ -83,6 +83,8 @@ export interface ContentSection {
 
   subtitle?: string;
 
+  image?: string;
+
   description: string[];
 }
 
