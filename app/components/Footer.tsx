@@ -260,18 +260,18 @@ export default function Footer() {
             <div className="space-y-4 text-sm text-white/70">
               <div className="flex items-start gap-3">
                 <Mail size={16} className="mt-1 shrink-0 text-accent" />
-                <span>hello@lamahc.com</span>
+                <span>support@lamahc.com</span>
               </div>
 
               <div className="flex items-start gap-3">
                 <Phone size={16} className="mt-1 shrink-0 text-accent" />
-                <span>+1 (000) 000-0000</span>
+                <span>+1 (702) 500-0077</span>
               </div>
 
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="mt-1 shrink-0 text-accent" />
                 <span>
-                  Serving healthcare providers across the United States.
+                  5725 S. Valley View Blvd, Suite 7, Las Vegas, NV, 89118, USA
                 </span>
               </div>
             </div>

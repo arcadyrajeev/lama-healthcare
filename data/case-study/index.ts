@@ -5,6 +5,7 @@ import medicalBillingCaseStudy from "./medical-billing-turnaround";
 import hipaaAndCybersecurityCaseStudy from "./how-a-phishing-attack-was-contained";
 import newPracticeLaunchCaseStudy from "./what-nobody-tells-you-about-launching-a-medical-practice";
 import practiceComplianceCaseStudy from "./anonymous-complaint-investigation";
+import practiceOneCaseStudy from "./practice-one-case";
 
 export const caseStudies: CaseStudy[] = [
   credentialingCaseStudy,
@@ -12,6 +13,7 @@ export const caseStudies: CaseStudy[] = [
   hipaaAndCybersecurityCaseStudy,
   newPracticeLaunchCaseStudy,
   practiceComplianceCaseStudy,
+  practiceOneCaseStudy,
 ];
 
 export const caseStudyMap: Record<string, CaseStudy> = Object.fromEntries(

@@ -136,24 +136,26 @@ const Navbar = () => {
         {/* Practice One */}
 
         <li>
-          <Link
-            href="/practice-one"
-            className={`
-      block rounded-full h-full flex items-center justify-center
-      px-[2.5vw] md:px-4 py-auto  lg:px-6
-      text-[2.5vw] sm:text-xs md:text-base 
-
-       ${
-         pathname.startsWith("/practice-one")
-           ? "bg-gradient-to-r from-[#2F6F73] via-[#4D7D82] to-[#BF7E27] text-white font-light"
-           : "border-2 border-cyan-700 bg-gradient-to-r from-[#456B7C] via-[#5E8A98] to-[#C69247] bg-clip-text text-transparent  hover:bg-main  hover:bg-clip-border hover:text-white font-semibold"
-       }
-      transition-all duration-300
-      hover:brightness-110
-    `}
-          >
-            PRACTICE ONE
-          </Link>
+          <div className="rotating-border">
+            <Link
+              href="/practice-one"
+              className={`
+        relative z-10 flex items-center justify-center
+        rounded-full
+        px-[2.5vw] md:px-4 lg:px-6
+        py-[1.4vw] md:py-2
+        text-[2.5vw] sm:text-xs md:text-base
+        ${
+          pathname.startsWith("/practice-one")
+            ? "bg-gradient-to-r from-[#2F6F73] via-[#4D7D82] to-[#BF7E27] text-white"
+            : "bg-gradient-to-r from-teal-950  to-stone-600 text-white"
+        }
+      `}
+            >
+              <div className="absolute top-0 left-15 bg-gradient-to-br from-white/20 to-white/0 to-[30%] rounded-full w-[20vw] h-[10vw]" />
+              PRACTICE ONE
+            </Link>
+          </div>
         </li>
 
         {/* Services */}

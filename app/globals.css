@@ -52,3 +52,66 @@ body {
   color: var(--foreground);
   font-family: "Dm Sans", Helvetica, sans-serif;
 }
+
+.rotating-border {
+  position: relative;
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 9999px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.rotating-border::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300%;
+  aspect-ratio: 1;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    from 0deg,
+
+    transparent 0deg,
+    transparent 315deg,
+
+    rgba(8, 48, 58, 0.45) 324deg,
+    rgba(18, 88, 105, 0.8) 330deg,
+
+    #1db6d8 336deg,
+    #79e8ff 342deg,
+    #ffffff 347deg,
+    #79e8ff 352deg,
+    #1db6d8 357deg,
+
+    rgba(18, 88, 105, 0.8) 359deg,
+    transparent 360deg
+  );
+
+  animation: rotateBorder 3s linear infinite;
+
+  filter: blur(8px);
+}
+
+.rotating-border > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

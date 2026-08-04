@@ -150,7 +150,7 @@ const medicalBilling: Service = {
     description:
       "Whether you're a solo provider or a growing healthcare organization, our process adapts to your workflow.",
 
-    image: "/images/services/new-practice-1.webp",
+    image: "/images/services/new-practice-audience.webp",
 
     audiences: [
       {

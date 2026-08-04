@@ -36,7 +36,7 @@ const newPracticeConsulting: Service = {
     description:
       "Opening a medical practice requires far more than clinical expertise. We help providers build the operational, financial, and compliance foundation needed to launch successfully—before the first patient ever walks through the door.",
 
-    image: "/images/services/new-practice-hero.webp",
+    image: "/images/services/new-practice-hero2.webp",
 
     ctaText: "Schedule a Free Discovery Call",
 

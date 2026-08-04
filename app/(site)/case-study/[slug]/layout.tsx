@@ -21,11 +21,7 @@ export default function CaseStudyLayout({ children }: LayoutProps) {
     <>
       <ReadingProgress />
 
-      <Navbar />
-
       <main className="min-h-screen bg-white">{children}</main>
-
-      <Footer />
     </>
   );
 }
