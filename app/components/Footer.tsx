@@ -99,7 +99,7 @@ export default function Footer() {
             </div>
 
             <Link
-              href="/practice-one"
+              href="/practice-one#practicehero"
               className="
               shrink-0
               rounded-full
@@ -116,6 +116,7 @@ export default function Footer() {
               duration-300
               hover:scale-105
             "
+              scroll
             >
               Explore Practice One
             </Link>

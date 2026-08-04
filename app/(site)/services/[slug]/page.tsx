@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getServiceBySlug } from "@/lib/services";
@@ -18,6 +19,89 @@ interface PageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const service = getServiceBySlug(slug);
+
+  if (!service) {
+    return {};
+  }
+
+  const title = `${service.hero.eyebrow} | Lama Healthcare`;
+
+  const description =
+    service.hero.description.length > 160
+      ? `${service.hero.description.slice(0, 157)}...`
+      : service.hero.description;
+
+  return {
+    title,
+
+    description,
+
+    keywords: [
+      service.hero.eyebrow,
+      "Healthcare Operations",
+      "Medical Practice Management",
+      "Healthcare Consulting",
+      "Revenue Cycle Management",
+      "Medical Billing",
+      "Credentialing",
+      "Practice Management",
+      "Independent Healthcare Practices",
+      "Healthcare Compliance",
+      "Healthcare Services",
+      "Medical Practice Growth",
+      "Practice Operations",
+    ],
+
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    openGraph: {
+      title,
+
+      description,
+
+      url: `https://lamahealthcare.com/services/${slug}`,
+
+      siteName: "Lama Healthcare",
+
+      locale: "en_US",
+
+      type: "website",
+
+      images: [
+        {
+          url: service.hero.image,
+          width: 1200,
+          height: 630,
+          alt: service.hero.title,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+
+      title,
+
+      description,
+
+      images: [service.hero.image],
+    },
+  };
 }
 
 export default async function Page({ params }: PageProps) {

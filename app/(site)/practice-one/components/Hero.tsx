@@ -6,7 +6,10 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-32 pb-20">
+    <section
+      className="relative overflow-hidden bg-white pt-32 pb-20"
+      id="practicehero"
+    >
       {/* Background */}
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
