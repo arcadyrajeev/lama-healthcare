@@ -50,7 +50,7 @@ const medicalBilling: Service = {
     description:
       "Most practices don't know where revenue is leaking because vendors work independently and no one owns the complete process. Without transparency, denied claims, delayed reimbursements, and operational inefficiencies become normal.",
 
-    image: "/images/services/billing-problem2.webp",
+    image: "/images/services/billing-image3.webp",
 
     ctaText: "Get Your Free Audit",
 
