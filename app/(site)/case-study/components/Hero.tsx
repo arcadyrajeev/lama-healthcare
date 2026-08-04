@@ -27,7 +27,7 @@ export default function Hero({ hero }: HeroProps) {
         {/* Back */}
 
         <Link
-          href="/case-studies"
+          href="/case-study"
           className="mb-10 inline-flex items-center gap-2 text-sm text-neutral-500 transition hover:text-olive-700"
         >
           <ArrowLeft size={16} />
