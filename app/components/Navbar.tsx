@@ -144,7 +144,7 @@ const Navbar = () => {
         rounded-full
         px-[2.5vw] md:px-4 lg:px-6
         py-[1.4vw] md:py-2
-        text-[2.5vw] sm:text-xs md:text-base
+        text-[2.8vw] sm:text-xs lg:text-base
         ${
           pathname.startsWith("/practice-one")
             ? "bg-gradient-to-r from-[#2F6F73] via-[#4D7D82] to-[#BF7E27] text-white"

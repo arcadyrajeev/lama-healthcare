@@ -3,11 +3,11 @@ import CaseCard from "@/app/components/CaseCard";
 import { caseStudyCards } from "@/data/case-study";
 
 export default function PracticeOneCaseStudy() {
-  const credentialing = caseStudyCards.find(
-    (item) => item.slug === "the-credentialing-approval-that-wasnt",
+  const casestudy = caseStudyCards.find(
+    (item) => item.slug === "practice-one-case",
   );
 
-  if (!credentialing) return null;
+  if (!casestudy) return null;
 
   return (
     <section className="bg-neutral-50 py-24">
@@ -27,7 +27,7 @@ export default function PracticeOneCaseStudy() {
           </p>
         </div>
 
-        <CaseCard data={credentialing} />
+        <CaseCard data={casestudy} />
       </div>
     </section>
   );
