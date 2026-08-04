@@ -210,7 +210,7 @@ export const credentialing: Service = {
     description:
       "Whether you're onboarding new providers, expanding locations, or managing multiple specialties, we ensure your providers are credentialed correctly and ready to bill.",
 
-    image: "/images/services/credentialing-image3.webp",
+    image: "/images/services/credentialing-image4.webp",
 
     audiences: [
       {
