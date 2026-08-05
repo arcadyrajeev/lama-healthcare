@@ -51,6 +51,8 @@ export const hipaaAndCybersecurityCaseStudy: CaseStudy = {
     subtitle:
       "They look exactly like the vendors healthcare practices already trust.",
 
+    image: "/images/case-study/email-challenge.webp",
+
     description: [
       "The phishing email perfectly mimicked an existing medical supply vendor, making it almost impossible to identify as malicious.",
 

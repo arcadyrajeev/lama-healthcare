@@ -51,6 +51,8 @@ export const practiceComplianceCaseStudy: CaseStudy = {
     subtitle:
       "Regulatory investigations evaluate documentation as much as day-to-day operations.",
 
+    image: "/images/case-study/investigation-challenge.webp",
+
     description: [
       "The complaint accused the practice of reusing single-use disposable equipment, something that had never occurred.",
 

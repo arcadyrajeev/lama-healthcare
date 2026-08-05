@@ -13,7 +13,7 @@ export const practiceOneCaseStudy: CaseStudy = {
     location: "Multi Provider Medical Practice",
     readTime: "6 min",
     publishedBy: "Lama Healthcare",
-    heroImage: "/images/case-study/practice-one-dashboard.webp",
+    heroImage: "/images/case-study/practice-one-case.webp",
   },
 
   overview: {

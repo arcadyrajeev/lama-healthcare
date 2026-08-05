@@ -52,6 +52,8 @@ export const newPracticeLaunchCaseStudy: CaseStudy = {
     subtitle:
       "Launching a medical practice requires hundreds of operational decisions before the first patient arrives.",
 
+    image: "/images/case-study/practice-launch-challenge.webp",
+
     description: [
       "The provider had everything needed to deliver exceptional patient care but no clear roadmap for building the business behind it.",
 
