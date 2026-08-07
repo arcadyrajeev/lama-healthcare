@@ -3,8 +3,25 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Clock3 } from "lucide-react";
+import { useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react";
 
 export default function ContactSupport() {
+  useEffect(() => {
+    (async () => {
+      const cal = await getCalApi();
+
+      cal("ui", {
+        theme: "light",
+        styles: {
+          branding: {
+            brandColor: "#456B7C",
+          },
+        },
+      });
+    })();
+  }, []);
+
   return (
     <section className="py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6">
@@ -30,16 +47,17 @@ export default function ContactSupport() {
             </div>
 
             <div className="mt-10">
-              <Link
-                href="/contact"
+              <button
+                data-cal-link="https://cal.com/rajeev-das-girvlq/discovery-call"
+                data-cal-config='{"layout":"month_view"}'
                 className="group inline-flex items-center justify-between gap-8 rounded-full bg-white px-2 py-2 pl-6 text-base font-semibold text-[#2F2F2F] transition hover:shadow-lg"
               >
                 <span>Schedule a Discovery Call</span>
 
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#456B7C] text-white transition group-hover:translate-x-1">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#456B7C] text-white">
                   <ArrowRight size={20} />
                 </span>
-              </Link>
+              </button>
             </div>
           </div>
 

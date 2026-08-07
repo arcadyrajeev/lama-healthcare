@@ -13,6 +13,7 @@
     "@blocknote/core": "^0.51.4",
     "@blocknote/mantine": "^0.51.4",
     "@blocknote/react": "^0.51.4",
+    "@calcom/embed-react": "^1.5.3",
     "@mantine/core": "^9.5.0",
     "@mantine/hooks": "^9.5.0",
     "@prisma/adapter-pg": "^7.9.1",

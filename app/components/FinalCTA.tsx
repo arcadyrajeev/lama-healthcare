@@ -1,9 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react";
 import { ArrowRight, CalendarDays } from "lucide-react";
 
 export default function FinalCTA() {
+  useEffect(() => {
+    (async () => {
+      const cal = await getCalApi();
+
+      cal("ui", {
+        theme: "light",
+      });
+    })();
+  }, []);
   return (
     <section className="py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6">
@@ -37,14 +48,16 @@ export default function FinalCTA() {
               </p>
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="/contact"
+                <button
+                  type="button"
+                  data-cal-link="yourusername/discovery-call"
+                  data-cal-config='{"layout":"month_view"}'
                   className="inline-flex items-center justify-center gap-3 rounded-full bg-accent px-8 py-4 font-semibold text-white transition hover:brightness-95"
                 >
                   <CalendarDays size={18} />
                   Schedule Discovery Call
                   <ArrowRight size={18} />
-                </Link>
+                </button>
 
                 <Link
                   href="/services"

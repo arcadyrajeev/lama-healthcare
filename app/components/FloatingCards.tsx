@@ -1,9 +1,21 @@
 "use client";
 
 import { ArrowUpRight, BadgeDollarSign, TrendingUp } from "lucide-react";
-import CTAButton from "./CTAButton";
+
+import { useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react";
+import ScheduleButton from "./ScheduleButton";
 
 export default function FloatingCards() {
+  useEffect(() => {
+    (async () => {
+      const cal = await getCalApi();
+
+      cal("ui", {
+        theme: "light",
+      });
+    })();
+  }, []);
   return (
     <div className="w-full">
       <div className="grid portrait:w-full landscape:w-[50vw] grid-cols-1 md:grid-cols-3 gap-4">
@@ -32,7 +44,13 @@ export default function FloatingCards() {
             </p>
 
             <div className="mt-6">
-              <CTAButton size="sm">Schedule Call</CTAButton>
+              <ScheduleButton
+                size="sm"
+                data-cal-link="https://cal.com/rajeev-das-girvlq/discovery-call"
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Schedule Call
+              </ScheduleButton>
             </div>
           </div>
         </div>
