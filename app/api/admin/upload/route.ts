@@ -62,6 +62,8 @@ export async function POST(req: NextRequest) {
       data: { publicUrl },
     } = adminSupabase.storage.from(bucket).getPublicUrl(path);
 
+    console.log("UPLOAD PATH:", path);
+    console.log("PUBLIC URL:", publicUrl);
     return NextResponse.json({
       success: true,
       url: publicUrl,

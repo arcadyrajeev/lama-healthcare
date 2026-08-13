@@ -5,7 +5,6 @@ import { useState } from "react";
 import "@blocknote/core/fonts/inter.css";
 import "@blocknote/mantine/style.css";
 
-import Image from "next/image";
 import { BlockNoteView } from "@blocknote/mantine";
 import { useCreateBlockNote } from "@blocknote/react";
 
@@ -161,12 +160,17 @@ export default function BlockEditor({ mode, initialData }: BlockEditorProps) {
     <div className="overflow-hidden rounded-xl border bg-white">
       <div className="border-b">
         {coverImage ? (
-          <div className="relative h-[420px]">
-            <Image src={coverImage} alt="Cover" fill className="object-cover" />
+          <div className="relative h-[420px] overflow-hidden">
+            <img
+              src={coverImage}
+              alt="Cover"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
 
             <button
+              type="button"
               onClick={() => setCoverImage("")}
-              className="absolute top-5 right-5 rounded-lg bg-black/70 px-4 py-2 text-white"
+              className="absolute top-5 right-5 z-10 rounded-lg bg-black/70 px-4 py-2 text-white"
             >
               Remove
             </button>
