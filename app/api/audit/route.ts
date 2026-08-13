@@ -67,7 +67,7 @@ export async function POST(request: Request) {
       from: "Lama Healthcare <hello@info.lamahc.com>",
 
       // Change this if your internal lead email is different
-      to: ["rajeev@arcadydesign.com"],
+      to: ["admin@lamahc.com"],
 
       replyTo: email,
 

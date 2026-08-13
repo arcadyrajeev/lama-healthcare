@@ -56,7 +56,7 @@ export async function POST(request: Request) {
         from: "Lama Healthcare <hello@info.lamahc.com>",
 
         // IMPORTANT
-        to: ["rajeev@arcadydesign.com"],
+        to: ["admin@lamahc.com"],
 
         replyTo: email,
 
