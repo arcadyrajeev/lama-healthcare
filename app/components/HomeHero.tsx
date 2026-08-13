@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-
+import AuditFormModal from "./AuditFormModal";
 import CTAButton from "./CTAButton";
 import FloatingCards from "./FloatingCards";
 
@@ -11,6 +11,7 @@ export default function HomeHero() {
   const heroRef = useRef<HTMLElement>(null);
 
   const [isDesktop, setIsDesktop] = useState(false);
+  const [auditOpen, setAuditOpen] = useState(false);
 
   useEffect(() => {
     const update = () => {
@@ -75,7 +76,9 @@ export default function HomeHero() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <CTAButton size="lg">Get Your Free Audit</CTAButton>
+              <CTAButton size="lg" onClick={() => setAuditOpen(true)}>
+                Get Your Free Audit
+              </CTAButton>
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row lg:items-center gap-4 ">
@@ -146,6 +149,7 @@ export default function HomeHero() {
       </div>
 
       {/* Bottom Fade */}
+      <AuditFormModal open={auditOpen} onClose={() => setAuditOpen(false)} />
     </section>
   );
 }

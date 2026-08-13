@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { ChevronDown, Mail, MessageSquare, Phone, User } from "lucide-react";
 
 const topics = [
@@ -23,6 +24,91 @@ export default function ContactForm({
   selectedTopic,
   onTopicChange,
 }: ContactFormProps) {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({
+    type: null,
+    message: "",
+  });
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    console.log("========== CONTACT FORM SUBMIT ==========");
+
+    console.log("Form data:", {
+      topic: selectedTopic,
+      fullName,
+      email,
+      phone,
+      message,
+    });
+
+    setStatus({
+      type: null,
+      message: "",
+    });
+
+    setIsSubmitting(true);
+
+    try {
+      console.log("Sending POST /api/contact...");
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          topic: selectedTopic,
+          fullName,
+          email,
+          phone,
+          message,
+        }),
+      });
+
+      console.log("API status:", response.status);
+
+      const data = await response.json();
+
+      console.log("API response:", data);
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to submit your inquiry.");
+      }
+
+      setStatus({
+        type: "success",
+        message: "Thank you. Your inquiry has been sent successfully.",
+      });
+
+      setFullName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } catch (error) {
+      console.error("CONTACT FORM ERROR:", error);
+
+      setStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Something went wrong. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section className="py-2">
       <div className="mx-auto max-w-3xl rounded-[28px] border border-gray-200 bg-white p-6 shadow-sm lg:p-8">
@@ -43,7 +129,7 @@ export default function ContactForm({
         </div>
 
         {/* Form */}
-        <form className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Topic */}
           <div>
             <label className="mb-2 block text-[11px] font-semibold uppercase tracking-wide text-[#2F2F2F]">
@@ -54,10 +140,12 @@ export default function ContactForm({
               <select
                 value={selectedTopic}
                 onChange={(e) => onTopicChange(e.target.value)}
-                className="h-12 w-full appearance-none cursor-pointer font-semibold rounded-xl border border-gray-200 bg-white px-4 pr-12 text-sm text-[#2F2F2F] outline-none transition focus:border-[#456B7C]"
+                className="h-12 w-full appearance-none cursor-pointer rounded-xl border border-gray-200 bg-white px-4 pr-12 text-sm font-semibold text-[#2F2F2F] outline-none transition focus:border-[#456B7C]"
               >
                 {topics.map((item) => (
-                  <option key={item}>{item}</option>
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
                 ))}
               </select>
 
@@ -82,6 +170,9 @@ export default function ContactForm({
 
               <input
                 type="text"
+                required
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
                 placeholder="John Smith"
                 className="h-12 w-full rounded-xl border border-gray-200 py-3 pl-11 pr-4 text-sm outline-none transition focus:border-[#456B7C]"
               />
@@ -103,6 +194,9 @@ export default function ContactForm({
 
                 <input
                   type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="john@email.com"
                   className="h-12 w-full rounded-xl border border-gray-200 py-3 pl-11 pr-4 text-sm outline-none transition focus:border-[#456B7C]"
                 />
@@ -122,6 +216,8 @@ export default function ContactForm({
 
                 <input
                   type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   placeholder="(702) XXX XXXX"
                   className="h-12 w-full rounded-xl border border-gray-200 py-3 pl-11 pr-4 text-sm outline-none transition focus:border-[#456B7C]"
                 />
@@ -143,18 +239,35 @@ export default function ContactForm({
 
               <textarea
                 rows={4}
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="Briefly describe how we can help..."
                 className="w-full resize-none rounded-xl border border-gray-200 py-4 pl-11 pr-4 text-sm leading-6 outline-none transition focus:border-[#456B7C]"
               />
             </div>
           </div>
 
+          {/* Status */}
+          {status.type && (
+            <div
+              className={`rounded-xl px-4 py-3 text-sm ${
+                status.type === "success"
+                  ? "bg-green-50 text-green-700"
+                  : "bg-red-50 text-red-700"
+              }`}
+            >
+              {status.message}
+            </div>
+          )}
+
           {/* Button */}
           <button
             type="submit"
-            className="inline-flex h-12 items-center justify-center rounded-full bg-[#456B7C] px-7 text-sm font-medium text-white transition hover:bg-[#355564]"
+            disabled={isSubmitting}
+            className="inline-flex h-12 items-center justify-center rounded-full bg-[#456B7C] px-7 text-sm font-medium text-white transition hover:bg-[#355564] disabled:cursor-not-allowed disabled:opacity-60"
           >
-            Submit Inquiry
+            {isSubmitting ? "Sending..." : "Submit Inquiry"}
           </button>
         </form>
       </div>

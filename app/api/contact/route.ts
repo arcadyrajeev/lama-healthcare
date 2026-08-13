@@ -5,371 +5,206 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
+    console.log("========== CONTACT REQUEST ==========");
+
+    console.log("RESEND KEY EXISTS:", !!process.env.RESEND_API_KEY);
+
     const body = await request.json();
+
+    console.log("CONTACT BODY:", {
+      topic: body.topic,
+      fullName: body.fullName,
+      email: body.email,
+      phone: body.phone,
+      message: body.message,
+    });
 
     const { topic, fullName, email, phone, message } = body;
 
-    // -----------------------------------------
+    // -----------------------------
     // Validation
-    // -----------------------------------------
+    // -----------------------------
 
     if (!topic || !fullName || !email || !message) {
+      console.log("VALIDATION FAILED");
+
       return NextResponse.json(
         {
           success: false,
           message: "Please fill in all required fields.",
+          received: {
+            topic: !!topic,
+            fullName: !!fullName,
+            email: !!email,
+            message: !!message,
+          },
         },
         { status: 400 },
       );
     }
 
-    // -----------------------------------------
-    // 1. Send inquiry to your team
-    // -----------------------------------------
+    console.log("Validation passed");
+
+    // -----------------------------
+    // Send internal email
+    // -----------------------------
+
+    console.log("Sending internal email...");
 
     const { data: inquiryData, error: inquiryError } = await resend.emails.send(
       {
-        from: "Healthcare Team <hello@info.lamahc.com>",
+        from: "Lama Healthcare <hello@info.lamahc.com>",
+
+        // IMPORTANT
         to: ["rajeev@arcadydesign.com"],
+
         replyTo: email,
+
         subject: `New Contact Inquiry: ${topic}`,
 
         html: `
           <div
             style="
-              font-family: Arial, Helvetica, sans-serif;
+              font-family: Arial, sans-serif;
               max-width: 650px;
               margin: 0 auto;
               color: #2F2F2F;
-              background: #ffffff;
             "
           >
 
-            <!-- Header -->
-            <div
-              style="
-                padding: 28px 0;
-                border-bottom: 1px solid #e5e5e5;
-              "
-            >
-              <p
-                style="
-                  margin: 0 0 8px;
-                  font-size: 11px;
-                  font-weight: 600;
-                  letter-spacing: 3px;
-                  text-transform: uppercase;
-                  color: #C6944A;
-                "
-              >
-                New Inquiry
-              </p>
+            <h2>New Contact Inquiry</h2>
 
-              <h2
-                style="
-                  margin: 0;
-                  font-size: 24px;
-                  font-weight: 500;
-                  color: #2F2F2F;
-                "
-              >
-                New Contact Inquiry
-              </h2>
+            <p>
+              <strong>Topic:</strong>
+              ${escapeHtml(topic)}
+            </p>
 
-              <p
-                style="
-                  margin: 10px 0 0;
-                  font-size: 14px;
-                  line-height: 1.6;
-                  color: #777777;
-                "
-              >
-                Someone submitted a contact form through your website.
-              </p>
-            </div>
+            <p>
+              <strong>Name:</strong>
+              ${escapeHtml(fullName)}
+            </p>
 
-            <!-- Contact Details -->
-            <div style="padding: 28px 0;">
+            <p>
+              <strong>Email:</strong>
+              ${escapeHtml(email)}
+            </p>
 
-              <h3
-                style="
-                  margin: 0 0 20px;
-                  font-size: 16px;
-                  color: #2F2F2F;
-                "
-              >
-                Contact Details
-              </h3>
+            <p>
+              <strong>Phone:</strong>
+              ${escapeHtml(phone || "Not provided")}
+            </p>
 
-              <p style="margin: 0 0 18px;">
-                <strong>Topic</strong><br />
-                <span style="color: #555555;">
-                  ${escapeHtml(topic)}
-                </span>
-              </p>
+            <h3>Message</h3>
 
-              <p style="margin: 0 0 18px;">
-                <strong>Full Name</strong><br />
-                <span style="color: #555555;">
-                  ${escapeHtml(fullName)}
-                </span>
-              </p>
-
-              <p style="margin: 0 0 18px;">
-                <strong>Email</strong><br />
-                <span style="color: #555555;">
-                  ${escapeHtml(email)}
-                </span>
-              </p>
-
-              <p style="margin: 0 0 18px;">
-                <strong>Phone</strong><br />
-                <span style="color: #555555;">
-                  ${escapeHtml(phone || "Not provided")}
-                </span>
-              </p>
-
-              <!-- Message -->
-
-              <h3
-                style="
-                  margin: 30px 0 12px;
-                  font-size: 16px;
-                  color: #2F2F2F;
-                "
-              >
-                Message
-              </h3>
-
-              <div
-                style="
-                  background: #f7f7f7;
-                  border-radius: 12px;
-                  padding: 18px;
-                  font-size: 14px;
-                  line-height: 1.7;
-                  color: #555555;
-                "
-              >
-                ${escapeHtml(message).replace(/\n/g, "<br />")}
-              </div>
-
-            </div>
-
-            <!-- Footer -->
-            <div
-              style="
-                padding: 20px 0;
-                border-top: 1px solid #e5e5e5;
-                font-size: 12px;
-                color: #888888;
-              "
-            >
-              This inquiry was submitted through your website contact form.
-            </div>
+            <p>
+              ${escapeHtml(message).replace(/\n/g, "<br />")}
+            </p>
 
           </div>
         `,
       },
     );
 
+    console.log("INTERNAL EMAIL RESPONSE:", {
+      inquiryData,
+      inquiryError,
+    });
+
     if (inquiryError) {
-      console.error("Resend inquiry error:", inquiryError);
+      console.error("RESEND INTERNAL EMAIL FAILED:", inquiryError);
 
       return NextResponse.json(
         {
           success: false,
-          message: "Failed to send inquiry.",
+          message: inquiryError.message,
+          error: inquiryError,
         },
         { status: 500 },
       );
     }
 
-    // -----------------------------------------
-    // 2. Send confirmation email to visitor
-    // -----------------------------------------
+    console.log("INTERNAL EMAIL SENT:", inquiryData?.id);
 
-    const { error: confirmationError } = await resend.emails.send({
-      from: "Healthcare Team <hello@info.lamahc.com>",
-      to: [email],
-      subject: "We received your inquiry",
+    // -----------------------------
+    // Send visitor confirmation
+    // -----------------------------
 
-      html: `
-          <div
-            style="
-              font-family: Arial, Helvetica, sans-serif;
-              max-width: 650px;
-              margin: 0 auto;
-              color: #2F2F2F;
-              background: #ffffff;
-            "
-          >
+    console.log("Sending confirmation email...");
 
-            <!-- Header -->
-            <div
-              style="
-                padding: 32px 0;
-                border-bottom: 1px solid #e5e5e5;
-              "
-            >
-              <p
-                style="
-                  margin: 0 0 10px;
-                  font-size: 11px;
-                  font-weight: 600;
-                  letter-spacing: 3px;
-                  text-transform: uppercase;
-                  color: #C6944A;
-                "
-              >
-                Thank You
-              </p>
+    const { data: confirmationData, error: confirmationError } =
+      await resend.emails.send({
+        from: "Lama Healthcare <hello@info.lamahc.com>",
 
-              <h2
-                style="
-                  margin: 0;
-                  font-size: 26px;
-                  font-weight: 500;
-                  color: #2F2F2F;
-                "
-              >
-                We received your inquiry
-              </h2>
-            </div>
+        to: [email],
 
-            <!-- Content -->
-            <div style="padding: 30px 0;">
+        subject: "We received your inquiry",
 
-              <p
-                style="
-                  margin: 0 0 18px;
-                  font-size: 15px;
-                  line-height: 1.7;
-                "
-              >
-                Hi ${escapeHtml(fullName)},
-              </p>
+        html: `
+        <div
+          style="
+            font-family: Arial, sans-serif;
+            max-width: 650px;
+            margin: 0 auto;
+            color: #2F2F2F;
+          "
+        >
 
-              <p
-                style="
-                  margin: 0 0 18px;
-                  font-size: 15px;
-                  line-height: 1.7;
-                  color: #555555;
-                "
-              >
-                Thank you for contacting us. We've received your inquiry
-                regarding
-                <strong>${escapeHtml(topic)}</strong>.
-              </p>
+          <h2>We received your inquiry</h2>
 
-              <p
-                style="
-                  margin: 0 0 24px;
-                  font-size: 15px;
-                  line-height: 1.7;
-                  color: #555555;
-                "
-              >
-                Our team will review your message and get back to you
-                within one business day.
-              </p>
+          <p>
+            Hi ${escapeHtml(fullName)},
+          </p>
 
-              <!-- Inquiry Summary -->
-              <div
-                style="
-                  background: #f7f7f7;
-                  border-radius: 14px;
-                  padding: 20px;
-                  margin-top: 25px;
-                "
-              >
+          <p>
+            Thank you for contacting Lama Healthcare.
+            We've received your inquiry regarding
+            <strong>${escapeHtml(topic)}</strong>.
+          </p>
 
-                <p
-                  style="
-                    margin: 0 0 8px;
-                    font-size: 11px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    color: #888888;
-                  "
-                >
-                  Your inquiry
-                </p>
+          <p>
+            Our team will review your message and get back
+            to you within one business day.
+          </p>
 
-                <p
-                  style="
-                    margin: 0;
-                    font-size: 14px;
-                    line-height: 1.7;
-                    color: #555555;
-                  "
-                >
-                  ${escapeHtml(message).replace(/\n/g, "<br />")}
-                </p>
+        </div>
+      `,
+      });
 
-              </div>
-
-            </div>
-
-            <!-- Footer -->
-            <div
-              style="
-                padding: 24px 0;
-                border-top: 1px solid #e5e5e5;
-              "
-            >
-              <p
-                style="
-                  margin: 0;
-                  font-size: 13px;
-                  line-height: 1.6;
-                  color: #888888;
-                "
-              >
-                Best,<br />
-                <strong style="color: #2F2F2F;">
-                  Healthcare Team
-                </strong>
-              </p>
-            </div>
-
-          </div>
-        `,
+    console.log("CONFIRMATION RESPONSE:", {
+      confirmationData,
+      confirmationError,
     });
 
     if (confirmationError) {
-      // The main inquiry was already sent successfully.
-      // Don't tell the visitor that the entire submission failed.
-      console.error("Resend confirmation email error:", confirmationError);
+      console.error("CONFIRMATION EMAIL FAILED:", confirmationError);
+
+      // Don't fail the whole request.
+      // The internal lead email already succeeded.
     }
 
-    // -----------------------------------------
+    // -----------------------------
     // Success
-    // -----------------------------------------
+    // -----------------------------
 
     return NextResponse.json({
       success: true,
       message: "Your inquiry has been sent successfully.",
-      id: inquiryData?.id,
+      inquiryId: inquiryData?.id,
+      confirmationId: confirmationData?.id,
     });
   } catch (error) {
-    console.error("Contact form error:", error);
+    console.error("CONTACT ROUTE CRASHED:", error);
 
     return NextResponse.json(
       {
         success: false,
-        message: "Something went wrong. Please try again.",
+        message:
+          error instanceof Error ? error.message : "Something went wrong.",
       },
       { status: 500 },
     );
   }
 }
-
-// -----------------------------------------
-// HTML escaping
-// -----------------------------------------
 
 function escapeHtml(value: string) {
   return value

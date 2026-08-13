@@ -16,7 +16,7 @@ interface CTAButtonProps {
 }
 
 export default function CTAButton({
-  href = "#",
+  href,
   children,
   variant = "primary",
   size = "md",
@@ -35,6 +35,34 @@ export default function CTAButton({
     secondary: "bg-[#355F72] text-white hover:bg-[#294D5C]",
   };
 
+  const content = (
+    <>
+      <span>{children}</span>
+
+      {icon && (
+        <motion.span
+          whileHover={{
+            x: 3,
+            y: -3,
+          }}
+          transition={{
+            duration: 0.2,
+          }}
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20"
+        >
+          <ArrowUpRight size={16} />
+        </motion.span>
+      )}
+    </>
+  );
+
+  const classes = clsx(
+    "inline-flex items-center gap-3 cursor-pointer rounded-full font-medium transition-colors duration-300",
+    sizes[size],
+    variants[variant],
+    className,
+  );
+
   return (
     <motion.div
       whileHover={{
@@ -49,33 +77,15 @@ export default function CTAButton({
         damping: 20,
       }}
     >
-      <Link
-        href={href}
-        onClick={onClick}
-        className={clsx(
-          "inline-flex items-center gap-3 rounded-full font-medium transition-colors duration-300",
-          sizes[size],
-          variants[variant],
-          className,
-        )}
-      >
-        <span>{children}</span>
-
-        {icon && (
-          <motion.span
-            whileHover={{
-              x: 3,
-              y: -3,
-            }}
-            transition={{
-              duration: 0.2,
-            }}
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20"
-          >
-            <ArrowUpRight size={16} />
-          </motion.span>
-        )}
-      </Link>
+      {href ? (
+        <Link href={href} onClick={onClick} className={classes}>
+          {content}
+        </Link>
+      ) : (
+        <button type="button" onClick={onClick} className={classes}>
+          {content}
+        </button>
+      )}
     </motion.div>
   );
 }
