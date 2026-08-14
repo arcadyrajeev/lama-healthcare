@@ -50,7 +50,7 @@ export default function FinalCTA() {
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <button
                   type="button"
-                  data-cal-link="yourusername/discovery-call"
+                  data-cal-link="https://cal.com/rajeev-das-girvlq/discovery-call"
                   data-cal-config='{"layout":"month_view"}'
                   className="inline-flex items-center justify-center gap-3 rounded-full bg-accent px-8 py-4 font-semibold text-white transition hover:brightness-95"
                 >

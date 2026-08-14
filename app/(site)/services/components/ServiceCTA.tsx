@@ -9,6 +9,8 @@ interface ServiceCTAProps {
   data: ServiceCTAData;
 }
 
+const CAL_URL = "https://cal.com/rajeev-das-girvlq/discovery-call";
+
 export default function ServiceCTA({ data }: ServiceCTAProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
@@ -18,6 +20,7 @@ export default function ServiceCTA({ data }: ServiceCTAProps) {
           <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-white/5" />
 
           <div className="absolute right-10 top-10 h-20 w-20 rounded-full border border-white/10" />
+
           <div className="absolute -right-16 -bottom-10 h-52 w-52 rounded-full border-2 border-accent/80" />
 
           <div className="relative z-10 grid items-center gap-14 lg:grid-cols-[1fr_340px]">
@@ -41,16 +44,20 @@ export default function ServiceCTA({ data }: ServiceCTAProps) {
 
               {/* Buttons */}
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href={data.primaryButton.href}
+                {/* Schedule Call */}
+                <a
+                  href={CAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 rounded-full bg-[#C6944A] px-8 py-4 font-semibold text-white transition hover:bg-[#b9873d]"
                 >
                   {data.primaryButton.label}
                   <ArrowRight size={18} />
-                </Link>
+                </a>
 
+                {/* Contact */}
                 <Link
-                  href={data.secondaryButton.href}
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-8 py-4 font-semibold backdrop-blur-sm transition hover:bg-white/20"
                 >
                   <Phone size={18} />
