@@ -99,14 +99,15 @@ export default function Footer() {
             </div>
 
             <Link
-              href="/practice-one#practicehero"
+              href="/practice-one"
               className="
               shrink-0
               rounded-full
+              border
               border-white
               border-1
               bg-gradient-to-r
-              from-cyan-700 
+              from-cyan-700
               to-[#C6944A]
               px-8
               py-4
@@ -116,7 +117,6 @@ export default function Footer() {
               duration-300
               hover:scale-105
             "
-              scroll
             >
               Explore Practice One
             </Link>
