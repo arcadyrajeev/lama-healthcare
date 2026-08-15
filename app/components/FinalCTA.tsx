@@ -60,7 +60,7 @@ export default function FinalCTA() {
                 </button>
 
                 <Link
-                  href="/services"
+                  href="/medical-billing"
                   className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-8 py-4 font-semibold backdrop-blur-sm transition hover:bg-white/20"
                 >
                   Explore Services
