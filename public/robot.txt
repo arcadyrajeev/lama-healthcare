@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lamahealthcare.com/sitemap.xml
+Sitemap: https://lamahc.com/sitemap.xml

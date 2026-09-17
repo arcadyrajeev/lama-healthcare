@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lamahealthcare.com"),
+  metadataBase: new URL("https://lamahc.com"),
 
   title: {
     default: "Lama Healthcare | Practice Management Solutions",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Lama Healthcare",
-      url: "https://lamahealthcare.com",
+      url: "https://lamahc.com",
     },
   ],
 
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       "Helping independent healthcare practices improve operations, compliance, credentialing, billing, and profitability.",
 
-    url: "https://lamahealthcare.com",
+    url: "https://lamahc.com",
 
     siteName: "Lama Healthcare",
 

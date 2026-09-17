@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import services from "@/data/services";
 import { caseStudies } from "@/data/case-study";
 
-const BASE_URL = "https://lamahealthcare.com";
+const BASE_URL = "https://lamahc.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

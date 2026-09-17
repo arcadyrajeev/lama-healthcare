@@ -74,7 +74,7 @@ export async function generateMetadata({
 
       description,
 
-      url: `https://lamahealthcare.com/services/${slug}`,
+      url: `https://lamahc.com/services/${slug}`,
 
       siteName: "Lama Healthcare",
 

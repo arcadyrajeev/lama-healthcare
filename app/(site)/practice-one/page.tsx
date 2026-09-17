@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Practice One | Provider Credentialing Platform",
     description:
       "Run your entire provider roster without chasing documents. Built for independent healthcare practices.",
-    url: "https://lamahealthcare.com/practice-one",
+    url: "https://lamahc.com/practice-one",
     images: [
       {
         url: "/og-image.jpg",

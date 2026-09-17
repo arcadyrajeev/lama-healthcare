@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description:
       "We didn't build another healthcare company. We built the operational system we wished we had.",
 
-    url: "https://lamahealthcare.com/about",
+    url: "https://lamahc.com/about",
 
     siteName: "Lama Healthcare",
 
